@@ -1,0 +1,13 @@
+rofi.color-enabled:     true
+rofi.color-window:      argb:B0435e75, argb:D0435e75, argb:D0435e75
+rofi.color-normal: argb:00435e75, argb:FF9dbeda, argb:00486883, argb:A02C3E4F, argb:D09dbeda
+rofi.color-active: argb:00435e75, argb:D0734375, argb:00486883, argb:A02C3E4F, argb:D0734375
+rofi.color-urgent: argb:00435e75, argb:D0b9524e, argb:00486883, argb:A02C3E4F, argb:D0b9524e
+
+!rofi.fake-transparency: true
+!rofi.lines:             3
+!rofi.bw:                0
+!rofi.opacity:           "80"
+rofi.hide-scrollbar:    true
+!rofi.width:             30
+rofi.font:		serif 24
