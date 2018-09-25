@@ -27,6 +27,8 @@ set $stoprec --no-startup-id killall ffmpeg
 
 exec feh --bg-fill ~/Downloads/wall.jpg
 
+exec_always --no-startup-id i3-msg "workspace $ws1; exec urxvt -e bash -c 'neofetch && bash'"
+
 # #---Starting External Scripts---# #
 #Music player daemon:
 exec --no-startup-id mpd
