@@ -12,3 +12,4 @@ cfmb	~/.ncmpcpp/bindings
 cfmc	~/.ncmpcpp/config
 cfmpd	~/.config/mpd/mpd.conf
 cfM	~/.config/mpd/mpd.conf
+crof	~/.config/rofi/config

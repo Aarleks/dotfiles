@@ -1,13 +1,23 @@
-rofi.color-enabled:     true
-rofi.color-window:      argb:B0435e75, argb:D0435e75, argb:D0435e75
-rofi.color-normal: argb:00435e75, argb:FF9dbeda, argb:00486883, argb:A02C3E4F, argb:D09dbeda
-rofi.color-active: argb:00435e75, argb:D0734375, argb:00486883, argb:A02C3E4F, argb:D0734375
-rofi.color-urgent: argb:00435e75, argb:D0b9524e, argb:00486883, argb:A02C3E4F, argb:D0b9524e
 
-!rofi.fake-transparency: true
-!rofi.lines:             3
-!rofi.bw:                0
-!rofi.opacity:           "80"
-rofi.hide-scrollbar:    true
-!rofi.width:             30
-rofi.font:		serif 24
+rofi.color-enabled: true
+
+! Window:           'background',  'border', 'separator'
+rofi.color-window: argb:aa002b36,  #9575cd, argb:ffffffff
+
+!   State:              'bg',       'fg',   'altbg',        'hlbg',         hlfg
+rofi.color-normal: argb:00002b36, #ffffff, argb:00b58900, argb:00b58900, #ffb58900
+rofi.color-active: argb:00002b36, #252936, argb:00252936, argb:009575cd, #ffc000
+rofi.color-urgent: argb:00002b36, #ff0000, argb:00252936, argb:00252936, #ff0000
+
+rofi.fullscreen: true
+rofi.width: 100
+rofi.padding: 400
+rofi.line-margin: 5
+rofi.lines: 3
+rofi.separator-style: none
+rofi.columns: 1
+rofi.font: Inconsolata Bold 22
+rofi.bw: 0
+rofi.eh: 2
+rofi.hide-scrollbar: true
+rofi.auto-select: false
