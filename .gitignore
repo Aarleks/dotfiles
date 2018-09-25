@@ -1,0 +1,15 @@
+# VARIOUS FILES
+
+.Xauthority
+.bash_history
+.bash_logout
+.viminfo
+
+# FOLDERS
+
+.cache/
+Documents/
+Downloads/
+Music/
+Videos/
+.mozilla/

@@ -1,8 +1,8 @@
 # You can add comments to these files with #
-d	~/Documents
-D	~/Downloads
-m	~/Music
-pp	~/Pictures
-vv	~/Videos
-s	~/.scripts
-cf	~/.config
+docs	~/Documents
+down	~/Downloads
+music	~/Music
+pics	~/Pictures
+vids	~/Videos
+scripts	~/.scripts
+confs	~/.config
