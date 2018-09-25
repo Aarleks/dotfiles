@@ -5,7 +5,7 @@ cfv	~/.vimrc
 cfr	~/.config/ranger/rc.conf
 cfi	~/.config/i3/config
 cfp	~/.config/polybar/config
-cfd	~/.Xdefaults
+cfd	~/.Xresources
 cfn	~/.newsboat/urls
 cfA	~/.asoundrc
 cfmb	~/.ncmpcpp/bindings
