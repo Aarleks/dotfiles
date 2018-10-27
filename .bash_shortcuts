@@ -1,6 +1,7 @@
 # vim: filetype=sh
 alias docs='cd ~/Documents && ls -a'
 alias down='cd ~/Downloads && ls -a'
+alias dbox='cd ~/Dropbox && ls -a'
 alias music='cd ~/Music && ls -a'
 alias pics='cd ~/Pictures && ls -a'
 alias vids='cd ~/Videos && ls -a'
