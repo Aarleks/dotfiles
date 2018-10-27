@@ -56,7 +56,7 @@
 *.color15:               S_base3
 
 URxvt.intensityStyles: 	false
-URxvt.background:	[70]#002b36
+URxvt.background:	[75]#002b36
 URxvt.depth:		32
 URxvt.font:		xft:monospace:size=16
 URxvt.scrollBar:	false

@@ -180,13 +180,6 @@ alias YT="youtube-viewer"
 alias ethspeed="speedometer -r enp2s0"
 alias wifispeed="speedometer -r wlp1s0"
 alias starwars="telnet towel.blinkenlights.nl"
-alias tpbs="clear && figlet -c TPB Search && tpb.sh" # Pirate Bay search
-
-# TeX
-alias Txa="cp ~/Documents/LaTeX/article.tex"
-alias Txs="cp ~/Documents/LaTeX/beamer.tex"
-alias Txh="cp ~/Documents/LaTeX/handout.tex"
-alias TC='texclear'
 
 # Audio and Music
 alias mute="pamixer -m"
@@ -204,4 +197,5 @@ alias bigbak="mpc seek -120"
 alias bigfor="mpc seek +120"
 
 export VISUAL="vim"
+shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 source /home/alex/.bash_shortcuts
