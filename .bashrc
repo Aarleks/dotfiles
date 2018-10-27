@@ -135,7 +135,7 @@ alias muttwizard="~/.config/mutt/mutt-wizard.sh"
 alias progs="pacman -Qet" # List programs I've installed
 alias orphans="pacman -Qdt" # List orphan programs
 alias upgr="neofetch && sudo pacman -Syyu --noconfirm && echo Update complete. | figlet"
-alias atltime="sudo timedatectl set-timezone America/New_York && i3 restart" # Eastcoast time
+alias sydtime="sudo timedatectl set-timezone Australia/Sydney && i3 restart" # Eastcoast time
 alias tuctime="sudo timedatectl set-timezone America/Phoenix && i3 restart" # Arizona time
 alias sdn="sudo shutdown now"
 alias newnet="sudo systemctl restart NetworkManager" # Refresh wifi
@@ -204,6 +204,4 @@ alias bigbak="mpc seek -120"
 alias bigfor="mpc seek +120"
 
 export VISUAL="vim"
-hello-larbs() { sed -i -e '/LARBS/,$d' ~/.config/i3/config ;}
-source /home/aarleks/.bash_shortcuts
-PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"
+source /home/alex/.bash_shortcuts

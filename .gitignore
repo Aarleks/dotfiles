@@ -5,6 +5,7 @@
 .bash_logout
 .viminfo
 .gitconfig
+.esd_auth
 
 # FOLDERS
 
@@ -15,3 +16,8 @@ Music/
 Videos/
 .mozilla/
 .local/
+.config/autostart/
+.config/pulse/
+.dropbox/
+Dropbox/
+.dropbox-dist/
