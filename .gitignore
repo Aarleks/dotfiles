@@ -6,6 +6,10 @@
 .viminfo
 .gitconfig
 .esd_auth
+.steampid
+.steampath
+.pulse-cookie
+.config/dconf/user
 
 # FOLDERS
 
@@ -21,3 +25,6 @@ Videos/
 .dropbox/
 Dropbox/
 .dropbox-dist/
+.steam/
+.pki/
+.config/unity3d/
