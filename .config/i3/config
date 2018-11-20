@@ -210,7 +210,7 @@ bindsym $mod+x			exec --no-startup-id betterlockscreen -l
 bindsym $mod+Shift+x		exec prompt "Are you sure you want to shutdown?" "$shutdown"
 
 bindsym $mod+c			exec --no-startup-id camtoggle
-##bindsym $mod+Shift+c
+bindsym $mod+Shift+c		exec ~/.scripts/kblayout.sh
 
 bindsym $mod+v			exec $term -e ncmpcpp -s visualizer
 bindsym $mod+Shift+v		exec projectM-pulseaudio
@@ -330,7 +330,7 @@ bindsym $mod+F6		exec --no-startup-id $term -e transmission-remote-cli
 bindsym $mod+F9		exec --no-startup-id dmenumount
 bindsym $mod+F10	exec --no-startup-id dmenuumount
 ##bindsym $mod+F11
-##bindsym $mod+F12
+bindsym F12	exec ~/.scripts/kblayout.sh
 
 
 # #---Arrow Keys---# #
@@ -451,4 +451,3 @@ bindsym XF86Documents		exec $term -e ranger ~/Documents
 bindsym XF86WLAN		exec $netrefresh
 
 
-exec_always --no-startup-id notify-send -i ~/.scripts/larbs.png '<b>Welcome to LARBS:</b> Press Super+F1 for the manual.' -t 10000

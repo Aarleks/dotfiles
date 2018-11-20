@@ -50,21 +50,10 @@ font-2 = FontAwesome:pixelsize=10;1
 
 modules-left = i3
 modules-center = mpd
-#modules-right = volume wlan eth battery temperature date
-modules-right = filesystem volume wlan battery cpu date
+modules-right = xkeyboard filesystem volume wlan battery cpu date
 
 tray-position = right
 tray-padding = 0
-;tray-transparent = true
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -79,15 +68,12 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
 
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+label-layout = %name%
 
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
