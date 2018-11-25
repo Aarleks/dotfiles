@@ -2,10 +2,8 @@
 
 # This script is called by i3 on startup.
 
-# Map the caps lock key to super...
-setxkbmap -layout us -variant altgr-intl -option caps:super
-
-# Makes the Caps key into Escape when tapped.
+# Map the caps lock key to super
+setxkbmap -layout us -option caps:super
 xcape -e 'Super_L=Escape'
 
 # Map the menu button to right super as well.
