@@ -31,5 +31,6 @@ Dropbox/
 .config/unity3d/
 .config/Unknown\ Organization/
 .config/libreoffice/
-.config/zoomus/conf
+.config/zoomus.conf
 .zoom/
+.config/dconf/user

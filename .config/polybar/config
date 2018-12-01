@@ -50,7 +50,7 @@ font-2 = FontAwesome:pixelsize=10;1
 
 modules-left = i3
 modules-center = mpd
-modules-right = xkeyboard filesystem volume wlan battery cpu date
+modules-right = xkeyboard filesystem volume wlan cpu date
 
 tray-position = right
 tray-padding = 0
