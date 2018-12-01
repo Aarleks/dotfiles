@@ -1,0 +1,56 @@
+Nov 30 16:02 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 30 16:02 : exception: Failed to open '/home/alex/.config/mpd/state': No such file or directory
+Nov 30 16:02 : client: [0] opened from 127.0.0.1:51160
+Nov 30 16:03 : client: [0] closed
+Nov 30 16:03 : client: [1] opened from 127.0.0.1:51174
+Nov 30 16:15 : client: [1] closed
+Nov 30 16:15 : client: [2] opened from 127.0.0.1:51284
+Nov 30 17:42 : client: [3] opened from 127.0.0.1:51942
+Nov 30 17:43 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:44 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:44 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:44 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:44 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:44 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:44 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:44 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:44 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:44 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:44 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:45 : update: added /Religious-education-in-Aus-and-NZ-Reg.mp3
+Nov 30 17:45 : exception: Failed to open /home/alex/.config/mpd/playlists: No such file or directory
+Nov 30 17:46 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 30 17:46 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 30 17:46 : client: [3] closed
+Nov 30 17:47 : client: [4] opened from 127.0.0.1:51958
+Nov 30 17:47 : client: [4] closed
+Nov 30 17:47 : client: [5] opened from 127.0.0.1:51962
+Nov 30 17:47 : client: [5] closed
+Nov 30 18:02 : client: [6] opened from 127.0.0.1:52010
+Nov 30 18:02 : client: [6] closed
+Nov 30 18:09 : client: [7] opened from 127.0.0.1:52036
+Nov 30 18:09 : client: [7] closed
+Nov 30 18:16 : client: [8] opened from 127.0.0.1:52136
+Nov 30 18:16 : client: [8] closed
+Nov 30 19:15 : client: [9] opened from 127.0.0.1:52584
+Nov 30 19:15 : client: [9] closed
+Nov 30 23:03 : player: played "Religious-education-in-Aus-and-NZ-Reg.mp3"
+Nov 30 23:04 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 30 23:04 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 30 23:04 : client: [0] opened from 127.0.0.1:59708
+Dec 01 00:31 : player: played "Religious-education-in-Aus-and-NZ-Reg.mp3"
+Dec 01 13:41 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 01 13:41 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 01 13:41 : client: [0] opened from 127.0.0.1:50374
+Dec 01 13:44 : client: [0] closed
+Dec 01 13:44 : client: [1] opened from 127.0.0.1:50376
+Dec 01 13:47 : client: [1] closed
+Dec 01 13:47 : client: [2] opened from 127.0.0.1:50378
+Dec 01 13:47 : client: [2] closed
+Dec 01 13:47 : client: [3] opened from 127.0.0.1:50380
+Dec 01 13:47 : client: [3] closed
+Dec 01 13:47 : client: [4] opened from 127.0.0.1:50382
+Dec 01 13:49 : player: played "Religious-education-in-Aus-and-NZ-Reg.mp3"
+Dec 01 13:50 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 01 13:50 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Dec 01 13:50 : client: [0] opened from 127.0.0.1:55512
