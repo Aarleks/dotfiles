@@ -151,7 +151,6 @@ alias mkd="mkdir -pv"
 alias rf="source ~/.bashrc"
 alias ref="shortcuts.sh && source ~/.bashrc" # Refresh shortcuts manually and reload bashrc
 alias bars="bash ~/.config/polybar/launch.sh" # Run Polybar relaunch script
-alias bw="wal -i ~/.config/wall.png" # Rerun pywal
 weath() { curl wttr.in/$1 ;} # Check the weather (give city or leave blank).
 
 # Adding color
