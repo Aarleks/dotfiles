@@ -50,7 +50,7 @@ font-2 = FontAwesome:pixelsize=10;1
 
 modules-left = i3
 modules-center = mpd
-modules-right = xkeyboard filesystem volume wlan cpu date
+modules-right = xkeyboard filesystem alsa wlan cpu date
 
 tray-position = right
 tray-padding = 0
@@ -68,7 +68,6 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-
 label-layout = %name%
 
 label-indicator-padding = 2
@@ -152,12 +151,12 @@ format-online = <label-song> <label-time>
 #<icon-prev> <toggle> <icon-next>
 #<toggle>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-#icon-prev = <-
+;icon-prev = 
+;icon-stop = 
+;icon-play = 
+;icon-pause = 
+;icon-next = 
+;#icon-prev = <-
 #icon-stop = X
 #icon-play-prefix = #f00
 #icon-play = (Paused)
@@ -211,7 +210,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlp30s0
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -254,15 +253,46 @@ time = "%H:%M%"
 
 label = %date% %time%
 
-[module/volume]
-type = internal/volume
-format-volume = <ramp-volume> <label-volume>
-label-muted =   muted
-label-muted-foreground = #66
-ramp-volume-0 =
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
+[module/alsa]
+type = internal/pulseaudio
+
+; Soundcard to be used
+; Usually in the format hw:# where # is the card number
+; You can find the different card numbers in `/proc/asound/cards`
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
+; Name of the master, speaker and headphone mixers
+; Use the following command to list available mixer controls:
+; $ amixer scontrols | sed -nr "s/.*'([[:alnum:]]+)'.*/\1/p"
+; If master, speaker or headphone-soundcard isn't the default,
+; use `amixer -c # scontrols` instead where # is the number
+; of the master, speaker or headphone soundcard respectively
+;
+; Default: Master
+master-mixer = Master
+
+; Optionally define speaker and headphone mixers
+; Default: none
+speaker-mixer = Speaker
+; Default: none
+headphone-mixer = Headphone
+
+; NOTE: This is required if headphone_mixer is defined
+; Use the following command to list available device controls
+; $ amixer controls | sed -r "/CARD/\!d; s/.*=([0-9]+).*name='([^']+)'.*/printf '%3.0f: %s\n' '\1' '\2'/e" | sort
+; You may also need to use `amixer -c # controls` as above for the mixer names
+; Default: none
+headphone-id = 9
+
+; Use volume mapping (similar to amixer -M and alsamixer), where the increase in volume is linear to the ear
+; Default: false
+mapped = true
+
+; Interval for volume increase/decrease (in percent points) (unreleased)
+; Default: 5
+interval = 5
 
 [module/battery]
 type = internal/battery
