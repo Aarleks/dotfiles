@@ -200,7 +200,7 @@ bindsym $mod+Shift+l		move right 30
 bindsym $mod+z			gaps outer current plus 5
 bindsym $mod+Shift+z		gaps outer current minus 5
 
-bindsym $mod+x			exec --no-startup-id betterlockscreen -l
+bindsym $mod+x			exec ~/.config/i3/lock.sh
 bindsym $mod+Shift+x		exec prompt "Are you sure you want to shutdown?" "$shutdown"
 
 bindsym $mod+c			exec --no-startup-id camtoggle

@@ -20,7 +20,7 @@ mpc pause
 
 # Lock it up!
 #i3lock -e -f -c 000000 -i /tmp/screen.png
-i3lock -e -f -c 000000 -i ~/.config/wall.png
+i3lock -e -f -c 000000 -i ~/Downloads/wall.jpg
 #i3lock -n: i3-msg kill
 # If still locked after 20 seconds, turn off screen.
 sleep 20 && pgrep i3lock && xset dpms force off
