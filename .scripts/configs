@@ -1,4 +1,4 @@
-cff	~/.scripts/folders
+
 cfc	~/.scripts/configs
 cfb	~/.bashrc
 cfv	~/.vimrc
@@ -6,10 +6,12 @@ cfr	~/.config/ranger/rc.conf
 cfi	~/.config/i3/config
 cfp	~/.config/polybar/config
 cfx	~/.Xresources
-cfn	~/.newsboat/urls
+cfn	~/.config/newsboat/urls
 cfA	~/.asoundrc
 cfmb	~/.ncmpcpp/bindings
 cfmc	~/.ncmpcpp/config
 cfmpd	~/.config/mpd/mpd.conf
 cfM	~/.config/mpd/mpd.conf
 crof	~/.config/rofi/config
+cfma	~/.config/mutt/etc/aliases
+cfm	~/.config/mutt/muttrc

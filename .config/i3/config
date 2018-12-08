@@ -360,7 +360,7 @@ bindsym $mod+Shift+bracketright exec $bigfor
 bindsym Print 			exec --no-startup-id scrot
 bindsym Shift+Print 		exec --no-startup-id scrot -u
 bindsym $mod+Print		exec --no-startup-id dmenurecord
-bindsym $mod+Scroll_Lock	exec --no-startup-id "killall screenkey || screenkey"
+bindsym $mod+Scroll_Lock	exec --no-startup-id "killall screenkey || screenkey --opacity 0.5"
 bindsym $mod+Delete		exec $stoprec
 bindsym XF86Launch1		exec $stoprec & xset dpms force off
 
