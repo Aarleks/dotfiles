@@ -6,17 +6,28 @@
 " This vimrc is Alex Norman's customisation of Luke Smith's file that ships with his LARBS Arch Linux install. Any of my own customisations are indicated with a comment.
 
 
-	:let mapleader ="-"
-" Load Pathogen for plugins:
-	execute pathogen#infect()
+	let mapleader =" "
 
+	call plug#begin('~/.vim/plugged')
+	Plug 'junegunn/goyo.vim'
+	Plug 'itchyny/lightline.vim'
+	Plug 'terryma/vim-multiple-cursors'
+	Plug 'tpope/vim-fugitive'
+	Plug 'altercation/vim-colors-solarized'
+	Plug 'vimwiki/vimwiki'
+	Plug 'mboughaba/i3config.vim'
+	Plug 'vim-pandoc/vim-pandoc'
+	Plug 'vim-pandoc/vim-pandoc-syntax'
+	call plug#end()
+
+	let g:vimwiki_global_ext = 0
 	au BufNewFile,BufReadPost *.md set filetype=markdown
 	let g:markdown_fenced_languages = ['vim', 'r', 'python']
 
 " Some basics:
 	set nocompatible
-	filetype plugin on
-	syntax enable
+	filetype indent plugin on
+	syntax on
 	set background=dark
 	let g:solarized_termtrans=1
 	colorscheme solarized
@@ -48,6 +59,8 @@
 " View an image for a suckless sent presentation:
 	map <leader>v $F@ly$:!feh --scale-down --auto-zoom --image-bg black <c-r>" &<CR><CR>
 
+" Switch between keyboard layouts
+	map <leader>k :!kblayout.sh<CR><CR>
 " Open my bibliography file in split
 	map <F9> :vsp<space>~/Dropbox/WritingTools/zotero-library.bib<CR>
 
@@ -60,7 +73,7 @@
 	nnoremap S :%s//g<Left><Left>
 
 " Open corresponding.pdf
-	map <leader>p :!mupdf <c-r>%<backspace><backspace><backspace>pdf &<CR><CR>
+	map <leader>p :!zathura <c-r>%.pdf &<CR><CR>
 
 " Compile document
 	map <leader>c :!compiler <c-r>%<CR>
@@ -80,16 +93,6 @@
 
 " Spell-check set to F6:
 	map <F6> :setlocal spell! spelllang=en_gb<CR>
-
-" -------------------------------------------------------
-" ACN - Probably don't need these features in my Vim
-" Toggle DeadKeys set to F7 (for accent marks):
-	"so ~/.vim/luke/deadkeys.vim
-	"nm <F7> :call ToggleDeadKeys()<CR>
-
-" Source my IPA shorcuts:
-"	map <leader>i :so ~/.vim/luke/ipa.vim<CR>
-" -------------------------------------------------------
 
 " Use urlview to choose and open a url:
 	:noremap <leader>u :w<Home>silent <End> !urlview<CR>
