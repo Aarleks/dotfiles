@@ -39,3 +39,4 @@ macro p set browser "dmenuhandler"; open-in-browser ; set browser linkhandler
 # c copies the link to the clipboard.
 macro c set browser "xsel -b <<<" ; open-in-browser ; set browser linkandler
 text-width 72
+datetime-format "%b %d, %y"

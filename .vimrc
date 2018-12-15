@@ -26,7 +26,7 @@
 
 " Some basics:
 	set nocompatible
-	filetype indent plugin on
+	filetype plugin indent on
 	syntax on
 	set background=dark
 	let g:solarized_termtrans=1
@@ -53,6 +53,9 @@
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
 
+" Show invisibles (thanks to Vimcasts! http://vimcasts.org/episodes/show-invisibles/)
+	nmap <leader>l :set list!<CR>
+
 " Open file as suckless sent presentation
 	map <leader>s :!sent<space><C-r>% 2>/dev/null &<CR><CR>
 
@@ -63,6 +66,7 @@
 	map <leader>k :!kblayout.sh<CR><CR>
 " Open my bibliography file in split
 	map <F9> :vsp<space>~/Dropbox/WritingTools/zotero-library.bib<CR>
+	"let g:pandoc#biblio#bibs=["/home/alex/.pandoc/zotero-library.bib"]
 
 " Open the selected text in a split (i.e. should be a file).
 	map <leader>o "oyaW:sp <C-R>o<CR>
@@ -109,7 +113,7 @@
 " Not sure I'll need mutt.
 " Enable Goyo by default for mutt writting
 	"Goyo's width will be the line limit in mutt.
-	autocmd BufRead,BufNewFile /tmp/neomutt* let g:goyo_width=72
+"	autocmd BufRead,BufNewFile /tmp/neomutt* let g:goyo_width=72
 	autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo
 " -------------------------------------------------------
 
