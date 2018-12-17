@@ -151,7 +151,7 @@
 " MARKDOWN:
 	autocmd Filetype markdown,rmd map j gj
 	autocmd Filetype markdown,rmd map k gk
-	autocmd Filetype markdown,rmd inoremap ;n ---<Enter><Enter>
+	autocmd Filetype markdown,rmd inoremap ;n ---<Enter>
 	autocmd Filetype markdown,rmd inoremap ;b ****<++><Esc>F*hi
 	autocmd Filetype markdown,rmd inoremap ;s ~~~~<++><Esc>F~hi
 	autocmd Filetype markdown,rmd inoremap ;e **<++><Esc>F*i
@@ -163,7 +163,6 @@
 	autocmd Filetype markdown,rmd inoremap ;3 ###<Space><Enter><++><Esc>kA
 	autocmd Filetype markdown,rmd inoremap ;l --------<Enter>
 	autocmd Filetype markdown map <F5> :Pandoc pdf<CR>
-"	autocmd Filetype markdown map <F5> :!pandoc<space><C-r>%<space>--pdf-engine=xelatex<space>-o<space><C-r>%.pdf<Enter><Enter>
 	autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 	autocmd Filetype rmd inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
 	autocmd Filetype rmd inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
