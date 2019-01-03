@@ -183,7 +183,7 @@ bindsym $mod+f			fullscreen toggle
 ##bindsym $mod+Shift+f
 
 bindsym $mod+g			workspace prev
-bindsym $mod+Shift+g		exec --no-startup-id gimp; workspace $ws5
+bindsym $mod+Shift+g		exec --no-startup-id testshell.sh
 
 bindsym $mod+h			focus left
 bindsym $mod+Shift+h		move left 30
