@@ -7,17 +7,22 @@
 
 
 	let mapleader =" "
+	let maploccalleader ="\\"
 
 	call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/goyo.vim'
 	Plug 'itchyny/lightline.vim'
-	Plug 'terryma/vim-multiple-cursors'
+	"Plug 'terryma/vim-multiple-cursors'
 	Plug 'tpope/vim-fugitive'
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'vimwiki/vimwiki'
 	Plug 'mboughaba/i3config.vim'
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
+"	Plug 'jceb/vim-orgmode'
+	Plug 'tpope/vim-speeddating'
+	"Plug 'fcpg/vim-waikiki'
+	Plug 'suan/vim-instant-markdown'
 	call plug#end()
 
 " BASICS:
@@ -70,11 +75,17 @@
 
 " COMFY TIMES:
 	let g:vimwiki_global_ext = 0
-	let g:vimwiki_list = [{'path': '~/vimwiki/',
-				\ 'syntax': 'markdown',
-	 			\ 'ext': '.md'}]
-	au BufNewFile,BufReadPost *.md set filetype=markdown
-	let g:markdown_fenced_languages = ['vim', 'r', 'python']
+	let g:vimwiki_list = [{'path': '$HOME/Dropbox/vimwiki/',
+			\ 'syntax': 'markdown',
+	 		\ 'ext': '.md'}]
+	" Interpret .md files, etc. as .markdown
+	"let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+
+	let g:instant_markdown_autostart = 0
+	let g:instant_markdown_slow = 1
+	"au BufNewFile,BufReadPost *.md set filetype=markdown
+	"au BufNewFile,BufReadPost *.Rmd set filetype=markdown
+	let g:markdown_fenced_languages = ['vim', 'r', 'python', 'sh', 'lua']
 
 	" Show invisibles (thanks to Vimcasts! http://vimcasts.org/episodes/show-invisibles/)
 	nmap <leader>l :set list!<CR>
@@ -83,8 +94,10 @@
 	map <leader>k :!kblayout.sh<CR><CR>
 
 	" Open my bibliography file in split
-	map <F9> :vsp<space>~/.pandoc/zotero-library.bib<CR>
-	let g:pandoc#biblio#bibs=["/home/alex/.pandoc/zotero-library.bib"]
+	map <F9> :vsp<space>$HOME/Dropbox/WritingTools/zotero-library.bib<CR>
+	let g:pandoc#biblio#bibs=["$HOME/Dropbox/WritingTools/zotero-library.bib"]
+	"map <F9> :vsp<space>$HOME/.pandoc/zotero-library.bib<CR>
+	"let g:pandoc#biblio#bibs=["$HOME/.pandoc/zotero-library.bib"]
 
 	" Open the selected text in a split (i.e. should be a file).
 	map <leader>o "oyaW:sp <C-R>o<CR>
@@ -100,8 +113,6 @@
 	" Compile document
 	map <leader>c :!compiler <c-r>%<CR>
 
-	" Interpret .md files, etc. as .markdown
-	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
 	" Make calcurse notes markdown compatible:
 	autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
@@ -158,9 +169,9 @@
 	autocmd Filetype markdown,rmd inoremap ;h ====<Space><++><Esc>F=hi
 	autocmd Filetype markdown,rmd inoremap ;i ![](<++>)<++><Esc>F[a
 	autocmd Filetype markdown,rmd inoremap ;a [](<++>)<++><Esc>F[a
-	autocmd Filetype markdown,rmd inoremap ;1 #<Space><Enter><++><Esc>kA
-	autocmd Filetype markdown,rmd inoremap ;2 ##<Space><Enter><++><Esc>kA
-	autocmd Filetype markdown,rmd inoremap ;3 ###<Space><Enter><++><Esc>kA
+	autocmd Filetype markdown,rmd inoremap ;1 #<Space><Enter><Enter><++><Esc>kA
+	autocmd Filetype markdown,rmd inoremap ;2 ##<Space><Enter><Enter><++><Esc>kA
+	autocmd Filetype markdown,rmd inoremap ;3 ###<Space><Enter><Enter><++><Esc>kA
 	autocmd Filetype markdown,rmd inoremap ;l --------<Enter>
 	autocmd Filetype markdown map <F5> :Pandoc pdf<CR>
 	autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>

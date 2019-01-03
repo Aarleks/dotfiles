@@ -21,7 +21,7 @@ set $stoprec --no-startup-id killall ffmpeg
 
 exec feh --bg-fill ~/Downloads/wall.jpg
 
-exec_always --no-startup-id i3-msg "workspace $ws1; exec urxvt -e bash -c 'neofetch && bash'"
+exec_always --no-startup-id i3-msg "workspace $ws1; exec urxvt -e bash -c 'neofetch && task && bash'"
 
 # #---Starting External Scripts---# #
 #Music player daemon:
@@ -313,6 +313,7 @@ for_window [title="mpvfloat"] border pixel 0
 no_focus [title="mpvfloat"]
 
 # #---Function Buttons---# #
+bindsym F1		exec --no-startup-id firefox $HOME/Dropbox/vimwiki/html/index.html
 bindsym $mod+F1		exec --no-startup-id zathura ~/.config/i3/i3_guide.pdf
 bindsym $mod+F2		restart
 bindsym $mod+F3		exec --no-startup-id displayselect
@@ -324,7 +325,7 @@ bindsym $mod+F6		exec --no-startup-id $term -e transmission-remote-cli
 bindsym $mod+F9		exec --no-startup-id dmenumount
 bindsym $mod+F10	exec --no-startup-id dmenuumount
 ##bindsym $mod+F11
-bindsym F12	exec ~/.scripts/kblayout.sh
+bindsym F12		exec ~/.scripts/kblayout.sh
 
 
 # #---Arrow Keys---# #
@@ -444,5 +445,3 @@ bindsym XF86Documents		exec $term -e ranger ~/Documents
 ##bindsym XF86Bluetooth		exec
 bindsym XF86WLAN		exec $netrefresh
 
-
-exec_always --no-startup-id notify-send -i ~/.scripts/larbs.png '<b>Welcome to LARBS:</b> Press Super+F1 for the manual.' -t 10000

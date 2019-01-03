@@ -25,6 +25,9 @@
 .msmtp.log
 .config/RStudio/desktop.ini
 .config/dconf/user
+.vim/.netrwhist
+holidays.en-AU
+.viminfo.tmp
 
 # FOLDERS
 
@@ -59,3 +62,7 @@ R/
 .offlineimap/
 .mail/
 .vim/plugged
+.cabal/
+.emacs.d/
+.config/configstore/
+.npm/
