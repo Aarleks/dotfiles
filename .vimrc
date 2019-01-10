@@ -12,16 +12,13 @@
 	call plug#begin('~/.vim/plugged')
 	Plug 'junegunn/goyo.vim'
 	Plug 'itchyny/lightline.vim'
-	"Plug 'terryma/vim-multiple-cursors'
 	Plug 'tpope/vim-fugitive'
 	Plug 'altercation/vim-colors-solarized'
 	Plug 'vimwiki/vimwiki'
 	Plug 'mboughaba/i3config.vim'
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
-"	Plug 'jceb/vim-orgmode'
 	Plug 'tpope/vim-speeddating'
-	"Plug 'fcpg/vim-waikiki'
 	Plug 'suan/vim-instant-markdown'
 	call plug#end()
 
@@ -135,7 +132,7 @@
 	inoremap <F10> <esc>:Goyo<CR>a
 
 	" Enable Goyo by default for mutt writting
-	autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo
+	"autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo
 
 	" Navigating with guides
 	inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
@@ -169,9 +166,9 @@
 	autocmd Filetype markdown,rmd inoremap ;h ====<Space><++><Esc>F=hi
 	autocmd Filetype markdown,rmd inoremap ;i ![](<++>)<++><Esc>F[a
 	autocmd Filetype markdown,rmd inoremap ;a [](<++>)<++><Esc>F[a
-	autocmd Filetype markdown,rmd inoremap ;1 #<Space><Enter><Enter><++><Esc>kA
-	autocmd Filetype markdown,rmd inoremap ;2 ##<Space><Enter><Enter><++><Esc>kA
-	autocmd Filetype markdown,rmd inoremap ;3 ###<Space><Enter><Enter><++><Esc>kA
+	autocmd Filetype markdown,rmd inoremap ;1 #<Space><Enter><Enter><++><Esc>2kA
+	autocmd Filetype markdown,rmd inoremap ;2 ##<Space><Enter><Enter><++><Esc>2kA
+	autocmd Filetype markdown,rmd inoremap ;3 ###<Space><Enter><Enter><++><Esc>2kA
 	autocmd Filetype markdown,rmd inoremap ;l --------<Enter>
 	autocmd Filetype markdown map <F5> :Pandoc pdf<CR>
 	autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
