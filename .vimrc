@@ -131,9 +131,6 @@
 	map <leader>f :Goyo<CR>
 	inoremap <F10> <esc>:Goyo<CR>a
 
-	" Enable Goyo by default for mutt writting
-	"autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo
-
 	" Navigating with guides
 	inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 	vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
