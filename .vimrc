@@ -1,8 +1,3 @@
-"  _          _          ____            _ _   _     _             _
-" | |   _   _| | _____  / ___| _ __ ___ (_) |_| |__ ( )___  __   _(_)_ __ ___  _ __ ___
-" | |  | | | | |/ / _ \ \___ \| '_ ` _ \| | __| '_ \|// __| \ \ / / | '_ ` _ \| '__/ __|
-" | |__| |_| |   <  __/  ___) | | | | | | | |_| | | | \__ \  \ V /| | | | | | | | | (__
-" |_____\__,_|_|\_\___| |____/|_| |_| |_|_|\__|_| |_| |___/   \_/ |_|_| |_| |_|_|  \___|
 " This vimrc is Alex Norman's customisation of Luke Smith's file that ships with his LARBS Arch Linux install. Any of my own customisations are indicated with a comment.
 
 
@@ -34,7 +29,7 @@
 	set laststatus=2
 	set noshowmode
 
-	" By default Vim open new buffers at the top and left, which
+	" By default Vim will open new buffers at the top and left, which
 	" is counterintuitive. The next two line invert that, opening
 	" buffers below and right.
 	set splitbelow
@@ -70,11 +65,11 @@
 
 " COMFY TIMES:
 	let g:vimwiki_global_ext = 0
-	let g:vimwiki_list = [{'path': '~/vimwiki/',
+	let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/',
 				\ 'syntax': 'markdown',
 	 			\ 'ext': '.md'}]
-	au BufNewFile,BufReadPost *.md set filetype=markdown
-	let g:markdown_fenced_languages = ['vim', 'r', 'python']
+	autocmd BufNewFile,BufFilePre,BufReadPost *.md set filetype=markdown
+	let g:markdown_fenced_languages = ['vim', 'r', 'python', 'bash=sh']
 
 	" Show invisibles (thanks to Vimcasts! http://vimcasts.org/episodes/show-invisibles/)
 	nmap <leader>l :set list!<CR>
@@ -101,7 +96,7 @@
 	map <leader>c :!compiler <c-r>%<CR>
 
 	" Interpret .md files, etc. as .markdown
-	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+	"let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
 	" Make calcurse notes markdown compatible:
 	autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
@@ -122,9 +117,6 @@
 	map <F10> :Goyo<CR>
 	map <leader>f :Goyo<CR>
 	inoremap <F10> <esc>:Goyo<CR>a
-
-	" Enable Goyo by default for mutt writting
-	autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo
 
 	" Navigating with guides
 	inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
@@ -158,10 +150,10 @@
 	autocmd Filetype markdown,rmd inoremap ;h ====<Space><++><Esc>F=hi
 	autocmd Filetype markdown,rmd inoremap ;i ![](<++>)<++><Esc>F[a
 	autocmd Filetype markdown,rmd inoremap ;a [](<++>)<++><Esc>F[a
-	autocmd Filetype markdown,rmd inoremap ;1 #<Space><Enter><++><Esc>kA
-	autocmd Filetype markdown,rmd inoremap ;2 ##<Space><Enter><++><Esc>kA
-	autocmd Filetype markdown,rmd inoremap ;3 ###<Space><Enter><++><Esc>kA
-	autocmd Filetype markdown,rmd inoremap ;l --------<Enter>
+	autocmd Filetype markdown,rmd inoremap ;1 #<Space><Enter><Enter><++><Esc>kA
+	autocmd Filetype markdown,rmd inoremap ;2 ##<Space><Enter><Enter><++><Esc>kA
+	autocmd Filetype markdown,rmd inoremap ;3 ###<Space><Enter><Enter><++><Esc>kA
+	autocmd Filetype markdown,rmd inoremap ;l --------<Enter><Enter>
 	autocmd Filetype markdown map <F5> :Pandoc pdf<CR>
 	autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 	autocmd Filetype rmd inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO

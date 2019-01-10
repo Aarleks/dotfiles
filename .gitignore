@@ -25,6 +25,9 @@
 .msmtp.log
 .config/RStudio/desktop.ini
 .config/dconf/user
+.emacs
+.python_history
+.vim/.netrwhist
 
 # FOLDERS
 
@@ -59,3 +62,7 @@ R/
 .offlineimap/
 .mail/
 .vim/plugged
+.calcurse/
+Desktop/
+.vim/view
+.emacs.d/
