@@ -15,16 +15,17 @@
 	call plug#end()
 
 " BASICS:
-	set nocompatible
-	filetype plugin indent on
+"        set backspace=indent,eol,start
+	set autoindent
 	syntax on
+	filetype plugin indent on
 	set path+=**
 	set encoding=utf-8
 	set number
 	set relativenumber
 	set wrap	"turns on word wrapping
 	set linebreak	"wrap lines sensibly
-	" Need a word wrapping feature that soft breaks at ~80 characters.
+	set breakindent "indents wrapped lines to the same as the original
 	set laststatus=2
 	set noshowmode
 
