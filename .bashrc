@@ -51,60 +51,110 @@ prompt_git() {
 	fi;
 }
 
-if tput setaf 1 &> /dev/null; then
-	tput sgr0; # reset colors
-	bold=$(tput bold);
-	reset=$(tput sgr0);
-	# Solarized colors, taken from http://git.io/solarized-colors.
-	black=$(tput setaf 0);
-	blue=$(tput setaf 33);
-	cyan=$(tput setaf 37);
-	green=$(tput setaf 64);
-	orange=$(tput setaf 166);
-	purple=$(tput setaf 125);
-	red=$(tput setaf 124);
-	violet=$(tput setaf 61);
-	white=$(tput setaf 15);
-	yellow=$(tput setaf 136);
-else
-	bold='';
-	reset="\e[0m";
-	black="\e[1;30m";
-	blue="\e[1;34m";
-	cyan="\e[1;36m";
-	green="\e[1;32m";
-	orange="\e[1;33m";
-	purple="\e[1;35m";
-	red="\e[1;31m";
-	violet="\e[1;35m";
-	white="\e[1;37m";
-	yellow="\e[1;33m";
-fi;
+#if tput setaf 1 &> /dev/null; then
+#	tput sgr0; # reset colors
+#	bold=$(tput bold);
+#	reset=$(tput sgr0);
+#	# Solarized colors, taken from http://git.io/solarized-colors.
+#	black=$(tput setaf 0);
+#	blue=$(tput setaf 33);
+#	cyan=$(tput setaf 37);
+#	green=$(tput setaf 64);
+#	orange=$(tput setaf 166);
+#	purple=$(tput setaf 125);
+#	red=$(tput setaf 124);
+#	violet=$(tput setaf 61);
+#	white=$(tput setaf 15);
+#	yellow=$(tput setaf 136);
+#else
+#	bold='';
+#	reset="\e[0m";
+#	black="\e[1;30m";
+#	blue="\e[1;34m";
+#	cyan="\e[1;36m";
+#	green="\e[1;32m";
+#	orange="\e[1;33m";
+#	purple="\e[1;35m";
+#	red="\e[1;31m";
+#	violet="\e[1;35m";
+#	white="\e[1;37m";
+#	yellow="\e[1;33m";
+#fi;
+
+#if tput setaf 1 &> /dev/null; then
+#    tput sgr0
+#    if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
+#      BASE03=$(tput setaf 234)
+#      BASE02=$(tput setaf 235)
+#      BASE01=$(tput setaf 240)
+#      BASE00=$(tput setaf 241)
+#      BASE0=$(tput setaf 244)
+#      BASE1=$(tput setaf 245)
+#      BASE2=$(tput setaf 254)
+#      BASE3=$(tput setaf 230)
+#      YELLOW=$(tput setaf 136)
+#      ORANGE=$(tput setaf 166)
+#      RED=$(tput setaf 160)
+#      MAGENTA=$(tput setaf 125)
+#      VIOLET=$(tput setaf 61)
+#      BLUE=$(tput setaf 33)
+#      CYAN=$(tput setaf 37)
+#      GREEN=$(tput setaf 64)
+#    else
+      BASE03=$(tput setaf 8)
+      BASE02=$(tput setaf 0)
+      BASE01=$(tput setaf 10)
+      BASE00=$(tput setaf 11)
+      BASE0=$(tput setaf 12)
+      BASE1=$(tput setaf 14)
+      BASE2=$(tput setaf 7)
+      BASE3=$(tput setaf 15)
+      YELLOW=$(tput setaf 3)
+      ORANGE=$(tput setaf 9)
+      RED=$(tput setaf 1)
+      MAGENTA=$(tput setaf 5)
+      VIOLET=$(tput setaf 13)
+      BLUE=$(tput setaf 4)
+      CYAN=$(tput setaf 6)
+      GREEN=$(tput setaf 2)
+#    fi
+    BOLD=$(tput bold)
+    RESET=$(tput sgr0)
+#else
+#    # Linux console colors. I don't have the energy
+#    # to figure out the Solarized values
+#    MAGENTA="\033[1;31m"
+#    ORANGE="\033[1;33m"
+#    GREEN="\033[1;32m"
+#    PURPLE="\033[1;35m"
+#    WHITE="\033[1;37m"
+#    BOLD=""
+#    RESET="\033[m"
+#fi
 
 # Highlight the user name when logged in as root.
 if [[ "${USER}" == "root" ]]; then
-	userStyle="${red}";
+	userStyle="${RED}";
 else
-	userStyle="${orange}";
+	userStyle="${ORANGE}";
 fi;
 
 # Highlight the hostname when connected via SSH.
 if [[ "${SSH_TTY}" ]]; then
-	hostStyle="${bold}${red}";
+	hostStyle="${BOLD}${RED}";
 else
-	hostStyle="${yellow}";
+	hostStyle="${YELLOW}";
 fi;
 
 # Set the terminal title and prompt.
-PS1="\[\033]0;\W\007\]"; # working directory base name
-PS1+="\[${bold}\]\n"; # newline
+PS1="\[${BOLD}\]"; # newline
 PS1+="\[${userStyle}\]\u"; # username
-PS1+="\[${white}\]@";
+PS1+="\[${WHITE}\]@";
 PS1+="\[${hostStyle}\]\h\n"; # host
-PS1+="\[${white}\] in ";
-PS1+="\[${green}\]\W"; # working directory abbreviated path
-PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\") "; # Git repository details
-PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
+PS1+="\[${WHITE}\] in ";
+PS1+="\[${GREEN}\]\W"; # working directory abbreviated path
+PS1+="\$(prompt_git \"\[${WHITE}\] on \[${VIOLET}\]\" \"\[${BLUE}\]\") "; # Git repository details
+PS1+="\[${WHITE}\]\$ \[${RESET}\]"; # `$` (and reset color)
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
