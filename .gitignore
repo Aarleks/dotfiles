@@ -10,8 +10,6 @@
 .pulse-cookie
 .Rhistory
 .lesshst
-.msmtprc
-.offlineimaprc
 .sc-iminfo
 .config/mpd/database
 .config/mpd/log
@@ -50,7 +48,6 @@ Dropbox/
 .config/gtk-3.0/
 .thunderbird/
 .gnupg/
-.config/mutt/
 .rstudio-desktop/
 .password-store/
 Projects/
