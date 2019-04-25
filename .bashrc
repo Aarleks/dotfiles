@@ -117,8 +117,8 @@ prompt_git() {
       BLUE=$(tput setaf 4)
       CYAN=$(tput setaf 6)
       GREEN=$(tput setaf 2)
-#    fi
     BOLD=$(tput bold)
+    WHITE=$(tput setaf 15)
     RESET=$(tput sgr0)
 #else
 #    # Linux console colors. I don't have the energy
