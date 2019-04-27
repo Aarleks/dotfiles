@@ -58,7 +58,7 @@
 URxvt.intensityStyles: 	false
 URxvt.background:	[75]#002b36
 URxvt.depth:		32
-URxvt.font:		xft:monospace:size=16
+URxvt.font:		xft:monospace:size=16,xft:FontAfesome:size=12
 URxvt.scrollBar:	false
 
 !! Extensions

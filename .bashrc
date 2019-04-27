@@ -187,26 +187,18 @@ aurinstall() { curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz
 alias psref="gpg-connect-agent RELOADAGENT /bye" # Refresh gpg
 
 # Some aliases
-alias p="sudo pacman"
-alias v="vim"
-alias sv="sudo vim"
 alias r="ranger"
 alias sr="sudo ranger"
 alias ka="killall"
 alias g="git"
 alias gitup="git push origin master"
 alias gitpass="git config --global credential.helper cache"
-alias trem="transmission-remote"
-alias mkd="mkdir -pv"
-alias rf="source ~/.bashrc"
-alias ref="shortcuts.sh && source ~/.bashrc" # Refresh shortcuts manually and reload bashrc
 alias bars="bash ~/.config/polybar/launch.sh" # Run Polybar relaunch script
 weath() { curl wttr.in/$1 ;} # Check the weather (give city or leave blank).
 
 # Adding color
 alias ls='ls -hN --color=auto --group-directories-first'
-alias crep="grep --color=always" # Color grep - highlight desired sequence.
-alias ccat="highlight --out-format=xterm256" #Color cat - print file with syntax highlighting.
+alias grep="grep --color=always" # Color grep - highlight desired sequence.
 
 # Laptop management
 alias lsc="screen.sh l" # Use laptop screen only
