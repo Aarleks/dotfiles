@@ -17,7 +17,7 @@
 # Bookmarks:
 
 # TUI:
-al
+ar
 q0
 v2
 ov
@@ -252,8 +252,11 @@ d/home/alex
 	Downloads
 19
 d/home/alex/Downloads
-	wall.jpg
-20
+	ESP32_Web_Server_with_Arduino_IDE.zip
+5
+d/home/alex
+	.viminfo
+32
 d
 
 # Right window history (oldest to newest):
@@ -565,6 +568,8 @@ D
 # Search history (oldest to newest):
 
 # Prompt history (oldest to newest):
+picons
+picons_files
 
 # Local filter history (oldest to newest):
 
