@@ -133,7 +133,6 @@ let g:vimwiki_list = [{'path': '$HOME/Dropbox/vimwiki/',
 	             \ 'ext': '.md'}]
 nnoremap <Leader>ss :e $HOME/Dropbox/vimwiki/scratchpad.md<CR>
 
-let g:markdown_fenced_languages = ['vim', 'r', 'python', 'sh', 'lua']
 
 " Open my bibliography file in split
 map <F9> :vsp<space>$HOME/Dropbox/WritingTools/zotero-library.bib<CR>

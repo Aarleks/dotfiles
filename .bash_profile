@@ -5,8 +5,9 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 export PATH=$PATH:$HOME/.scripts
+export PATH=$PATH:$HOME/.local/bin
 export EDITOR="vim"
-export TERMINAL="urxvt"
+export TERMINAL="st"
 export BROWSER="firefox"
 export VISUAL="vim"
 

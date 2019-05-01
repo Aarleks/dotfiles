@@ -26,6 +26,10 @@
 .vim/.netrwhist
 holidays.en-AU
 .viminfo.tmp
+.config/mimeapps.list
+.zcompdump
+.zshrc.zni
+.config/vifm/vifminfo
 
 # FOLDERS
 
@@ -63,3 +67,15 @@ R/
 .emacs.d/
 .config/configstore/
 .npm/
+.gem/*
+.java/
+.jssc/
+.bundle/
+Arduino/
+Gemfile
+.stack/
+.arduino15/
+.config/fish/
+.config/htop/
+.config/suckless/st/
+

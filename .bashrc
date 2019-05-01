@@ -17,16 +17,18 @@ prompt_git() {
 			# Check for uncommitted changes in the index.
 			if ! $(git diff --quiet --ignore-submodules --cached); then
 				s+='+';
+				s+="$(git diff --cached --stat | awk '{print $1}' | tail -1) ";
 			fi;
 
 			# Check for unstaged changes.
 			if ! $(git diff-files --quiet --ignore-submodules --); then
 				s+='!';
+				s+="$(git ls-files --others --exclude-standard | wc -l)"
 			fi;
 
 			# Check for untracked files.
 			if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-				s+='?';
+			    s+="$(tput setaf 9)?";
 			fi;
 
 			# Check for stashed files.
@@ -39,11 +41,11 @@ prompt_git() {
 		# Get the short symbolic ref.
 		# If HEAD isn’t a symbolic ref, get the short SHA for the latest commit
 		# Otherwise, just give up.
-		branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
+		branchName="$(thing.sh commits)$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
 			git rev-parse --short HEAD 2> /dev/null || \
 			echo '(unknown)')";
 
-		[ -n "${s}" ] && s=" [${s}]";
+		[ -n "${s}" ] && s="$(tput setaf 10) [${s}$(tput setaf 10)]";
 
 		echo -e "${1}${branchName}${2}${s}";
 	else
@@ -51,56 +53,6 @@ prompt_git() {
 	fi;
 }
 
-#if tput setaf 1 &> /dev/null; then
-#	tput sgr0; # reset colors
-#	bold=$(tput bold);
-#	reset=$(tput sgr0);
-#	# Solarized colors, taken from http://git.io/solarized-colors.
-#	black=$(tput setaf 0);
-#	blue=$(tput setaf 33);
-#	cyan=$(tput setaf 37);
-#	green=$(tput setaf 64);
-#	orange=$(tput setaf 166);
-#	purple=$(tput setaf 125);
-#	red=$(tput setaf 124);
-#	violet=$(tput setaf 61);
-#	white=$(tput setaf 15);
-#	yellow=$(tput setaf 136);
-#else
-#	bold='';
-#	reset="\e[0m";
-#	black="\e[1;30m";
-#	blue="\e[1;34m";
-#	cyan="\e[1;36m";
-#	green="\e[1;32m";
-#	orange="\e[1;33m";
-#	purple="\e[1;35m";
-#	red="\e[1;31m";
-#	violet="\e[1;35m";
-#	white="\e[1;37m";
-#	yellow="\e[1;33m";
-#fi;
-
-#if tput setaf 1 &> /dev/null; then
-#    tput sgr0
-#    if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
-#      BASE03=$(tput setaf 234)
-#      BASE02=$(tput setaf 235)
-#      BASE01=$(tput setaf 240)
-#      BASE00=$(tput setaf 241)
-#      BASE0=$(tput setaf 244)
-#      BASE1=$(tput setaf 245)
-#      BASE2=$(tput setaf 254)
-#      BASE3=$(tput setaf 230)
-#      YELLOW=$(tput setaf 136)
-#      ORANGE=$(tput setaf 166)
-#      RED=$(tput setaf 160)
-#      MAGENTA=$(tput setaf 125)
-#      VIOLET=$(tput setaf 61)
-#      BLUE=$(tput setaf 33)
-#      CYAN=$(tput setaf 37)
-#      GREEN=$(tput setaf 64)
-#    else
 BASE03=$(tput setaf 8)
 BASE02=$(tput setaf 0)
 BASE01=$(tput setaf 10)
@@ -120,17 +72,6 @@ GREEN=$(tput setaf 2)
 BOLD=$(tput bold)
 WHITE=$(tput setaf 15)
 RESET=$(tput sgr0)
-#else
-#    # Linux console colors. I don't have the energy
-#    # to figure out the Solarized values
-#    MAGENTA="\033[1;31m"
-#    ORANGE="\033[1;33m"
-#    GREEN="\033[1;32m"
-#    PURPLE="\033[1;35m"
-#    WHITE="\033[1;37m"
-#    BOLD=""
-#    RESET="\033[m"
-#fi
 
 # Highlight the user name when logged in as root.
 if [[ "${USER}" == "root" ]]; then
