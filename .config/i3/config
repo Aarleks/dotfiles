@@ -26,6 +26,8 @@ exec_always --no-startup-id i3-msg "workspace $ws1; exec urxvt -e bash -c 'neofe
 # #---Starting External Scripts---# #
 #Music player daemon:
 exec --no-startup-id mpd
+# Starts dunst for notifications:
+exec --no-startup-id dunst
 #Torrent daemon:
 exec --no-startup-id transmission-daemon
 #Composite manager:
