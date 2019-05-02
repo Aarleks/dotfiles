@@ -12,6 +12,7 @@
 	Plug 'mboughaba/i3config.vim'
 	Plug 'vim-pandoc/vim-pandoc'
 	Plug 'vim-pandoc/vim-pandoc-syntax'
+	Plug 'itchyny/vim-gitbranch'
 	call plug#end()
 
 " BASICS:
@@ -60,8 +61,15 @@
 	let g:solarized_termtrans=1
 	colorscheme solarized
 	let g:lightline = {
-	\ 'colorscheme': 'solarized',
-	\ }
+        \ 'colorscheme': 'solarized',
+        \ 'active': {
+          \   'left': [ [ 'mode', 'paste' ],
+          \             [ 'readonly', 'filename', 'modified', 'gitbranch' ] ]
+        \ },
+        \ 'component_function': {
+        \   'gitbranch': 'fugitive#head'
+        \ },
+        \ }
 
 " COMFY TIMES:
 	let g:vimwiki_global_ext = 0

@@ -1,6 +1,24 @@
 stty -ixon
 shopt -s autocd #Allows you to cd into directory merely by typing the directory name.
 
+function ahead_behind {
+	local count='';
+	curr_branch=$(git rev-parse --abbrev-ref HEAD);
+	curr_remote=$(git config branch.$curr_branch.remote);
+	curr_merge_branch=$(git config branch.$curr_branch.merge | cut -d / -f 3);
+	master_branch=$(git rev-list --left-right --count $curr_branch...$curr_remote/$curr_merge_branch | tr -s '\t' '|');
+	if [ $(git rev-list upstream/master 2> /dev/null | wc -l; echo "$1") -gt 1 ]; then
+		upstream="$(git rev-list --left-right --count master...upstream/master | awk '{print $2}')";
+		if [ ${upstream} -gt 0 ]; then
+			count+="$upstream|";
+		fi;
+	fi;
+	if [ ${master_branch:0:1} -gt 0 ] || [ ${master_branch:2:3} -gt 0 ]; then
+		count+="$master_branch";
+	fi;
+	echo $count;
+}
+
 prompt_git() {
 	local s='';
 	local branchName='';
@@ -104,6 +122,7 @@ PS1+="\[${hostStyle}\]\h\n"; # host
 PS1+="\[${white}\] in ";
 PS1+="\[${green}\]\W"; # working directory abbreviated path
 PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\") "; # Git repository details
+PS1+="\$(ahead_behind)";
 PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
 export PS1;
 
@@ -120,8 +139,6 @@ alias audio="ncpamixer"
 alias getmail="offlineimap && notmuch new"
 
 # System Maintainence
-alias mw="~/.config/mutt/mutt-wizard.sh"
-alias muttwizard="~/.config/mutt/mutt-wizard.sh"
 alias progs="pacman -Qet" # List programs I've installed
 alias orphans="pacman -Qdt" # List orphan programs
 alias upgr="neofetch && sudo pacman -Syyu --noconfirm && echo Update complete. | figlet"
@@ -143,7 +160,7 @@ weath() { curl wttr.in/$1 ;} # Check the weather (give city or leave blank).
 
 # Adding color
 alias ls='ls -hN --color=auto --group-directories-first'
-alias crep="grep --color=always" # Color grep - highlight desired sequence.
+alias grep="grep --color=always" # Color grep - highlight desired sequence.
 alias ccat="highlight --out-format=xterm256" #Color cat - print file with syntax highlighting.
 
 # Laptop management
