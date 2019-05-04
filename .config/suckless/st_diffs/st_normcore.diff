@@ -26,7 +26,7 @@ index 0000000..5556726
 +
 +
 diff --git a/config.def.h b/config.def.h
-index 482901e..40abad0 100644
+index 482901e..53df786 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -5,7 +5,7 @@
@@ -124,17 +124,32 @@ index 482901e..40abad0 100644
  };
  
 +static char *openurlcmd[] = { "/bin/sh", "-c",
-+    "grep -aEo '(http|https)://[a-zA-Z0-9./?=_-]*' | uniq | dmenu -l 10 | xargs -r xdg-open",
++    "sed 's/.*│//g' | tr -d '\n' | grep -aEo '((http|https)://|www\\.)[a-zA-Z0-9./?=_-]*' | uniq | sed 's/^www./http:\\/\\/www\\./g' | dmenu -l 10 | xargs -r xdg-open",
 +    "externalpipe", NULL };
 +
  /* Internal keyboard shortcuts. */
  #define MODKEY Mod1Mask
  #define TERMMOD (ControlMask|ShiftMask)
-@@ -178,6 +183,7 @@ static Shortcut shortcuts[] = {
+@@ -170,14 +175,19 @@ static Shortcut shortcuts[] = {
+ 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
+ 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
+ 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
+-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
+-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
++	{ MODKEY,		XK_Prior,       zoom,           {.f = +1} },
++	{ MODKEY,		XK_Next,        zoom,           {.f = -1} },
++	{ MODKEY,		XK_Home,        zoomreset,      {.f =  0} },
+ 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
+ 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
  	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
  	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
  	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 +	{ Mod1Mask,		XK_l,		externalpipe,	{ .v = openurlcmd }},
++	{ MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
++	{ MODKEY,		XK_k,		kscrollup,      {.i =  1} },
++	{ MODKEY|ShiftMask,	XK_I,		zoom,           {.f = +1} },
++	{ MODKEY|ShiftMask,	XK_O,		zoom,           {.f = -1} },
  };
  
  /*
