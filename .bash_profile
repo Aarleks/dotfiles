@@ -6,10 +6,10 @@
 
 export PATH=$PATH:$HOME/.scripts
 export PATH=$PATH:$HOME/.local/bin
-export EDITOR="vim"
+export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="firefox"
-export VISUAL="vim"
+export VISUAL="nvim"
 
 # less/man colors
 export LESS=-R

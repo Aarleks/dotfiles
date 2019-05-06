@@ -171,6 +171,6 @@ alias bigbak="mpc seek -120"
 alias bigfor="mpc seek +120"
 
 export TIMEWARRIORDB=~/Dropbox/.timewarrior
-export VISUAL="vim"
+export VISUAL="nvim"
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 source /home/alex/.bash_shortcuts
