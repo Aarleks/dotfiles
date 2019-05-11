@@ -1,24 +1,10 @@
 # Here is my .zshrc from scratch
-
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 autoload -U colors && colors
 
 autoload -Uz vcs_info
-#function precmd {
-#    if [[ "$NEW_LINE" = true ]] then
-#	print ""
-#	if [[ "$DONE_PROMPT" != true ]] then
-#	    PROMPT=$PROMPT2$PROMPT1
-#	    DONE_PROMPT=true
-#	    fi
-#    else
-#	    NEW_LINE=true
-#    fi
-#        # Load version control information
-#	vcs_info
-#}
 
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-changes true
@@ -27,9 +13,8 @@ zstyle ':vcs_info:*' stagedstr "%F{green}●%f"
 zstyle ':vcs_info:*' unstagedstr "%F{red}●%f"
 zstyle ':vcs_info:*' use-simple true
 zstyle ':vcs_info:git+set-message:*' hooks git-untracked
-#zstyle ':vcs_info:git*:*' formats 'on %b%m '
-zstyle ':vcs_info:git*:*' formats 'on %F{61} %b%f%m%c%u'
-zstyle ':vcs_info:git*:*' actionformats ' %b %m%u%c '
+zstyle ':vcs_info:git*:*' formats '%F{61} %b%f%m%c%u'
+zstyle ':vcs_info:git*:*' actionformats ' %b %m%u%c'
 
 # Check for untracked files.
 function +vi-git-untracked() {
@@ -39,15 +24,12 @@ function +vi-git-untracked() {
   fi
 }
 
+# Prompt
 PS1="
-%B%F{33}%~%f \${vcs_info_msg_0_}
-->%b "
-#PROMPT1='%B%F{166}%n%F{230}@%F{136}%m%b
-#%B%F{230}in%f %F{green}%1~%f%F{230} on%f %F{magenta}${vcs_info_msg_0_}%F{230}$%f%b '
-#PROMPT1='%B%F{cyan}${vcs_info_msg_0_}%F{red}%1~%F{white} %# %f%b'
-#PROMPT2=$'%F{black}%{\e(0%}${(r:$COLUMNS::q:)}%{\e(B%}'
-#PROMPT=$PROMPT1
-RPROMPT='%T'
+%B%F{166}%n%f%F{white}@%f%F{136}%m%f %F{33}%1~%f
+\${vcs_info_msg_0_} ->%b "
+
+RPROMPT='%F{33}%~'
 
 setopt PROMPT_SUBST
 
