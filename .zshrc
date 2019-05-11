@@ -6,44 +6,52 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 autoload -U colors && colors
 
 autoload -Uz vcs_info
-setopt prompt_subst
-function precmd {
-    if [[ "$NEW_LINE" = true ]] then
-	print ""
-	if [[ "$DONE_PROMPT" != true ]] then
-	    PROMPT=$PROMPT2$PROMPT1
-	    DONE_PROMPT=true
-	    fi
-    else
-	    NEW_LINE=true
-    fi
-        # Load version control information
-	vcs_info
-}
-
+#function precmd {
+#    if [[ "$NEW_LINE" = true ]] then
+#	print ""
+#	if [[ "$DONE_PROMPT" != true ]] then
+#	    PROMPT=$PROMPT2$PROMPT1
+#	    DONE_PROMPT=true
+#	    fi
+#    else
+#	    NEW_LINE=true
+#    fi
+#        # Load version control information
+#	vcs_info
+#}
 
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git:*' check-for-changes 'true'
-zstyle ':vcs_info:git:*' formats ' %b %F{yellow}%m%f %u %c'
-zstyle ':vcs_info:git:*' stagedstr '%F{blue} '
-zstyle ':vcs_info:git:*' unstagedstr '%F{red}'
-zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' disable-patterns "${(b)HOME}/code/portal(|-ee)(|/*)"
+zstyle ':vcs_info:*' stagedstr "%F{green}●%f"
+zstyle ':vcs_info:*' unstagedstr "%F{red}●%f"
+zstyle ':vcs_info:*' use-simple true
+zstyle ':vcs_info:git+set-message:*' hooks git-untracked
+#zstyle ':vcs_info:git*:*' formats 'on %b%m '
+zstyle ':vcs_info:git*:*' formats 'on %F{61} %b%f%m%c%u'
+zstyle ':vcs_info:git*:*' actionformats ' %b %m%u%c '
 
 # Check for untracked files.
-+vi-git-untracked() {
-  if [[ -n "$(git ls-files --others --exclude-standard)" ]]; then
-      hook_com[misc]=''
-  else
-      hook_com[misc]=''
-      fi;
-  }
+function +vi-git-untracked() {
+  emulate -L zsh
+  if [[ -n $(git ls-files --others --exclude-standard 2> /dev/null) ]]; then
+      hook_com[unstaged]+="%F{33}●%f"
+  fi
+}
 
-PROMPT1='%B%F{red}%n%F{white}@%F{yellow}%m%b
-%B%F{white}in%f %F{green}%1~%f%F{white} on%f %F{magenta}${vcs_info_msg_0_}%F{white}$%f%b '
+PS1="
+%B%F{33}%~%f \${vcs_info_msg_0_}
+->%b "
+#PROMPT1='%B%F{166}%n%F{230}@%F{136}%m%b
+#%B%F{230}in%f %F{green}%1~%f%F{230} on%f %F{magenta}${vcs_info_msg_0_}%F{230}$%f%b '
 #PROMPT1='%B%F{cyan}${vcs_info_msg_0_}%F{red}%1~%F{white} %# %f%b'
-PROMPT2=$'%F{black}%{\e(0%}${(r:$COLUMNS::q:)}%{\e(B%}'
-PROMPT=$PROMPT1
+#PROMPT2=$'%F{black}%{\e(0%}${(r:$COLUMNS::q:)}%{\e(B%}'
+#PROMPT=$PROMPT1
 RPROMPT='%T'
+
+setopt PROMPT_SUBST
+
+add-zsh-hook precmd vcs_info
 
 HISTSIZE=10000
 if (( ! EUID )); then

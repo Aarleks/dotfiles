@@ -89,9 +89,9 @@ fi;
 
 # Set the terminal title and prompt.
 PS1="\[${BOLD}\]"; # newline
+PS1+="\[${hostStyle}\]\h: "; # host
 PS1+="\[${userStyle}\]\u"; # username
 PS1+="\[${WHITE}\]@";
-PS1+="\[${hostStyle}\]\h\n"; # host
 PS1+="\[${WHITE}\] in ";
 PS1+="\[${GREEN}\]\W"; # working directory abbreviated path
 PS1+="\$(prompt_git \"\[${WHITE}\] on \[${VIOLET}\]\" \"\[${BLUE}\]\") "; # Git repository details
