@@ -6,13 +6,15 @@ set pager_index_lines=10 # Number of index line to show while in pager
 bind index,pager i noop
 bind index,pager g noop
 bind index \Cf noop
+bind index Z noop
 set alias_file="~/Dropbox/dots/aliases"
 source etc/muttcol
 source $alias_file
 source personal.muttrc
 set sleep_time = 0 # Time to pause while displaying certain messages
-set sort = threads
-set sort_aux = reverse-date
+#set sort = threads
+#set sort_aux = reverse-date
+source $HOME/.config/mutt/sort-threads.rc
 set editor = "$EDITOR +1/^$ -c nohlsearch -c startinsert"
 set timeout = "5"
 set mail_check = "10"

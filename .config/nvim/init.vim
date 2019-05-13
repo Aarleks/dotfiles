@@ -89,8 +89,13 @@ vnoremap J xP`[V`]
 vnoremap L >gv
 vnoremap J <gv
 
+" Editing placeholder guides a la Luke Smith
+inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
+vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
+map <Space><Tab> <Esc>/<++><Enter>"_c4l
 
-" AESTHITICS:
+
+" AESTHeTICS:
 " ==========:
 
 set background=dark
@@ -145,3 +150,6 @@ augroup my_cm_setup
       \ 'on_complete': ['ncm2#on_complete#omni', 'pandoc#completion#Complete'],
       \ })
 augroup END
+
+" Use urlview to choose a valid url from the file and open it
+noremap <leader>u :w<Home>silent <End> !urlview<CR>
