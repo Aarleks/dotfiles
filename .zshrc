@@ -55,5 +55,4 @@ compinit
 bindkey -v
 bindkey '^[[Z' autosuggest-accept
 
-
 alias ls='ls -hN --color=auto --group-directories-first'

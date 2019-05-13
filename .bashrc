@@ -23,7 +23,6 @@ prompt_git() {
 			# Check for unstaged changes.
 			if ! $(git diff-files --quiet --ignore-submodules --); then
 				s+='!';
-				s+="$(git ls-files --others --exclude-standard | wc -l)"
 			fi;
 
 			# Check for untracked files.
@@ -41,7 +40,7 @@ prompt_git() {
 		# Get the short symbolic ref.
 		# If HEAD isn’t a symbolic ref, get the short SHA for the latest commit
 		# Otherwise, just give up.
-		branchName="$(thing.sh commits)$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
+		branchName="$(git symbolic-ref --quiet --short HEAD 2> /dev/null || \
 			git rev-parse --short HEAD 2> /dev/null || \
 			echo '(unknown)')";
 
@@ -90,8 +89,7 @@ fi;
 # Set the terminal title and prompt.
 PS1="\[${BOLD}\]"; # newline
 PS1+="\[${hostStyle}\]\h: "; # host
-PS1+="\[${userStyle}\]\u"; # username
-PS1+="\[${WHITE}\]@";
+PS1+="\[${userStyle}\]\u\n"; # username
 PS1+="\[${WHITE}\] in ";
 PS1+="\[${GREEN}\]\W"; # working directory abbreviated path
 PS1+="\$(prompt_git \"\[${WHITE}\] on \[${VIOLET}\]\" \"\[${BLUE}\]\") "; # Git repository details

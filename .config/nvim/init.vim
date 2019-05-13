@@ -107,6 +107,10 @@ let g:lightline = {
 	    \ },
 	    \ }
 
+" Goyo stuffs
+map <F10> :Goyo<CR>
+map <leader>f :Goyo<CR>
+inoremap <F10> <esc>:Goyo<CR>a
 
 " COMFY TIMES:
 " ===========:
