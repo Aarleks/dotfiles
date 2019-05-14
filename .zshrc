@@ -56,3 +56,7 @@ bindkey -v
 bindkey '^[[Z' autosuggest-accept
 
 alias ls='ls -hN --color=auto --group-directories-first'
+
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
+[ -f "$HOME/.config/shortcutsrc" ] && source "$HOME/.config/shortcutsrc"

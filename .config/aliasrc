@@ -1,0 +1,12 @@
+# vim:filetype=sh
+
+alias cfi="$EDITOR $HOME/.config/i3/config"
+
+alias mv="mv -v"\
+    cp="cp -v"\
+    mkc="make clean && rm -f config.h"\
+    mks="make && sudo make clean install"\
+    YT="youtube-viewer"\
+    fm="$FILES"
+
+vf() { fzf | xargs -r -I % $EDITOR % ;}
