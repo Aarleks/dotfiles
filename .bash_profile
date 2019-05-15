@@ -6,7 +6,7 @@
 
 export PATH=$PATH:$HOME/.scripts
 export EDITOR="vim"
-export TERMINAL="urxvt"
+export TERMINAL="st"
 export BROWSER="firefox"
 export VISUAL="vim"
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
