@@ -1,6 +1,5 @@
 # vim:filetype=sh
 
-alias cfi="$EDITOR $HOME/.config/i3/config"
 
 alias mv="mv -v"\
     cp="cp -v"\

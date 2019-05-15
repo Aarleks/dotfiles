@@ -1,4 +1,4 @@
-# vim:filetype=vim
+" vim:filetype=vim
 map ghome :cd ~/<CR>
 map thome <tab>:cd ~/<CR><tab>
 map Mhome <tab>:cd ~/<CR><tab>:mo<CR>
@@ -15,7 +15,7 @@ map gdown :cd ~/Downloads<CR>
 map tdown <tab>:cd ~/Downloads<CR><tab>
 map Mdown <tab>:cd ~/Downloads<CR><tab>:mo<CR>
 map Ydown <tab>:cd ~/Downloads<CR><tab>:co<CR>
-map grd1 :cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1<CR>
+nnoremap grd1 :cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1<CR>
 map trd1 <tab>:cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1<CR><tab>
 map Mrd1 <tab>:cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1<CR><tab>:mo<CR>
 map Yrd1 <tab>:cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1<CR><tab>:co<CR>
