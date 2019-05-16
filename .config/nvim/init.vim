@@ -154,4 +154,3 @@ augroup END
 " Use urlview to choose a valid url from the file and open it
 noremap <leader>u :w<Home>silent <End> !urlview<CR>
 
-https://www.dralexnorman.net
