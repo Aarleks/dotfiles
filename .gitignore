@@ -7,6 +7,10 @@
 !/.*
 
 #++ VARIOUS FILES
+/.history
+/.histfile
+/.nmcli-history
+/.python_history
 /.Xauthority
 /.bash_history
 /.bash_logout
