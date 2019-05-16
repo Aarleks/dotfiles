@@ -24,4 +24,4 @@ inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
 inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
 
 " TEMPLATES:
-nnoremap ;art :-1read $HOME/.vim/templates/article.md<CR>jA<Space>
+nnoremap ;art :-1read $HOME/.config/nvim/templates/article.md<CR>jA<Space>

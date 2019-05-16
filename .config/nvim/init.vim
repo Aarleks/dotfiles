@@ -25,21 +25,21 @@ call plug#end()
 
 
 " BASICS:
-filetype plugin indent on
-syntax on
+"filetype plugin indent on
+"syntax on
 
-set incsearch
-set hlsearch
+"set incsearch
+"set hlsearch
 set ignorecase
 set smartcase
 set path+=**
-set encoding=utf-8
+"set encoding=utf-8
 set number
 set relativenumber
 set wildmode=longest,list,full
-set wildmenu
+"set wildmenu
 set splitbelow splitright
-set laststatus=2
+"set laststatus=2
 set noshowmode
 
 
@@ -66,8 +66,8 @@ nmap <leader>l :set list!<CR>
 
 
 " EDITING:
-set autoindent
-set backspace=indent,eol,start
+"set autoindent
+"set backspace=indent,eol,start
 set go=a " visual mode - highlighted text is copied to the clipboard
 set shiftwidth=4
 let &softtabstop=&shiftwidth
@@ -79,7 +79,7 @@ let &softtabstop=&shiftwidth
 autocmd BufWritePre * %s/\s\+$//e
 
 " Disables auto-commenting of new lines
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Replace all -
 nnoremap S :%s//g<Left><Left>
@@ -95,10 +95,10 @@ vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 map <Space><Tab> <Esc>/<++><Enter>"_c4l
 
 
-" AESTHeTICS:
+" AESTHETICS:
 " ==========:
 
-set background=dark
+"set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 let g:lightline = {
@@ -153,3 +153,5 @@ augroup END
 
 " Use urlview to choose a valid url from the file and open it
 noremap <leader>u :w<Home>silent <End> !urlview<CR>
+
+https://www.dralexnorman.net

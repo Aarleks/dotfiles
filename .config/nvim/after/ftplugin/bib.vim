@@ -1,8 +1,8 @@
 " Settings for .bib files in Vim
 
-nnoremap ;a :read $HOME/.vim/templates/article.bib<CR>
+nnoremap ;a :read $HOME/.config/nvim/templates/article.bib<CR>
 
-nnoremap ;b :read $HOME/.vim/templates/book.bib<CR>
+nnoremap ;b :read $HOME/.config/nvim/templates/book.bib<CR>
 
-nnoremap ;c :read $HOME/.vim/templates/chapter.bib<CR>
+nnoremap ;c :read $HOME/.config/nvim/templates/chapter.bib<CR>
 
