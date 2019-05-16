@@ -79,7 +79,7 @@ let &softtabstop=&shiftwidth
 autocmd BufWritePre * %s/\s\+$//e
 
 " Disables auto-commenting of new lines
-"autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 
 " Replace all -
 nnoremap S :%s//g<Left><Left>
