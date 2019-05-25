@@ -21,6 +21,7 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
+Plug 'kovetskiy/sxhkd-vim'
 call plug#end()
 
 

@@ -39,6 +39,7 @@
 /.config/nvim/autoload/
 /.config/nvim/plugged/
 /.config/mutt/
+/.wget-hsts
 
 # FOLDERS
 
