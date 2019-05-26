@@ -143,12 +143,12 @@ bindsym $mod+Shift+q		kill
 ##bindsym $mod+Shift+e
 
 #bindsym $mod+r 			exec $term -e vifm
-bindsym $mod+Shift+r		exec $term -e sudo vifm
+#bindsym $mod+Shift+r		exec $term -e sudo vifm
 
 bindsym $mod+t			split toggle
 bindsym $mod+Shift+t		gaps inner current set 15; gaps outer current set 15
 
-bindsym $mod+y			exec $term -e calcurse
+#bindsym $mod+y			exec $term -e calcurse
 bindsym $mod+Shift+y		resize shrink width 10 px or 10ppt
 
 #bindsym $mod+u			[instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
@@ -161,22 +161,22 @@ bindsym $mod+o			sticky toggle
 bindsym $mod+Shift+o		resize grow width 10 px or 10 ppt
 
 bindsym $mod+p			exec $pause
-bindsym $mod+Shift+p		exec mypaint
+#bindsym $mod+Shift+p		exec mypaint
 
 bindsym $mod+a			[instance="math"] scratchpad show; [instance="math"] move position center
-bindsym $mod+Shift+a		exec $term -e ncpamixer
+#bindsym $mod+Shift+a		exec $term -e ncpamixer
 
 bindsym $mod+s			gaps inner current plus 5
 bindsym $mod+Shift+s		gaps inner current minus 5
 
-bindsym $mod+d			exec --no-startup-id rofi -show run
+#bindsym $mod+d			exec --no-startup-id rofi -show run
 bindsym $mod+Shift+d		gaps inner current set 0; gaps outer current set 0
 
 bindsym $mod+f			fullscreen toggle
 ##bindsym $mod+Shift+f
 
 bindsym $mod+g			workspace prev
-bindsym $mod+Shift+g		exec --no-startup-id testshell.sh
+#bindsym $mod+Shift+g		exec --no-startup-id testshell.sh
 
 bindsym $mod+h			focus left
 bindsym $mod+Shift+h		move left 30
@@ -197,13 +197,13 @@ bindsym $mod+Shift+z		gaps outer current minus 5
 #bindsym $mod+Shift+x		exec prompt "Are you sure you want to shutdown?" "$shutdown"
 
 #bindsym $mod+c			exec --no-startup-id camtoggle
-bindsym $mod+Shift+c		exec ~/.scripts/kblayout.sh
+#bindsym $mod+Shift+c		exec ~/.scripts/kblayout.sh
 
 bindsym $mod+v			exec $term -e ncmpcpp -s visualizer
 bindsym $mod+Shift+v		exec projectM-pulseaudio
 
 bindsym $mod+b			floating toggle; sticky toggle; exec --no-startup-id bottomleft
-bindsym $mod+Shift+b		exec --no-startup-id blender; workspace $ws6
+#bindsym $mod+Shift+b		exec --no-startup-id blender; workspace $ws6
 
 bindsym $mod+n			exec $term -e newsboat
 ##bindsym $mod+Shift+n
@@ -363,7 +363,7 @@ bindsym XF86Launch1		exec $stoprec & xset dpms force off
 bindsym XF86AudioMute		exec $mute
 bindsym XF86AudioLowerVolume	exec $dec
 bindsym XF86AudioRaiseVolume	exec $inc
-bindsym XF86PowerOff		exec prompt "Are you sure you want to shutdown?" "$shutdown"
+#bindsym XF86PowerOff		exec prompt "Are you sure you want to shutdown?" "$shutdown"
 ##bindsym XF86Copy		exec
 ##bindsym XF86Open		exec
 ##bindsym XF86Paste		exec

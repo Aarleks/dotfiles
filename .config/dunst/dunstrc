@@ -1,3 +1,5 @@
+#vim: ft=cfg
+
 [global]
     monitor = 0
     follow = keyboard
@@ -10,7 +12,7 @@
     padding = 0
     horizontal_padding = 8
     frame_width = 3
-    frame_color = "#282828"
+    frame_color = "#93a1a1"
 
     # Define a color for the separator.
     # possible values are:
@@ -75,20 +77,20 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#282828"
-    foreground = "#928374"
+    background = "#002b36"
+    foreground = "#b58900"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#458588"
-    foreground = "#ebdbb2"
+    background = "#002b36"
+    foreground = "#d33682"
     timeout = 5
 
 [urgency_critical]
-    background = "#cc2421"
-    foreground = "#ebdbb2"
+    background = "#002b36"
+    foreground = "#dc322f"
     frame_color = "#fabd2f"
     timeout = 0
 
@@ -122,31 +124,4 @@
 #[ignore]
 #    # This notification will not be displayed
 #    summary = "foobar"
-#    format = ""
-
-#[history-ignore]
-#    # This notification will not be saved in history
-#    summary = "foobar"
-#    history_ignore = yes
-
-#[signed_on]
-#    appname = Pidgin
-#    summary = "*signed on*"
-#    urgency = low
-#
-#[signed_off]
-#    appname = Pidgin
-#    summary = *signed off*
-#    urgency = low
-#
-#[says]
-#    appname = Pidgin
-#    summary = *says*
-#    urgency = critical
-#
-#[twitter]
-#    appname = Pidgin
-#    summary = *twitter.com*
-#    urgency = normal
-#
-# vim: ft=cfg
+#    format =
