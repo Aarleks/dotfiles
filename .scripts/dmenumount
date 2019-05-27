@@ -9,7 +9,7 @@
 
 pgrep -x dmenu && exit
 
-mountable=$(lsblk -lp | grep part | grep -v "t /" | awk '{print $1, "(" $4 ")"}')
+mountable=$(lsblk -lp | grep part | grep -v "t /" | awk '{print $1, "(" $4 ")" "\n"}')
 [[ "$mountable" = "" ]] && exit 1
 chosen=$(echo "$mountable" | dmenu -i -p "Mount which drive?" | awk '{print $1}')
 [[ "$chosen" = "" ]] && exit 1
