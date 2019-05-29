@@ -1,0 +1,11 @@
+# vim:filetype=sh
+
+
+alias mv="mv -v"\
+    cp="cp -v"\
+    mkc="make clean && rm -f config.h"\
+    mks="make && sudo make clean install"\
+    YT="youtube-viewer"\
+    fm="$FILES"
+
+vf() { fzf | xargs -r -I % $EDITOR % ;}

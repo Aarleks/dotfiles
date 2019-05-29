@@ -35,6 +35,7 @@ prompt_git() {
 			# Check for uncommitted changes in the index.
 			if ! $(git diff --quiet --ignore-submodules --cached); then
 				s+='+';
+				s+="$(git diff --cached --stat | awk '{print $1}' | tail -1) ";
 			fi;
 
 			# Check for unstaged changes.
@@ -44,7 +45,7 @@ prompt_git() {
 
 			# Check for untracked files.
 			if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-				s+='?';
+			    s+="$(tput setaf 9)?";
 			fi;
 
 			# Check for stashed files.
@@ -61,7 +62,7 @@ prompt_git() {
 			git rev-parse --short HEAD 2> /dev/null || \
 			echo '(unknown)')";
 
-		[ -n "${s}" ] && s=" [${s}]";
+		[ -n "${s}" ] && s="$(tput setaf 10) [${s}$(tput setaf 10)]";
 
 		echo -e "${1}${branchName}${2}${s}";
 	else
@@ -69,61 +70,48 @@ prompt_git() {
 	fi;
 }
 
-if tput setaf 1 &> /dev/null; then
-	tput sgr0; # reset colors
-	bold=$(tput bold);
-	reset=$(tput sgr0);
-	# Solarized colors, taken from http://git.io/solarized-colors.
-	black=$(tput setaf 0);
-	blue=$(tput setaf 33);
-	cyan=$(tput setaf 37);
-	green=$(tput setaf 64);
-	orange=$(tput setaf 166);
-	purple=$(tput setaf 125);
-	red=$(tput setaf 124);
-	violet=$(tput setaf 61);
-	white=$(tput setaf 15);
-	yellow=$(tput setaf 136);
-else
-	bold='';
-	reset="\e[0m";
-	black="\e[1;30m";
-	blue="\e[1;34m";
-	cyan="\e[1;36m";
-	green="\e[1;32m";
-	orange="\e[1;33m";
-	purple="\e[1;35m";
-	red="\e[1;31m";
-	violet="\e[1;35m";
-	white="\e[1;37m";
-	yellow="\e[1;33m";
-fi;
+BASE03=$(tput setaf 8)
+BASE02=$(tput setaf 0)
+BASE01=$(tput setaf 10)
+BASE00=$(tput setaf 11)
+BASE0=$(tput setaf 12)
+BASE1=$(tput setaf 14)
+BASE2=$(tput setaf 7)
+BASE3=$(tput setaf 15)
+YELLOW=$(tput setaf 3)
+ORANGE=$(tput setaf 9)
+RED=$(tput setaf 1)
+MAGENTA=$(tput setaf 5)
+VIOLET=$(tput setaf 13)
+BLUE=$(tput setaf 4)
+CYAN=$(tput setaf 6)
+GREEN=$(tput setaf 2)
+BOLD=$(tput bold)
+WHITE=$(tput setaf 15)
+RESET=$(tput sgr0)
 
 # Highlight the user name when logged in as root.
 if [[ "${USER}" == "root" ]]; then
-	userStyle="${red}";
+	userStyle="${RED}";
 else
-	userStyle="${orange}";
+	userStyle="${ORANGE}";
 fi;
 
 # Highlight the hostname when connected via SSH.
 if [[ "${SSH_TTY}" ]]; then
-	hostStyle="${bold}${red}";
+	hostStyle="${BOLD}${RED}";
 else
-	hostStyle="${yellow}";
+	hostStyle="${YELLOW}";
 fi;
 
 # Set the terminal title and prompt.
-PS1="\[\033]0;\W\007\]"; # working directory base name
-PS1+="\[${bold}\]\n"; # newline
-PS1+="\[${userStyle}\]\u"; # username
-PS1+="\[${white}\]@";
-PS1+="\[${hostStyle}\]\h\n"; # host
-PS1+="\[${white}\] in ";
-PS1+="\[${green}\]\W"; # working directory abbreviated path
-PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\") "; # Git repository details
-PS1+="\$(ahead_behind)";
-PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
+PS1="\[${BOLD}\]"; # newline
+PS1+="\[${hostStyle}\]\h: "; # host
+PS1+="\[${userStyle}\]\u\n"; # username
+PS1+="\[${WHITE}\] in ";
+PS1+="\[${GREEN}\]\W"; # working directory abbreviated path
+PS1+="\$(prompt_git \"\[${WHITE}\] on \[${VIOLET}\]\" \"\[${BLUE}\]\") "; # Git repository details
+PS1+="\[${WHITE}\]\$ \[${RESET}\]"; # `$` (and reset color)
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
@@ -141,7 +129,7 @@ alias getmail="offlineimap && notmuch new"
 # System Maintainence
 alias progs="pacman -Qet" # List programs I've installed
 alias orphans="pacman -Qdt" # List orphan programs
-alias upgr="neofetch && sudo pacman -Syyu --noconfirm && echo Update complete. | figlet"
+alias upgr="neofetch && sudo pacman -Syyu --noconfirm && echo Update complete."
 alias sydtime="sudo timedatectl set-timezone Australia/Sydney && i3 restart" # Eastcoast time
 alias sdn="sudo shutdown now"
 alias newnet="sudo systemctl restart NetworkManager" # Refresh wifi
@@ -154,7 +142,9 @@ alias psref="gpg-connect-agent RELOADAGENT /bye" # Refresh gpg
 alias r="ranger"
 alias sr="sudo ranger"
 alias ka="killall"
-alias trem="transmission-remote"
+alias g="git"
+alias gitup="git push origin master"
+alias gitpass="git config --global credential.helper cache"
 alias bars="bash ~/.config/polybar/launch.sh" # Run Polybar relaunch script
 weath() { curl wttr.in/$1 ;} # Check the weather (give city or leave blank).
 
@@ -193,6 +183,6 @@ alias bigbak="mpc seek -120"
 alias bigfor="mpc seek +120"
 
 export TIMEWARRIORDB=~/Dropbox/.timewarrior
-export VISUAL="vim"
+export VISUAL="nvim"
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 source /home/alex/.bash_shortcuts

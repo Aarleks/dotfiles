@@ -50,7 +50,7 @@ font-2 = FontAwesome:pixelsize=10;1
 
 modules-left = i3
 modules-center = mpd
-modules-right = xkeyboard filesystem alsa wlan cpu date
+modules-right = xkeyboard filesystem alsa battery wlan cpu date
 
 tray-position = right
 tray-padding = 0
@@ -296,7 +296,7 @@ interval = 5
 
 [module/battery]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = ADP1
 full-at = 98
 

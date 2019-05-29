@@ -5,10 +5,10 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 export PATH=$PATH:$HOME/.scripts
-export EDITOR="vim"
+export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="firefox"
-export VISUAL="vim"
+export VISUAL="nvim"
 export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 
 if [[ "$(tty)" = "/dev/tty1" ]]; then
