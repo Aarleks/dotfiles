@@ -21,11 +21,7 @@ set $stoprec --no-startup-id killall ffmpeg
 
 exec feh --bg-fill ~/Downloads/wall.jpg
 
-<<<<<<< HEAD
 exec_always --no-startup-id i3-msg "workspace $ws1; exec st -e zsh -c 'neofetch && zsh'"
-=======
-exec_always --no-startup-id i3-msg "workspace $ws1; exec st -e bash -c 'neofetch && bash'"
->>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
 # #---Starting External Scripts---# #
 #Music player daemon:
@@ -48,12 +44,6 @@ exec --no-startup-id unclutter
 exec --no-startup-id nm-applet
 # Launch Dropbox
 exec --no-startup-id dropbox
-<<<<<<< HEAD
-
-=======
-# Launch Dunst
-exec --no-startup-id dunst
->>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
 #SYSTEMD
 set $shutdown sudo shutdown -h now
@@ -84,13 +74,8 @@ set $micmute --no-startup-id pamixer --allow-boost -t
 set $truemute --no-startup-id pamixer -m
 
 # #---Basic Bindings---# #
-<<<<<<< HEAD
 #bindsym $mod+Return 		exec $term
 #bindsym $mod+Shift+Return 	exec $term -e nvim ~/Dropbox/vimwiki/index.md
-=======
-bindsym $mod+Return 		exec $term
-bindsym $mod+Shift+Return 	exec $term -e vim ~/Dropbox/vimwiki/index.md
->>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
 bindsym $mod+Shift+space 	floating toggle
 bindsym $mod+space		focus mode_toggle
@@ -168,13 +153,8 @@ bindsym $mod+Shift+z		gaps outer current minus 5
 #bindsym $mod+x			exec ~/.config/i3/lock.sh
 #bindsym $mod+Shift+x		exec prompt "Are you sure you want to shutdown?" "$shutdown"
 
-<<<<<<< HEAD
 #bindsym $mod+c			exec --no-startup-id camtoggle
 #bindsym $mod+Shift+c		exec ~/.scripts/kblayout.sh
-=======
-bindsym $mod+c			exec --no-startup-id camtog2
-bindsym $mod+Shift+c		exec ~/.scripts/kblayout.sh
->>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
 bindsym $mod+v			exec $term -e ncmpcpp -s visualizer
 bindsym $mod+Shift+v		exec projectM-pulseaudio
