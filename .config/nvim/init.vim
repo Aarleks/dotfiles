@@ -1,13 +1,16 @@
 " Playing around with Neovim
 "
 
-let mapleader=" "
+let mapleader="\<Space>"
+let maplocalleader="\\"
 
+" Check for Plug and download if not present ---------------- {{{
 if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
         echo "Downloading junegunn/vim-plug to manage plugins..."
         silent !mkdir -p ~/.config/nvim/autoload/
         silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
 endif
+" }}}
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/goyo.vim'
@@ -99,6 +102,7 @@ map <Space><Tab> <Esc>/<++><Enter>"_c4l
 " AESTHETICS:
 " ==========:
 
+set linebreak
 "set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
