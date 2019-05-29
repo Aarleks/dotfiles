@@ -105,7 +105,6 @@ else
 fi;
 
 # Set the terminal title and prompt.
-<<<<<<< HEAD
 PS1="\[${BOLD}\]"; # newline
 PS1+="\[${hostStyle}\]\h: "; # host
 PS1+="\[${userStyle}\]\u\n"; # username
@@ -113,18 +112,6 @@ PS1+="\[${WHITE}\] in ";
 PS1+="\[${GREEN}\]\W"; # working directory abbreviated path
 PS1+="\$(prompt_git \"\[${WHITE}\] on \[${VIOLET}\]\" \"\[${BLUE}\]\") "; # Git repository details
 PS1+="\[${WHITE}\]\$ \[${RESET}\]"; # `$` (and reset color)
-=======
-PS1="\[\033]0;\W\007\]"; # working directory base name
-PS1+="\[${bold}\]\n"; # newline
-PS1+="\[${userStyle}\]\u"; # username
-PS1+="\[${white}\]@";
-PS1+="\[${hostStyle}\]\h\n"; # host
-PS1+="\[${white}\] in ";
-PS1+="\[${green}\]\W"; # working directory abbreviated path
-PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\") "; # Git repository details
-PS1+="\$(ahead_behind)";
-PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
->>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
@@ -155,23 +142,16 @@ alias psref="gpg-connect-agent RELOADAGENT /bye" # Refresh gpg
 alias r="ranger"
 alias sr="sudo ranger"
 alias ka="killall"
-<<<<<<< HEAD
 alias g="git"
 alias gitup="git push origin master"
 alias gitpass="git config --global credential.helper cache"
-=======
-alias trem="transmission-remote"
->>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 alias bars="bash ~/.config/polybar/launch.sh" # Run Polybar relaunch script
 weath() { curl wttr.in/$1 ;} # Check the weather (give city or leave blank).
 
 # Adding color
 alias ls='ls -hN --color=auto --group-directories-first'
 alias grep="grep --color=always" # Color grep - highlight desired sequence.
-<<<<<<< HEAD
-=======
 alias ccat="highlight --out-format=xterm256" #Color cat - print file with syntax highlighting.
->>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
 # Laptop management
 alias lsc="screen.sh l" # Use laptop screen only
@@ -203,10 +183,6 @@ alias bigbak="mpc seek -120"
 alias bigfor="mpc seek +120"
 
 export TIMEWARRIORDB=~/Dropbox/.timewarrior
-<<<<<<< HEAD
 export VISUAL="nvim"
-=======
-export VISUAL="vim"
->>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 source /home/alex/.bash_shortcuts
