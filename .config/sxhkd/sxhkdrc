@@ -1,0 +1,85 @@
+# Modular hotkeys for tiling window managers (e.g. i3, DWM)
+
+##############
+## MOD KEYS ##
+##############
+
+## Open $TERMINAL instance
+super + Return
+    $TERMINAL
+
+## Open the Vimwiki Index page in the default editor
+super + shift + Return
+    $TERMINAL -e $EDITOR ~/Dropbox/vimwiki/index.md
+
+
+# Some comments
+## Reboot
+super + shift + BackSpace
+    prompt "Are you sure you want to reboot?" "sudo reboot"
+
+#super + shift + a
+#	$TERMINAL -e alsamixer; refbar
+
+## Toggle webcam on/off
+super + shift + c
+	mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
+
+### ALPHA MODS ###
+
+# q
+
+## Open the default browser
+super + w
+    $BROWSER
+
+## Refresh the wifi
+super + shift + w
+    $TERMINAL -e sudo wifi-menu
+
+## Open neomutt in a terminal instance
+super + e
+    $TERMINAL -e neomutt
+
+## Open the file manager lf in a terminal instance
+super + r
+    $TERMINAL -e lf
+
+## Open htop in a terminal instance
+super + i
+    $TERMINAL -e htop
+
+## Run the application launcher
+super + d
+    rofi -show run
+
+## Lock the screen
+super + x
+    ~/.config/i3/lock.sh
+
+## Shut the system down
+super + shift + x
+    prompt "Are you sure you want to shutdown?" "sudo -A shutdown -h now"
+
+## Toggle the webcam on-screen functionn on/off
+super + c
+    camtoggle
+
+## Launch the music visualiser in a terminal instance.
+super + v
+        $TERMINAL -e ncmpcpp -s visualizer
+
+## Open Newsboat in a terminal instance
+super + n
+	$TERMINAL -e newsboat
+
+## Open Ncmpcpp in a terminal instance.
+super + m
+	$TERMINAL -e ncmpcpp
+
+#bindsym $mod+Shift+m		exec $mute
+
+## Show a Dunst notification with the contents of the two clipboards
+super + Insert
+    showclip
+

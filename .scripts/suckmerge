@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Runs suckdiff to create diffs for each branch, then resets the master branch
 # and merges each branch. Ends my running make
@@ -8,6 +8,7 @@
 # Must be in the project directory to run; i.e. in  /suckless/st/
 suckdiffs &&
 git reset --hard origin/master &&
+git branch normcore
 
 for branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d'/' -f3); do
     if [ "$branch" != "master" ]; then

@@ -4,7 +4,7 @@
 
 # But don't ignore dotfiles
 
-!/.*
+!/.**
 
 #++ VARIOUS FILES
 /.history
@@ -24,6 +24,16 @@
 /.lesshst
 /.sc-iminfo
 /.config/mpd/
+/.config/chromium/
+/.config/enchant/
+/.config/nvim/.netrwhist
+/.config/qmk_firmware
+/.config/suckless/dmenu/
+/.config/suckless/surf/
+/.stellarium/
+/.surf/
+/.vimgolf/
+/.weechat/
 /.git-credentials
 /.config/QtProject.conf
 /.notmuch-config
