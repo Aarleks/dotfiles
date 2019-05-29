@@ -1,6 +1,24 @@
 stty -ixon
 shopt -s autocd #Allows you to cd into directory merely by typing the directory name.
 
+function ahead_behind {
+	local count='';
+	curr_branch=$(git rev-parse --abbrev-ref HEAD);
+	curr_remote=$(git config branch.$curr_branch.remote);
+	curr_merge_branch=$(git config branch.$curr_branch.merge | cut -d / -f 3);
+	master_branch=$(git rev-list --left-right --count $curr_branch...$curr_remote/$curr_merge_branch | tr -s '\t' '|');
+	if [ $(git rev-list upstream/master 2> /dev/null | wc -l; echo "$1") -gt 1 ]; then
+		upstream="$(git rev-list --left-right --count master...upstream/master | awk '{print $2}')";
+		if [ ${upstream} -gt 0 ]; then
+			count+="$upstream|";
+		fi;
+	fi;
+	if [ ${master_branch:0:1} -gt 0 ] || [ ${master_branch:2:3} -gt 0 ]; then
+		count+="$master_branch";
+	fi;
+	echo $count;
+}
+
 prompt_git() {
 	local s='';
 	local branchName='';
@@ -87,6 +105,7 @@ else
 fi;
 
 # Set the terminal title and prompt.
+<<<<<<< HEAD
 PS1="\[${BOLD}\]"; # newline
 PS1+="\[${hostStyle}\]\h: "; # host
 PS1+="\[${userStyle}\]\u\n"; # username
@@ -94,6 +113,18 @@ PS1+="\[${WHITE}\] in ";
 PS1+="\[${GREEN}\]\W"; # working directory abbreviated path
 PS1+="\$(prompt_git \"\[${WHITE}\] on \[${VIOLET}\]\" \"\[${BLUE}\]\") "; # Git repository details
 PS1+="\[${WHITE}\]\$ \[${RESET}\]"; # `$` (and reset color)
+=======
+PS1="\[\033]0;\W\007\]"; # working directory base name
+PS1+="\[${bold}\]\n"; # newline
+PS1+="\[${userStyle}\]\u"; # username
+PS1+="\[${white}\]@";
+PS1+="\[${hostStyle}\]\h\n"; # host
+PS1+="\[${white}\] in ";
+PS1+="\[${green}\]\W"; # working directory abbreviated path
+PS1+="\$(prompt_git \"\[${white}\] on \[${violet}\]\" \"\[${blue}\]\") "; # Git repository details
+PS1+="\$(ahead_behind)";
+PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 export PS1;
 
 PS2="\[${yellow}\]→ \[${reset}\]";
@@ -105,19 +136,14 @@ alias clock="ncmpcpp -s clock"
 alias visualizer="ncmpcpp -s visualizer"
 alias news="newsboat"
 alias email="neomutt"
-alias files="ranger"
 alias audio="ncpamixer"
 alias getmail="offlineimap && notmuch new"
-alias gm="offlineimap && notmuch new"
 
 # System Maintainence
-alias mw="~/.config/mutt/mutt-wizard.sh"
-alias muttwizard="~/.config/mutt/mutt-wizard.sh"
 alias progs="pacman -Qet" # List programs I've installed
 alias orphans="pacman -Qdt" # List orphan programs
 alias upgr="neofetch && sudo pacman -Syyu --noconfirm && echo Update complete."
 alias sydtime="sudo timedatectl set-timezone Australia/Sydney && i3 restart" # Eastcoast time
-alias tuctime="sudo timedatectl set-timezone America/Phoenix && i3 restart" # Arizona time
 alias sdn="sudo shutdown now"
 alias newnet="sudo systemctl restart NetworkManager" # Refresh wifi
 alias nf="clear && neofetch" # Le Redditfetch
@@ -129,15 +155,23 @@ alias psref="gpg-connect-agent RELOADAGENT /bye" # Refresh gpg
 alias r="ranger"
 alias sr="sudo ranger"
 alias ka="killall"
+<<<<<<< HEAD
 alias g="git"
 alias gitup="git push origin master"
 alias gitpass="git config --global credential.helper cache"
+=======
+alias trem="transmission-remote"
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 alias bars="bash ~/.config/polybar/launch.sh" # Run Polybar relaunch script
 weath() { curl wttr.in/$1 ;} # Check the weather (give city or leave blank).
 
 # Adding color
 alias ls='ls -hN --color=auto --group-directories-first'
 alias grep="grep --color=always" # Color grep - highlight desired sequence.
+<<<<<<< HEAD
+=======
+alias ccat="highlight --out-format=xterm256" #Color cat - print file with syntax highlighting.
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
 # Laptop management
 alias lsc="screen.sh l" # Use laptop screen only
@@ -169,6 +203,10 @@ alias bigbak="mpc seek -120"
 alias bigfor="mpc seek +120"
 
 export TIMEWARRIORDB=~/Dropbox/.timewarrior
+<<<<<<< HEAD
 export VISUAL="nvim"
+=======
+export VISUAL="vim"
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 source /home/alex/.bash_shortcuts

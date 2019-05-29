@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 #vim: ft=cfg
 
+=======
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 [global]
     monitor = 0
     follow = keyboard
@@ -12,7 +15,11 @@
     padding = 0
     horizontal_padding = 8
     frame_width = 3
+<<<<<<< HEAD
     frame_color = "#93a1a1"
+=======
+    frame_color = "#282828"
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
     # Define a color for the separator.
     # possible values are:
@@ -94,6 +101,7 @@
     frame_color = "#fabd2f"
     timeout = 0
 
+<<<<<<< HEAD
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 # Messages can be matched by "appname", "summary", "body", "icon", "category",
@@ -125,3 +133,6 @@
 #    # This notification will not be displayed
 #    summary = "foobar"
 #    format =
+=======
+# vim: ft=cfg
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555

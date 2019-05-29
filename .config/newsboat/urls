@@ -3,4 +3,8 @@ http://rss.sciencedirect.com/publication/science/01607383 "~Annals of Tourism Re
 https://rtalbert.org/feed "~Robert Talbert"
 http://vimcasts.org/feeds/ogg "~VimCasts"
 https://theconversation.com/au/articles.atom "~The Conversation"
+<<<<<<< HEAD
 https://git.suckless.org/st/log.html "~Suckless Terminal"
+=======
+https://feeds.megaphone.fm/replyall "~Reply All"
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555

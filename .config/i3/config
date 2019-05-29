@@ -21,7 +21,11 @@ set $stoprec --no-startup-id killall ffmpeg
 
 exec feh --bg-fill ~/Downloads/wall.jpg
 
+<<<<<<< HEAD
 exec_always --no-startup-id i3-msg "workspace $ws1; exec st -e zsh -c 'neofetch && zsh'"
+=======
+exec_always --no-startup-id i3-msg "workspace $ws1; exec st -e bash -c 'neofetch && bash'"
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
 # #---Starting External Scripts---# #
 #Music player daemon:
@@ -44,7 +48,12 @@ exec --no-startup-id unclutter
 exec --no-startup-id nm-applet
 # Launch Dropbox
 exec --no-startup-id dropbox
+<<<<<<< HEAD
 
+=======
+# Launch Dunst
+exec --no-startup-id dunst
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
 #SYSTEMD
 set $shutdown sudo shutdown -h now
@@ -52,17 +61,6 @@ set $reboot sudo reboot
 set $netrefresh --no-startup-id sudo systemctl restart NetworkManager
 set $hibernate sudo systemctl suspend
 
-# #---Audio and Music Definitions---# #
-
-##For spotify
-#set $music spotify
-#set $pause dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-#set $trupause dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause
-#set $play dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Play
-#set $next dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
-#set $prev dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
-#set $lilfor dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Seek
-#set $bigfor dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Seek(
 
 # For mpc:
 set $music --no-startup-id urxvt -e ncmpcpp
@@ -76,37 +74,6 @@ set $lilbak --no-startup-id mpc seek -10
 set $bigbak --no-startup-id mpc seek -120
 set $beg --no-startup-id mpc seek 0%
 
-# For moc:
-#set $music --no-startup-id st -e mocp
-#set $pause --no-startup-id mocp -G
-#set $truepause --no-startup-id mocp -P
-#set $next --no-startup-id mocp -f
-#set $prev --no-startup-id mocp -r
-#set $lilfor --no-startup-id mocp -k 10
-#set $bigfor --no-startup-id mocp -k 120
-#set $lilbak --no-startup-id mocp -k -10
-#set $bigbak --no-startup-id mocp -k -120
-#set $beg --no-startup-id mocp -j 0%
-
-# For cmus:
-#set $music --no-startup-id st -e cmus
-#set $pause --no-startup-id cmus-remote -u
-#set $next --no-startup-id cmus-remote -n
-#set $prev --no-startup-id cmus-remote -r
-#set $lilfor --no-startup-id cmus-remote -k +10
-#set $bigfor --no-startup-id cmus-remote -k +120
-#set $lilbak --no-startup-id cmus-remote -k -10
-#set $bigbak --no-startup-id cmus-remote -k -120
-#set $beg --no-startup-id cmus-remote -k 00:00:00
-
-#FOR ALSA/AMIXER
-#set $inc --no-startup-id amixer sset Master 2%+
-#set $biginc --no-startup-id amixer sset Master 5%+
-#set $dec --no-startup-id amixer sset Master 2%-
-#set $bigdec --no-startup-id amixer sset Master 5%-
-#set $mute --no-startup-id amixer sset Master toggle
-#set $truemute --no-startup-id amixer sset Master mute
-
 #For PULSEAUDIO/PAMIXER
 set $inc --no-startup-id pamixer --allow-boost -i 5
 set $biginc --no-startup-id pamixer --allow-boost -i 15
@@ -117,8 +84,13 @@ set $micmute --no-startup-id pamixer --allow-boost -t
 set $truemute --no-startup-id pamixer -m
 
 # #---Basic Bindings---# #
+<<<<<<< HEAD
 #bindsym $mod+Return 		exec $term
 #bindsym $mod+Shift+Return 	exec $term -e nvim ~/Dropbox/vimwiki/index.md
+=======
+bindsym $mod+Return 		exec $term
+bindsym $mod+Shift+Return 	exec $term -e vim ~/Dropbox/vimwiki/index.md
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
 bindsym $mod+Shift+space 	floating toggle
 bindsym $mod+space		focus mode_toggle
@@ -196,8 +168,13 @@ bindsym $mod+Shift+z		gaps outer current minus 5
 #bindsym $mod+x			exec ~/.config/i3/lock.sh
 #bindsym $mod+Shift+x		exec prompt "Are you sure you want to shutdown?" "$shutdown"
 
+<<<<<<< HEAD
 #bindsym $mod+c			exec --no-startup-id camtoggle
 #bindsym $mod+Shift+c		exec ~/.scripts/kblayout.sh
+=======
+bindsym $mod+c			exec --no-startup-id camtog2
+bindsym $mod+Shift+c		exec ~/.scripts/kblayout.sh
+>>>>>>> d8c9a2c61430f1e8b25a57469a98aecbabf0e555
 
 bindsym $mod+v			exec $term -e ncmpcpp -s visualizer
 bindsym $mod+Shift+v		exec projectM-pulseaudio
@@ -351,7 +328,7 @@ bindsym $mod+bracketright 	exec $lilfor
 bindsym $mod+Shift+bracketright exec $bigfor
 
 # For screenshots and recording
-bindsym Print 			exec --no-startup-id scrot
+bindsym Print 			exec --no-startup-id scrot '%Y-%m-%d_$wx$h.jpg'
 bindsym Shift+Print 		exec --no-startup-id scrot -u
 bindsym $mod+Print		exec --no-startup-id dmenurecord
 bindsym $mod+Scroll_Lock	exec --no-startup-id "killall screenkey || screenkey --opacity 0.5"
