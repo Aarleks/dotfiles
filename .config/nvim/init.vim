@@ -112,7 +112,7 @@ let g:lightline = {
 	    \ 'active': {
 	    \   'left': [ [ 'mode', 'paste' ],
 	    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
-	    \   'right': [['lines'], ['filetype'], ['fileencoding', 'filetype']]
+	    \   'right': [['lines'], ['filetype'], ['fileencoding', 'fileformat']]
 	    \ },
 	    \ 'component_function': {
 	    \    'gitbranch': 'fugitive#head'
