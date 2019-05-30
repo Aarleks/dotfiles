@@ -51,6 +51,18 @@
 /.config/mutt/
 /.wget-hsts
 /.mbsyncrc
+/.abook
+/.calcurse/
+/.config/gtk-2.0/
+/.config/menus/
+/.config/mpv/
+/.config/mutt-wizard/
+/.config/ranger/
+/.config/texput.log
+/.mplayer/
+/.vuescan/
+/.vuescanrc
+/.zotero/
 
 # FOLDERS
 
