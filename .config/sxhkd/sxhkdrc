@@ -12,18 +12,10 @@ super + Return
 super + shift + Return
     $TERMINAL -e $EDITOR ~/Dropbox/vimwiki/index.md
 
-
-# Some comments
 ## Reboot
 super + shift + BackSpace
     prompt "Are you sure you want to reboot?" "sudo reboot"
 
-#super + shift + a
-#	$TERMINAL -e alsamixer; refbar
-
-## Toggle webcam on/off
-super + shift + c
-	mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
 
 ### ALPHA MODS ###
 
@@ -40,6 +32,9 @@ super + shift + w
 ## Open neomutt in a terminal instance
 super + e
     $TERMINAL -e neomutt
+
+super + shift + e
+    $TERMINAL -e neomutt -R
 
 ## Open the file manager lf in a terminal instance
 super + r
@@ -65,19 +60,24 @@ super + shift + x
 super + c
     camtoggle
 
+## Toggle webcam on/off
+super + shift + c
+    mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
+
 ## Launch the music visualiser in a terminal instance.
 super + v
-        $TERMINAL -e ncmpcpp -s visualizer
+    $TERMINAL -e ncmpcpp -s visualizer
 
 ## Open Newsboat in a terminal instance
 super + n
-	$TERMINAL -e newsboat
+    $TERMINAL -e newsboat
 
 ## Open Ncmpcpp in a terminal instance.
 super + m
-	$TERMINAL -e ncmpcpp
+    $TERMINAL -e ncmpcpp
 
-#bindsym $mod+Shift+m		exec $mute
+#bindsym $mod+Shift+m
+#exec $mute
 
 ## Show a Dunst notification with the contents of the two clipboards
 super + Insert
