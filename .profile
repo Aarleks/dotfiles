@@ -8,7 +8,7 @@ export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="firefox"
 export VISUAL="nvim"
-export FILES="vifm"
+export FILES="lf"
 
 # less/man colors
 export LESS=-R
