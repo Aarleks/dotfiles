@@ -40,6 +40,7 @@
 /.config/nvim/plugged/
 /.config/mutt/
 /.wget-hsts
+/.mbsyncrc
 
 # FOLDERS
 
