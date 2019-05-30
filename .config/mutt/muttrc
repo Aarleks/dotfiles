@@ -8,6 +8,7 @@ macro index,pager i1 '<sync-mailbox><enter-command>source /home/alex/.config/mut
 set index_format="%3C  %zs  %?X?A& ?  %-21.21F   %-60.60s    (%e/%E) %>  %D  "
 set pager_index_lines = 10 # number of index lines to show while in pager
 source $HOME/.config/mutt/sort-threads.rc
+set mailcap_path=$HOME/.config/mutt/mailcap
 set date_format="%H:%M   %a %d %b   (%Y)"
 set sort = threads
 set sort_aux = reverse-last-date-received
