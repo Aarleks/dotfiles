@@ -111,10 +111,14 @@ let g:lightline = {
 	    \ 'colorscheme': 'solarized',
 	    \ 'active': {
 	    \   'left': [ [ 'mode', 'paste' ],
-	    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+	    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+	    \   'right': [['lines'], ['filetype'], ['fileencoding', 'filetype']]
 	    \ },
 	    \ 'component_function': {
 	    \    'gitbranch': 'fugitive#head'
+	    \ },
+	    \ 'component': {
+	    \    'lines': 'ℓ %l/%L'
 	    \ },
 	    \ }
 
