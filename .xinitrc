@@ -2,7 +2,7 @@
 
 xrdb ~/.Xresources &
 kblayout.sh &
-sxhkd -m 1 &
+sxhkd &
 
 xset r rate 300 50 &
 
