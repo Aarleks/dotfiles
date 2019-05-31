@@ -49,8 +49,6 @@ set noshowmode
 
 
 " NAVIGATION:
-" Quick buffer navigation
-nnoremap gb :ls<CR>:b<Space>
 
 " Shortcuts for navigating splits
 map <C-h> <C-w>h
@@ -61,13 +59,6 @@ map <C-l> <C-w>l
 " matchit.vim is built-in
 " Hit % on if or else to jump to its partner
 runtime macros/matchit.vim
-
-" For removing search highlighting
-nnoremap <Leader>hl :nohlsearch<CR>
-
-" Show invisible formatting (thanks to Vimcasts episode
-" http://vimcasts.org/episodes/show-invisibles/
-nmap <leader>l :set list!<CR>
 
 
 " EDITING:
@@ -94,11 +85,6 @@ vnoremap J xP`[V`]
 vnoremap L >gv
 vnoremap J <gv
 
-" Editing placeholder guides a la Luke Smith
-inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
-vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
-map <Space><Tab> <Esc>/<++><Enter>"_c4l
-
 
 " AESTHETICS:
 " ==========:
@@ -124,7 +110,6 @@ let g:lightline = {
 
 " Goyo stuffs
 map <F10> :Goyo<CR>
-map <leader>f :Goyo<CR>
 inoremap <F10> <esc>:Goyo<CR>a
 
 " COMFY TIMES:
@@ -160,7 +145,4 @@ augroup my_cm_setup
       \ 'on_complete': ['ncm2#on_complete#omni', 'pandoc#completion#Complete'],
       \ })
 augroup END
-
-" Use urlview to choose a valid url from the file and open it
-noremap <leader>u :w<Home>silent <End> !urlview<CR>
 
