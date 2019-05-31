@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Set the wallpaper - can take an image as an argument or not.
+
+[ ! -z "$1" ] && cp "$1" ~/.config/wall.png && notify-send -i "$HOME/.config/wall.png" "Wallpaper changed."
+xwallpaper --zoom ~/.config/wall.png
