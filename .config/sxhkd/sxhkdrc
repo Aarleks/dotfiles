@@ -12,6 +12,24 @@ super + Return
 super + shift + Return
     $TERMINAL -e $EDITOR ~/Dropbox/vimwiki/index.md
 
+super + shift + F1
+    firefox $HOME/Dropbox/vimwiki/html/index.html
+
+super + F3
+    displayselect
+
+# Toggle between Colemak and Qwerty keyboards
+super + shift + F12
+    kblayout.sh
+
+# Increase volume
+super + equal
+    pulsemixer --change-volume +5
+
+# Decrease volume
+super + minus
+    pulsemixer --change-volume -5
+
 ## Reboot
 super + shift + BackSpace
     prompt "Are you sure you want to reboot?" "sudo reboot"
@@ -76,10 +94,14 @@ super + n
 super + m
     $TERMINAL -e ncmpcpp
 
-#bindsym $mod+Shift+m
-#exec $mute
+super + shift + m
+    pulsemixer --toggle-mute
 
 ## Show a Dunst notification with the contents of the two clipboards
 super + Insert
     showclip
 
+XF86AudioLowerVolume
+    pamixer --allow-boost -d 5
+XF86AudioRaiseVolume
+    pamixer --allow-boost -i 5
