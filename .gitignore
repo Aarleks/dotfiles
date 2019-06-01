@@ -60,6 +60,7 @@
 /.config/ranger/
 /.config/texput.log
 /.config/wall.png
+/.config/suckless/dwm/
 /.mplayer/
 /.vuescan/
 /.vuescanrc
