@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ "$(cat /sys/class/net/w*/operstate)" = 'up' ]; then
+    name="$(nmcli connection show | grep wlp | awk '{ print $1 }')"
+    icon=" $name"
+elif [ "$(cat /sys/class/net/e*/operstate)" = 'up' ]; then
+    icon=""
+else
+    icon="No interwebz"
+fi
+
+echo "$icon"

@@ -1,0 +1,36 @@
+#!/bin/sh
+
+# Show battery status
+
+case $BLOCK_BUTTON in
+    3) pgrep -x dunst >/dev/null && notify-send "Battery" "
+     full
+     75%
+     50%
+     25%
+     LOW!" ;;
+esac
+
+capacity=$(cat /sys/class/power_supply/"$1"/capacity) || exit
+status=$(cat /sys/class/power_supply/"$1"/status)
+
+if [ "$capacity" -ge 90 ]; then
+    level=" "
+elif [ "$capacity" -ge 75 ]; then
+    level=" "
+elif [ "$capacity" -ge 50 ]; then
+    level=" "
+elif [ "$capacity" -ge 25 ]; then
+    level=""
+else
+    level=""
+fi
+
+if [ "$status" = "Discharging" ]; then
+    colour="#FFAA00"
+else
+    colour="#FFFFFF"
+fi
+
+
+printf "<span color='%s'>%s%s%s</span>" "$colour" "$(echo "$level")"
