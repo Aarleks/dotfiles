@@ -1,10 +1,5 @@
 #!/bin/sh
 
-xrdb ~/.Xresources &
-kblayout.sh &
-sxhkd &
-
-xset r rate 300 50 &
+[ -f "$HOME/.xprofile" ] && . ~/.xprofile
 
 exec i3
-

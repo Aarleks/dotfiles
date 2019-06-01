@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 
-export PATH="$PATH":$HOME/.scripts
+export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"
 export PATH="$PATH":$HOME/.local/bin
 export PATH="/home/alex/.gem/ruby/2.6.0/bin:$PATH"
 export EDITOR="nvim"
