@@ -28,6 +28,7 @@ nnoremap <leader>f :Goyo<CR>
 " Show invisible formatting (thanks to Vimcasts episode
 " http://vimcasts.org/episodes/show-invisibles/
 nnoremap <leader>l :set list!<CR>
+set listchars=tab:»\ ,eol:¬,nbsp:
 
 "" U:
 " Use urlview to choose a valid url from the file and open it
