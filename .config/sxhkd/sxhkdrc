@@ -66,6 +66,10 @@ super + i
 super + d
     rofi -show run
 
+## Run the Colemak script
+super + shift + k
+    kblayout.sh
+
 ## Lock the screen
 super + x
     ~/.config/i3/lock.sh
