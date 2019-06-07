@@ -5,11 +5,11 @@ let mapleader =" "
 
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vimwiki/vimwiki'
-Plug 'mboughaba/i3config.vim'
+"Plug 'mboughaba/i3config.vim'
 "Plug 'vim-pandoc/vim-pandoc'
 "Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
