@@ -24,7 +24,6 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
-"Plug 'kovetskiy/sxhkd-vim'
 Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 
@@ -114,6 +113,9 @@ inoremap <F10> <esc>:Goyo<CR>a
 
 " COMFY TIMES:
 " ===========:
+
+" When shortcut files are updated, renew bash and vifm configs with new material:
+autocmd BufWritePost ~/.config/alias-conf,~/.config/alias-dirs !shortcuts.sh
 
 let g:vimwiki_global_ext=0
 let g:vimwiki_list=[{

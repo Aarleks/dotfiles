@@ -16,3 +16,6 @@ cfv="$EDITOR ~/.config/nvim/init.vim" \
 cfm="$EDITOR ~/.config/mutt/muttrc" \
 cfi="$EDITOR ~/.config/i3/config" \
 cfnew="$EDITOR ~/.config/newsboat/urls" \
+cfx="$EDITOR ~/.xinitrc" \
+cfxp="$EDITOR ~/.xprofile" \
+cff="$EDITOR ~/.config/fontconfig/fonts.conf" \
