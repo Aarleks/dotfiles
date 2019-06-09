@@ -1,0 +1,15 @@
+#!/bin/sh
+
+barstats() { \
+    case "$(cat /sys/class/power_supply/BAT0/capacity)" in
+	100|9[0-9])    echo "" ;;
+	*)             echo "" ;;
+    esac
+
+    date '+%d %b, %H:%M'
+}
+
+while :; do
+    xsetroot -name "$(barstats | tr '\n' ' ')" &
+    sleep 1m
+done
