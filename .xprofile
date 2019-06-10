@@ -2,7 +2,7 @@
 
 setwall & # Set the background
 xcompmgr & # Transparency
-setxkbmap -layout us -option caps:super && killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape' &
+setxkbmap -layout us -variant colemak -option caps:super && killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape' &
 xset r rate 300 50 & # Faster key repeats when holding a key down
 dunst & # Notifications
 unclutter & # Makes the mouse disappear after a bit
