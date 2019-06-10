@@ -11,6 +11,7 @@ set statusline+=\ %f
 set statusline+=\ %#LineNr#
 set statusline+=                                  " Powerline arrow.
 set statusline+=%{statusline#gitbranch()}
+set statusline+=%{FugitiveStatusline()}
 set statusline+=\ %#Visual#
 "set statusline+=%M\ %R
 set statusline+=\ %{statusline#filetype()}
