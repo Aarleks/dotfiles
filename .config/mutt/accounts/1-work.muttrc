@@ -18,7 +18,7 @@ macro index o "<shell-escape>mailsync -V work<enter>" "run mbsync to sync work"
 unmailboxes *
 
 set spoolfile = "+INBOX"
-set record = "+Sent"
+set record = "+Sent Items"
 set postponed = "+Drafts"
 set trash = "+Trash"
 mailboxes =work ===================== "=INBOX" "=TODO" "=Teaching" "=Service" "=Research" "=Personal" "=Professional" "=Sent\ Items"
