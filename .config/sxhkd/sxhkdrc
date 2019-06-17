@@ -92,7 +92,7 @@ super + v
 
 ## Open Newsboat in a terminal instance
 super + n
-    $TERMINAL -e newsboat
+    $TERMINAL -n newsboat -e newsboat
 
 ## Open Ncmpcpp in a terminal instance.
 super + m
