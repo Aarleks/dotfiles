@@ -31,3 +31,4 @@ macro index,pager Mt "<save-message>=TODO<enter>" "move mail to drafts" # move m
 macro index,pager MT "<save-message>=Teaching<enter>" "move mail to drafts" # move message to Teaching box
 macro index,pager MS "<save-message>=Service<enter>" "move mail to drafts" # move message to Service box
 macro index,pager MR "<save-message>=Research<enter>" "move mail to drafts" # move message to Research box
+macro index,pager MP "<save-message>=Professional<enter>" "move mail to drafts" # move message to Research box
