@@ -6,6 +6,8 @@ barstats() { \
 	*)             echo "" ;;
     esac
 
+    pulsemixer --get-volume | awk '{print $1}'
+
     date '+%d %b, %H:%M'
 }
 
