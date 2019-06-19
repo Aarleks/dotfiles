@@ -6,10 +6,12 @@ barstats() { \
 	*)             echo "" ;;
     esac
 
+    pulsemixer --get-volume | awk '{print $1}'
+
     date '+%d %b, %H:%M'
 }
 
 while :; do
-    xsetroot -name "$(barstats | tr '\n' ' ')" &
+    xsetroot -name "$(barstats | tr '\n' ' | ')" &
     sleep 1m
 done
