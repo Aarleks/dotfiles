@@ -5,7 +5,18 @@ macro index,pager i1 '<sync-mailbox><enter-command>source /home/alex/.config/mut
 
 ###########
 ## OVERRIDE SETTINGS FOR NEW MUTT-WIZARD CONFIG
-set index_format="%3C  %zs  %?X?A& ?  %-21.21F   %-60.60s    (%e/%E) %>  %D  "
+# Many of there settings are drawn from here: https://github.com/sheoak/neomutt-powerline-nerdfonts
+
+#set index_format="%3C  %zs  %?X?A& ?  %-21.21F   %-60.60s    (%e/%E) %>  %D  "
+set index_format="%3C %T %{!%d %b · %H:%M} %1M %-28.28L %?X?&? %s"
+set pager_format=" %n  %T %s%*  %{!%d %b · %H:%M} %?X?  %X ? %P  "
+#set status_format=" %f%?r? %r? %m %?n? %n ? || %p"
+set status_format = " %f%?r? %r?   %m %?n?  %n ?  %?d?  %d ?%?t?  %t ?%?F?  %F? %> %?p?  %p ?"
+set attach_format = "%u%D  %T%-75.75d %?T?%& ? %5s · %m/%M"
+# no addressed to me, to me, group, cc, sent by me, mailing list
+set to_chars=""
+# unchanged mailbox, changed, read only, attach mode
+set status_chars = " "
 set pager_index_lines = 10 # number of index lines to show while in pager
 source $HOME/.config/mutt/sort-threads.rc
 set mailcap_path=$HOME/.config/mutt/mailcap
@@ -22,4 +33,20 @@ set uncollapse_jump    = yes  # jump to unread message when uncollapse
 set collapse_unread    = no   # don't collapse threads with unread mails
 set strict_threads
 
+# powerline status bar hack
+color index white black "~D" # deleted messages
+color status white black
+color status green black ''
+color status yellow black ''
+color status red black ''
+color status brightblack blue '(.*)' 1
+color status blue black '.*()' 1
+color status black blue '\s* [0-9]+\s*'
+color status blue black '().*$' 1
+color status yellow black '()\s*\s*[0-9]+\s*' 1
+color status black yellow '\s*\s*[0-9]+\s*'
+color status blue yellow '() ([0-9]+%|all|end) \s*' 1
+color status black blue ' ([0-9]+%|all|end) \s*'
+color status yellow black '()\s*' 1
+color status default black ''
 #set index_format = "%4C %Z %[%b %d %R] %-15.15L (%?l?%4l&%4c?) %s"
