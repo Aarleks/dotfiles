@@ -8,7 +8,7 @@ macro index,pager i1 '<sync-mailbox><enter-command>source /home/alex/.config/mut
 # Many of there settings are drawn from here: https://github.com/sheoak/neomutt-powerline-nerdfonts
 
 #set index_format="%3C  %zs  %?X?A& ?  %-21.21F   %-60.60s    (%e/%E) %>  %D  "
-set index_format="%3C %T %{!%d %b · %H:%M} %1M %-28.28L %?X?&? %s"
+set index_format="%3C %T %D %1M %-28.28L %?X?&? %s"
 set pager_format=" %n  %T %s%*  %{!%d %b · %H:%M} %?X?  %X ? %P  "
 #set status_format=" %f%?r? %r? %m %?n? %n ? || %p"
 set status_format = " %f%?r? %r?   %m %?n?  %n ?  %?d?  %d ?%?t?  %t ?%?F?  %F? %> %?p?  %p ?"
@@ -20,7 +20,7 @@ set status_chars = " "
 set pager_index_lines = 10 # number of index lines to show while in pager
 source $HOME/.config/mutt/sort-threads.rc
 set mailcap_path=$HOME/.config/mutt/mailcap
-set date_format="%H:%M   %a %d %b   (%Y)"
+set date_format="%d %b · %H:%M"
 set sort = threads
 set sort_aux = reverse-last-date-received
 set editor = "$EDITOR +1/^$ -c nohlsearch"
