@@ -18,10 +18,10 @@ inoremap ;1 #<Space><Enter><Enter><++><Esc>2kA
 inoremap ;2 ##<Space><Enter><Enter><++><Esc>2kA
 inoremap ;3 ###<Space><Enter><Enter><++><Esc>2kA
 inoremap ;l --------<Enter>
-map <F5> :Pandoc pdf<CR>
 inoremap ;c ```<CR><++><CR>```<CR><CR><esc>4kA
 inoremap ;r ```{r}<CR>```<CR><CR><esc>2kO
 inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
 
 " TEMPLATES:
 nnoremap ;art :-1read $HOME/.config/nvim/templates/article.md<CR>jA<Space>
+

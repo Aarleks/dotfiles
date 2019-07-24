@@ -21,6 +21,7 @@ nnoremap <Leader>w :write<CR>
 nnoremap <leader>f :Goyo<CR>
 
 "" P:
+nnoremap <leader>p :Pandoc pdf<CR>
 "" G:
 "" J:
 
