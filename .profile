@@ -9,6 +9,7 @@ export TERMINAL="st"
 export BROWSER="firefox"
 export VISUAL="nvim"
 export FILES="lf"
+export READER="zathura"
 
 # less/man colors
 export LESS=-R
