@@ -1,17 +1,39 @@
 #!/bin/sh
 
+delimiter=" | "
+
 barstats() { \
+    echo "$delimiter"
+
     case "$(cat /sys/class/power_supply/BAT0/capacity)" in
 	100|9[0-9])    echo "" ;;
+	8[0-9]|7[0-9]) echo "" ;;
 	*)             echo "" ;;
     esac
 
-    pulsemixer --get-volume | awk '{print $1}'
+    echo "$delimiter"
+
+    if [ "$(cat /sys/class/net/w*/operstate)" = 'up' ]; then
+	name="$(nmcli connection show | grep wlp | awk '{ print $1 }')"
+	icon=" $name"
+    elif [ "$(cat /sys/class/net/e*/operstate)" = 'up' ]; then
+	icon=""
+    else
+	icon="No interwebz"
+    fi
+
+    echo "$icon"
+
+    echo "$delimiter"
+
+    pulsemixer --get-volume | awk '{print "" $1}'
+
+    echo "$delimiter"
 
     date '+%d %b, %H:%M'
 }
 
 while :; do
-    xsetroot -name "$(barstats | tr '\n' ' | ')" &
-    sleep 1m
+    xsetroot -name "$(barstats | tr '\n' ' ')" &
+    sleep 30s
 done
