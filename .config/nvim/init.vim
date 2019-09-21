@@ -25,6 +25,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
+" A Vim Plugin for Lively Previewing LaTeX PDF Output
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
 
 
@@ -117,6 +119,11 @@ inoremap <F10> <esc>:Goyo<CR>a
 " When shortcut files are updated, renew bash and vifm configs with new material:
 autocmd BufWritePost ~/.config/alias-conf,~/.config/alias-dirs !shortcuts.sh
 
+" Vim-LaTeX-Live-Preview settings
+let g:livepreview_previewer = 'zathura'
+let g:livepreview_engine = 'xelatex'
+
+" Vimwiki Settings
 let g:vimwiki_global_ext=0
 let g:vimwiki_list=[{
 	    \ 'path': '$HOME/Dropbox/vimwiki/',

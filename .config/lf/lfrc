@@ -40,6 +40,7 @@ map O $mimeopen --ask $f
 cmd open ${{
     case $(file --mime-type $f -b) in
         text/*) $EDITOR $fx;;
+	application/pdf) setsid zathura $fx >/dev/null 2>&1 & ;;
         *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
@@ -81,6 +82,8 @@ cmd extract ${{
         *.7z) 7z x $f;;
     esac
 }}
+
+map Z extract
 
 # compress current file or selected files with tar and gunzip
 cmd tar ${{
