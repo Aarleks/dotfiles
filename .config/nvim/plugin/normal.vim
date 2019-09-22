@@ -1,6 +1,6 @@
 " NORMAL MODE MAPPING:
 
-" Toggle folding ad the cursor
+" Toggle folding at the cursor
 nnoremap <Tab> za
 
 " Stop accidentally recording macros

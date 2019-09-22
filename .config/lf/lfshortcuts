@@ -23,3 +23,18 @@ map Crlit $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RLit
 map gcu cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/
 map Mcu $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/)
 map Ccu $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/)
+map gcv cd ~/Dropbox/WritingTools/CV
+map Mcv $(mv $f ~/Dropbox/WritingTools/CV)
+map Ccv $(cp $f ~/Dropbox/WritingTools/CV)
+map cfa :e ~/.config/aliasrc<CR>
+map cfc :e ~/.config/alias-conf<CR>
+map cfd :e ~/.config/alias-dirs<CR>
+map cfz :e ~/.zshrc<CR>
+map cfp :e ~/.profile<CR>
+map cfv :e ~/.config/nvim/init.vim<CR>
+map cfm :e ~/.config/mutt/muttrc<CR>
+map cfi :e ~/.config/i3/config<CR>
+map cfnew :e ~/.config/newsboat/urls<CR>
+map cfx :e ~/.xinitrc<CR>
+map cfxp :e ~/.xprofile<CR>
+map cff :e ~/.config/fontconfig/fonts.conf<CR>

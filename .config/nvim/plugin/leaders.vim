@@ -21,6 +21,8 @@ nnoremap <Leader>w :write<CR>
 nnoremap <leader>f :Goyo<CR>
 
 "" P:
+nnoremap <Leader>p :!opout <c-r>%<CR><CR>
+nnoremap <Leader><Leader>p :LLPStartPreview<CR>
 "" G:
 "" J:
 
@@ -29,6 +31,7 @@ nnoremap <leader>f :Goyo<CR>
 " http://vimcasts.org/episodes/show-invisibles/
 nnoremap <leader>l :set list!<CR>
 set listchars=tab:»\ ,eol:¬,nbsp:
+nnoremap <Leader><Leader>l :-1read $HOME/.config/nvim/templates/lorem<CR>
 
 "" U:
 " Use urlview to choose a valid url from the file and open it
@@ -44,7 +47,7 @@ noremap <leader>u :w<Home>silent <End> !urlview<CR>
 "" D:
 "" H:
 " For removing search highlighting
-nnoremap <Leader>hl :nohlsearch<CR>
+nnoremap <Leader><Leader>h :nohlsearch<CR>
 
 "" N:
 "" E:
@@ -59,8 +62,11 @@ nnoremap <LocalLeader>e :edit <C-R>=expand('%:p:h') . '/'<CR>
 "" X:
 " Write and Quit
 nnoremap <Leader>x :xit<CR>
+nnoremap <Leader><Leader>x :xit<CR>:xit<CR>
 
 "" C:
+nnoremap <Leader>c :w! \| !compiler <c-r>%<CR>
+
 "" V:
 "" B:
 " Quick buffer navigation

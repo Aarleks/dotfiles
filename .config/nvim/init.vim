@@ -25,25 +25,20 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
+" A Vim Plugin for Lively Previewing LaTeX PDF Output
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
 
 
 " BASICS:
 "filetype plugin indent on
-"syntax on
-
-"set incsearch
-"set hlsearch
 set ignorecase
 set smartcase
 set path+=**
-"set encoding=utf-8
 set number
 set relativenumber
 set wildmode=longest,list,full
-"set wildmenu
 set splitbelow splitright
-"set laststatus=2
 set noshowmode
 
 
@@ -114,8 +109,12 @@ inoremap <F10> <esc>:Goyo<CR>a
 " COMFY TIMES:
 " ===========:
 
-" When shortcut files are updated, renew bash and vifm configs with new material:
+" When shortcut files are updated, renew bash and lf configs with new material:
 autocmd BufWritePost ~/.config/alias-conf,~/.config/alias-dirs !shortcuts.sh
+
+" Vim-LaTeX-Live-Preview settings
+let g:livepreview_previewer = 'zathura'
+let g:livepreview_engine = 'xelatex'
 
 let g:vimwiki_global_ext=0
 let g:vimwiki_list=[{

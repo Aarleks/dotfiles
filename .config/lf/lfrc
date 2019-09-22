@@ -61,6 +61,8 @@ cmd extract ${{
     esac
 }}
 
+map Z extract
+
 cmd moveto ${{
 	set -f
 	clear; echo "Move to where?"

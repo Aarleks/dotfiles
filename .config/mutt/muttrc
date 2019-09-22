@@ -23,7 +23,7 @@ set mailcap_path=$HOME/.config/mutt/mailcap
 set date_format="%d %b · %H:%M"
 set sort = threads
 set sort_aux = reverse-last-date-received
-set editor = "$EDITOR +1/^$ -c nohlsearch"
+set editor = "$EDITOR +1/^$ -c nohlsearch -c Goyo"
 set abort_noattach = ask-yes
 set edit_headers = yes
 

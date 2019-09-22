@@ -7,6 +7,7 @@ rd1="cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1 && ls -a" 
 rd2="cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD2 && ls -a" \
 rlit="cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RLit && ls -a" \
 cu="cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/ && ls -a" \
+cv="cd ~/Dropbox/WritingTools/CV && ls -a" \
 cfa="$EDITOR ~/.config/aliasrc" \
 cfc="$EDITOR ~/.config/alias-conf" \
 cfd="$EDITOR ~/.config/alias-dirs" \
