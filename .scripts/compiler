@@ -13,5 +13,5 @@ echo $ext
 case "$ext" in
 	rmd) echo "require(rmarkdown); render('$file')" | R --vanilla ;;
 	tex) xelatex "$file" ;;
-	md) pandoc "$file" --pdf-engine=xelatex -o "$base".pdf ;;
+	md) pandoc "$file" --pdf-engine=xelatex --filter pandoc-citeproc -o "$base".pdf ;;
 esac

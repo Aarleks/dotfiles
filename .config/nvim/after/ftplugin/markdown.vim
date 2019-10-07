@@ -1,8 +1,13 @@
 " SETTINGS:
-set foldlevel=2
+"set foldlevel=2
 
 let g:markdown_fenced_languages = ['vim', 'r', 'python', 'sh', 'lua', 'c']
+let g:markdown_folding = 1
 let g:pandoc#syntax#codeblocks#embeds#langs = ["sh", "r", "python", "markdown", "c", "vimscript"]
+"let g:pandoc#modules#disabled = ["folding"]
+"set foldenable
+"set foldmethod=syntax
+"set foldlevelstart=2
 
 " MARKDOWN:
 map j gj
