@@ -46,7 +46,8 @@
 /.zcompdump
 /.zshrc.zni
 /.config/vifm/vifminfo
-/.config/nvim/autoload/
+/.config/nvim/autoload/plug.vim
+/.config/nvim/autoload/plug.vim.old
 /.config/nvim/plugged/
 /.wget-hsts
 /.mbsyncrc
