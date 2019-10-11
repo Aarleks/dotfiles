@@ -14,19 +14,30 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/goyo.vim'
+Plug '/usr/local/opt/fzf'                    " Fzf fuzzy finder
+Plug 'junegunn/fzf.vim'                      " Fzf vim wrapper
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vimwiki/vimwiki'
 Plug 'mboughaba/i3config.vim'
-Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
+"Plug 'plasticboy/vim-markdown'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 
+augroup pandoc_syntax
+    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup END
+" support front matter of various format
+"let g:vim_markdown_frontmatter = 1  " for YAML format
+" do not use conceal feature, the implementation is not so good
+"let g:vim_markdown_conceal = 0
+"let g:vim_markdown_math = 1
 
 " BASICS:
 "filetype plugin indent on

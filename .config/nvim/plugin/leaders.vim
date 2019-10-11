@@ -42,6 +42,7 @@ noremap <leader>u :w<Home>silent <End> !urlview<CR>
 
 "" A:
 "" R:
+"" fzf - see after/ftplugin/markdown.vim
 "" S:
 "" T:
 "" D:

@@ -4,6 +4,7 @@
 export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"
 export PATH="$PATH":$HOME/.local/bin
 export PATH="/home/alex/.gem/ruby/2.6.0/bin:$PATH"
+export PATH="/home/alex/go/bin:$PATH"
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="firefox"
