@@ -1,0 +1,27 @@
+" A Vimrc From Scratch
+
+set number
+set wrap
+set relativenumber
+filetype on
+set noruler
+set laststatus=2
+
+let mapleader = "\<Space>"
+nnoremap <Leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <Leader>sv :source $MYVIMRC<cr>
+
+" MARKDOWN:
+autocmd FileType markdown :setlocal spell
+"inoremap bb<Tab> ****<++><Esc>F*hi
+
+" STATUSLINE:
+set statusline=%f
+set statusline+=\ -\ 
+set statusline+=FileType: 
+set statusline+=%y
+set statusline+=%=
+set statusline+=ℓ
+set statusline+=\ %l
+set statusline+=/
+set statusline+=%L
