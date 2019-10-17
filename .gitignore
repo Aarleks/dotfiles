@@ -41,6 +41,7 @@
 /.config/RStudio/desktop.ini
 /.config/dconf/user
 /.vim/.netrwhist
+/.vim/autoload/plug.vim.old
 /.viminfo.tmp
 /.config/mimeapps.list
 /.zcompdump
