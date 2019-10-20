@@ -21,7 +21,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vimwiki/vimwiki'
 Plug 'mboughaba/i3config.vim'
-Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
@@ -29,6 +29,10 @@ Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 
 imap <c-x><c-f> <plug>(fzf-complete-path)
+
+augroup pandoc_syntax
+    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup END
 
 " BASICS:
 "filetype plugin indent on

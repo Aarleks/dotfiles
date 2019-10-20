@@ -21,3 +21,28 @@ function! aarleks#settings#foldtext() abort
   let l:dashes=substitute(v:folddashes, '-', s:middot, 'g')
   return s:raquo . s:middot . s:middot . l:lines . l:dashes . ': ' . l:first
 endfunction
+
+
+function! aarleks#settings#markdownfold() abort
+    let l:thisline = getline(v:lnum)
+    let l:level = len(matchstr(l:thisline, '^#\{1,6}'))
+    let l:indent = repeat('#', l:level)
+    let l:title = substitute(getline(v:foldstart), '^#\+\s\+', '', '')
+    let l:foldsize = (v:foldend - v:foldstart)
+    let l:linecount = '['.l:foldsize.'ℓ'.']'
+
+    let l:spaces_1 = ' '
+    if exists('*strdisplaywidth')
+	let l:title_width = strdisplaywidth(title)
+    else
+	let l:title_width = len(title)
+    endif
+
+    if l:title_width < 40
+	let l:spaces_2 = repeat(' ', 40 - title_width)
+    else
+	let l:spaces_2 = ' '
+    endif
+
+    return l:indent . l:spaces_1. l:title. l:spaces_2. l:linecount
+endfunction

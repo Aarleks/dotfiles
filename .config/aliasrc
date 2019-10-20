@@ -6,6 +6,7 @@ alias mv="mv -v"\
     mkc="make clean && rm -f config.h"\
     mks="make && sudo make clean install"\
     YT="youtube-viewer"\
-    fm="$FILES"
+    fm="$FILES"\
+    bat="cat /sys/class/power_supply/BAT0/capacity"
 
 vf() { fzf | xargs -r -I % $EDITOR % ;}

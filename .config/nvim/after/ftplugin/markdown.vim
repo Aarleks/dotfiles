@@ -1,9 +1,13 @@
 " SETTINGS:
 set foldlevel=2
+set fillchars=fold:\    " Wipe out fillchars for Markdown files
+
+set foldtext=aarleks#settings#markdownfold()
 
 let g:markdown_fenced_languages = ['vim', 'r', 'python', 'sh', 'lua', 'c']
 let g:markdown_folding = 1
 let g:pandoc#syntax#codeblocks#embeds#langs = ["sh", "r", "python", "markdown", "c", "vimscript"]
+
 
 " MARKDOWN:
 map j gj
