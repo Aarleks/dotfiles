@@ -1,27 +1,58 @@
 " A Vimrc From Scratch
 
+" BASIC SETTINGS: {{{
+source $VIMRUNTIME/defaults.vim
 set number
-set wrap
 set relativenumber
-filetype on
-set noruler
+set ignorecase   " case insensitive search
+set smartcase    " case sensitive search when specified
 set laststatus=2
+
+augroup vimrc-incsearch-highlight
+	autocmd!
+	autocmd CmdlineEnter /,\? :set hlsearch
+	autocmd CmdlineLeave /,\? :set nohlsearch
+augroup END
+" }}}
 
 let mapleader = "\<Space>"
 nnoremap <Leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <Leader>sv :source $MYVIMRC<cr>
 
-" MARKDOWN:
-autocmd FileType markdown :setlocal spell
-"inoremap bb<Tab> ****<++><Esc>F*hi
 
-" STATUSLINE:
-set statusline=%f
-set statusline+=\ -\ 
-set statusline+=FileType: 
+" STATUSLINE: {{{
+set statusline=
+set statusline+=%#IncSearch#
+set statusline+=\ %{mode()}
+set statusline+=\ %t\ 
+set statusline+=%#LineNr#
+set statusline+=%m\  
 set statusline+=%y
 set statusline+=%=
 set statusline+=ℓ
 set statusline+=\ %l
 set statusline+=/
 set statusline+=%L
+" }}}
+
+" NETRW: {{{
+let g:netrw_banner = 0       " Remove banner
+let g:netrw_liststyle = 3    " Tree view
+let g:netrw_browse_split = 4 " Open in the previous split
+let g:netrw_altv = 1         " Opens in split to the right
+let g:netrw_winsize = 25
+"let g:netrw_list_hide = netrw_gitignore#Hide()
+"let g:netrw_list_hide.= ',\(^\|\s\s\)\zs\.\S\+'
+" }}}
+
+" VIM: {{{
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
+" MARKDOWN: {{{
+autocmd FileType markdown :setlocal spell
+"inoremap bb<Tab> ****<++><Esc>F*hi
+" }}}
