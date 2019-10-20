@@ -14,6 +14,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-fugitive'
@@ -27,6 +28,7 @@ Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 
+imap <c-x><c-f> <plug>(fzf-complete-path)
 
 " BASICS:
 "filetype plugin indent on
