@@ -26,6 +26,7 @@ set sort_aux = reverse-last-date-received
 set editor = "$EDITOR +1/^$ -c nohlsearch -c Goyo"
 set abort_noattach = ask-yes
 set edit_headers = yes
+auto_view text/calendar application/ics
 
 unset fcc_attach
 set uncollapse_new     = yes  # open threads when new mail

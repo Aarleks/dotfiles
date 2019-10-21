@@ -1,0 +1,18 @@
+[calendars]
+
+[[private]]
+path = /home/alex/.local/share/khal/calendars/private
+type = calendar
+color = dark green
+
+[locale]
+timeformat = %H:%M
+dateformat = %d/%m/%Y
+longdateformat = %d/%m/%Y
+datetimeformat = %d/%m/%Y %H:%M
+longdatetimeformat = %d/%m/%Y %H:%M
+local_timezone = Australia/Sydney
+
+[default]
+default_calendar = private
+highlight_event_days = True
