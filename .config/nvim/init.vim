@@ -33,11 +33,6 @@ call plug#end()
 augroup pandoc_syntax
     au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
-" support front matter of various format
-"let g:vim_markdown_frontmatter = 1  " for YAML format
-" do not use conceal feature, the implementation is not so good
-"let g:vim_markdown_conceal = 0
-"let g:vim_markdown_math = 1
 
 " BASICS:
 "filetype plugin indent on
@@ -49,7 +44,6 @@ set relativenumber
 set wildmode=longest,list,full
 set splitbelow splitright
 set noshowmode
-
 
 " NAVIGATION:
 
@@ -63,18 +57,15 @@ map <C-l> <C-w>l
 " Hit % on if or else to jump to its partner
 runtime macros/matchit.vim
 
-
 " EDITING:
-"set autoindent
-"set backspace=indent,eol,start
 set go=a " visual mode - highlighted text is copied to the clipboard
 set shiftwidth=4
 let &softtabstop=&shiftwidth
 
-" normal mode - c no longer cuts to the register
-"nnoremap c "_c
+" Fuzzy-find file-paths with fzf
+imap <c-x><c-f> <plug>(fzf-complete-path)
 
-" Deleter training whitespace on save
+" Delete training whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
 " Disables auto-commenting of new lines
