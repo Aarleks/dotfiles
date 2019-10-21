@@ -88,6 +88,11 @@ bindkey -s '^o' 'lfcd\n'
 
 alias ls='ls -hN --color=auto --group-directories-first'
 
+# Functions
+[ -f "$HOME/.config/functionsrc" ] && source "$HOME/.config/functionsrc"
+
+# Aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
 
+# Shortcuts
 [ -f "$HOME/.config/shortcutsrc" ] && source "$HOME/.config/shortcutsrc"
