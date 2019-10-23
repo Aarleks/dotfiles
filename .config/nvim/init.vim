@@ -34,6 +34,7 @@ augroup pandoc_syntax
     au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
 
+
 " BASICS:
 "filetype plugin indent on
 "syntax on
@@ -159,3 +160,5 @@ augroup my_cm_setup
       \ })
 augroup END
 
+
+highlight Comment cterm=italic gui=italic
