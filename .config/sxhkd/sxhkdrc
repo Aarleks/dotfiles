@@ -49,7 +49,7 @@ super + shift + w
 
 ## Open neomutt in a terminal instance
 super + e
-    $TERMINAL -e neomutt
+    $TERMINAL -e email
 
 super + shift + e
     $TERMINAL -e neomutt -R
