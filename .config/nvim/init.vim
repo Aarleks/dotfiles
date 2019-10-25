@@ -1,3 +1,4 @@
+" vim:foldmethod=marker
 " Playing around with Neovim
 "
 
