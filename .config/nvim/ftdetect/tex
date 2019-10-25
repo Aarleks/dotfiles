@@ -1,0 +1,1 @@
+autocmd BefNewFile,BefRead *.tex set filetype=tex
