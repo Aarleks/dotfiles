@@ -34,7 +34,7 @@ nnoremap <silent> <leader>r :call fzf#run({
                         \ 'up': '40%',
                         \ 'options': '--ansi --multi --prompt "Cite> "'})<CR>
 
-" MARKDOWN:
+" SNIPPETS:
 map j gj
 map k gk
 inoremap ;n ---<Enter>
