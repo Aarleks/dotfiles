@@ -13,7 +13,7 @@ tmux new-session -d -s dotfiles -n nvim -x $(tput cols) -y $(tput lines)
 
 # Launch Neovim with GFiles to look for files in the dotfiles repo
 tmux send-keys -t dotfiles:nvim "nvim -c :GFiles" Enter
-tmux spit-window -t dotfiles:nvim -h
+tmux split-window -t dotfiles:nvim -h
 
 # Git pull and then git status
 tmux send-keys -t dotfiles:nvim.right "git pull" Enter
