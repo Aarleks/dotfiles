@@ -1,4 +1,4 @@
-" See also: after/ftplugin/mail.vim.
+" See also: after/ftplugin/mail.vim
 
 setlocal nolist
 setlocal spell
