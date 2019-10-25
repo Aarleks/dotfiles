@@ -94,7 +94,7 @@ vnoremap L >gv
 vnoremap H <gv
 
 
-" AESTHETICS:
+" AESTHETICS: {{{
 " ==========:
 
 set linebreak
@@ -116,9 +116,14 @@ let g:lightline = {
 	    \ },
 	    \ }
 
+" Make comments italics
+" Needs to go after colour plugin is loaded to override it
+highlight Comment cterm=italic gui=italic
+
 " Goyo stuffs
 map <F10> :Goyo<CR>
 inoremap <F10> <esc>:Goyo<CR>a
+" }}}
 
 " COMFY TIMES:
 " ===========:
@@ -138,29 +143,3 @@ let g:vimwiki_list=[{
 	    \ 'ext': '.md'
 	    \ }]
 
-let g:pandoc#biblio#bibs=["/home/alex/Dropbox/WritingTools/zotero-library.bib"]
-
-"let g:python3_host_prog='/usr/bin/python3.7'
-
-" enable ncm2 for all buffers
-"autocmd BufEnter * call ncm2#enable_for_buffer()
-
-" :help Ncm2PopupOpen for more information
-set completeopt=noinsert,menuone,noselect
-
-augroup my_cm_setup
-    autocmd!
-    autocmd BufEnter * call ncm2#enable_for_buffer()
-    autocmd Filetype pandoc call ncm2#register_source({
-      \ 'name': 'pandoc',
-      \ 'priority': 8,
-      \ 'scope': ['pandoc'],
-      \ 'mark': 'md',
-      \ 'word_pattern': '\w+',
-      \ 'complete_pattern': ['@'],
-      \ 'on_complete': ['ncm2#on_complete#omni', 'pandoc#completion#Complete'],
-      \ })
-augroup END
-
-
-highlight Comment cterm=italic gui=italic
