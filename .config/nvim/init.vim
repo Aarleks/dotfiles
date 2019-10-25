@@ -89,7 +89,7 @@ nnoremap S :%s//g<Left><Left>
 vnoremap K xkP`[V`]
 vnoremap J xP`[V`]
 vnoremap L >gv
-vnoremap J <gv
+vnoremap H <gv
 
 
 " AESTHETICS:
