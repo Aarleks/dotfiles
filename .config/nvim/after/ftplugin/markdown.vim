@@ -8,7 +8,7 @@ let g:markdown_fenced_languages = ['vim', 'r', 'python', 'sh', 'lua', 'c']
 let g:markdown_folding = 1
 let g:pandoc#syntax#codeblocks#embeds#langs = ["sh", "r", "python", "markdown", "c", "vimscript"]
 
-"let $FZF_BIBTEX_CACHEDIR = '/home/alex/Dropbox/WritingTools/bibcache/'
+let $FZF_BIBTEX_CACHEDIR = '/home/alex/Dropbox/WritingTools/bibcache/'
 let $FZF_BIBTEX_SOURCES = '/home/alex/Dropbox/WritingTools/zotero-library.bib'
 
 function! s:bibtex_cite_sink(lines)
@@ -26,7 +26,7 @@ inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
                         \ 'source': 'bibtex-ls',
                         \ 'sink*': function('<sid>bibtex_cite_sink_insert'),
                         \ 'up': '40%',
-                        \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'}
+                        \ 'options': '--ansi --layout=reverse-list --multi --prompt "Cite> "'})<CR>
 
 nnoremap <silent> <leader>r :call fzf#run({
                         \ 'source': 'bibtex-ls',
