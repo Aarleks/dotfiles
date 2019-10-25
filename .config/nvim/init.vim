@@ -69,17 +69,12 @@ map <C-l> <C-w>l
 runtime macros/matchit.vim
 
 
-" EDITING:
-"set autoindent
-"set backspace=indent,eol,start
+" EDITING: {{{
 set go=a " visual mode - highlighted text is copied to the clipboard
 set shiftwidth=4
 let &softtabstop=&shiftwidth
 
-" normal mode - c no longer cuts to the register
-"nnoremap c "_c
-
-" Deleter training whitespace on save
+" Delete training whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
 " Disables auto-commenting of new lines
@@ -88,11 +83,12 @@ autocmd FileType * setlocal formatoptions-=r formatoptions-=o
 " Replace all -
 nnoremap S :%s//g<Left><Left>
 
-vnoremap K xkP`[V`]
-vnoremap J xP`[V`]
-vnoremap L >gv
+" Move lines in Visual Mode
 vnoremap H <gv
-
+vnoremap J xP`[V`]
+vnoremap K xkP`[V`]
+vnoremap L >gv
+" }}}
 
 " AESTHETICS: {{{
 " ==========:
@@ -118,14 +114,14 @@ let g:lightline = {
 
 " Make comments italics
 " Needs to go after colour plugin is loaded to override it
-highlight Comment cterm=italic gui=italic
+highlight Comment cterm=italic
 
 " Goyo stuffs
 map <F10> :Goyo<CR>
 inoremap <F10> <esc>:Goyo<CR>a
 " }}}
 
-" COMFY TIMES:
+" COMFY TIMES: {{{
 " ===========:
 
 " When shortcut files are updated, renew bash and vifm configs with new material:
@@ -143,3 +139,4 @@ let g:vimwiki_list=[{
 	    \ 'ext': '.md'
 	    \ }]
 
+" }}}
