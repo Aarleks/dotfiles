@@ -107,6 +107,10 @@ let g:lightline = {
 	    \ },
 	    \ }
 
+" Make comments italics
+" Needs to go after colour plugin is loaded to override it
+highlight Comment cterm=italic
+
 " Goyo stuffs
 map <F10> :Goyo<CR>
 inoremap <F10> <esc>:Goyo<CR>a
