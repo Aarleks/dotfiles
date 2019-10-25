@@ -30,26 +30,19 @@ Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 " }}}
 
-" BASICS:
-"filetype plugin indent on
-"syntax on
-
-"set incsearch
-"set hlsearch
+" BASICS: {{{
 set ignorecase
 set smartcase
 set path+=**
-"set encoding=utf-8
 set number
 set relativenumber
 set wildmode=longest,list,full
-"set wildmenu
 set splitbelow splitright
-"set laststatus=2
 set noshowmode
+set scrolloff=5
+" }}}
 
-
-" NAVIGATION:
+" NAVIGATION: {{{
 
 " Shortcuts for navigating splits
 map <C-h> <C-w>h
@@ -60,7 +53,6 @@ map <C-l> <C-w>l
 " matchit.vim is built-in
 " Hit % on if or else to jump to its partner
 runtime macros/matchit.vim
-
 
 " EDITING: {{{
 
