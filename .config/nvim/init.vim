@@ -30,13 +30,6 @@ Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 " }}}
 
-imap <c-x><c-f> <plug>(fzf-complete-path)
-
-augroup pandoc_syntax
-    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
-augroup END
-
-
 " BASICS:
 "filetype plugin indent on
 "syntax on
@@ -70,6 +63,15 @@ runtime macros/matchit.vim
 
 
 " EDITING: {{{
+
+" replace native filepath completion with fzf
+imap <c-x><c-f> <plug>(fzf-complete-path)
+
+" Set Markdown files as markdown.pandoc for pandoc-syntax
+augroup pandoc_syntax
+    au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup END
+
 set go=a " visual mode - highlighted text is copied to the clipboard
 set shiftwidth=4
 let &softtabstop=&shiftwidth
@@ -85,7 +87,7 @@ nnoremap S :%s//g<Left><Left>
 
 " Move lines in Visual Mode
 vnoremap H <gv
-vnoremap J xP`[V`]
+vnoremap J xjP`[V`]
 vnoremap K xkP`[V`]
 vnoremap L >gv
 " }}}
