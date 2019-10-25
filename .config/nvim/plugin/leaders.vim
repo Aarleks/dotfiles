@@ -43,7 +43,10 @@ noremap <leader>u :w<Home>silent <End> !urlview<CR>
 "" A:
 "" R:
 "" fzf - see after/ftplugin/markdown.vim
+
 "" S:
+nnoremap <Leader>sp :call aarleks#spelling#replace()<CR>
+
 "" T:
 "" D:
 "" H:
