@@ -1,0 +1,43 @@
+# Check for .tmux file (poor man's Tmuxinator).
+function tman() {
+    emulate -L zsh
+
+    if [ -f .tmux ]; then
+	# Prompt the first time we see a given .tmux file before running it.
+	local DIGEST="$(openssl sha512 .tmux)"
+	if ! grep -q "$DIGEST" ~/..tmux.digests 2> /dev/null; then
+	    cat .tmux
+	    read -k 1 -r \
+		'REPLY?Trust (and run) this .tmux file? (t = trust, otherwise = skip) '
+			    echo
+			    if [[ $REPLY =~ ^[Tt]$ ]]; then
+				echo "$DIGEST" >> ~/..tmux.digests
+				./.tmux
+				return
+			    fi
+			else
+			    ./.tmux
+			    return
+	fi
+    fi
+}
+
+# Open neomutt in tmux
+function email() {
+    if ! tmux has-session -t Email 2> /dev/null; then
+	# Make saved attachments go to ~/ by default.
+	tmux new-session -d -s Email -c ~/ -n Neomutt
+	tmux send-keys -t Email:Neomutt neomutt Enter
+	tmux new-window -t Email -c ~/.config/mutt -n muttrc
+	tmux send-keys -t Email:muttrc 'nvim muttrc' Enter
+#	tmux split-window -t Email:sync -h -c ~/.mutt
+#	tmux send-keys -t Email:sync.right '~/.mutt/scripts/control.sh work' Enter
+#	tmux split-window -t Email:sync -v -f -l 8 -c ~/.mutt
+#	tmux send-keys -t Email:sync.bottom '~/.mutt/scripts/control.sh' Enter
+    fi
+    if [ -z "$TMUX" ]; then
+	tmux attach -t Email:Neomutt
+    else
+	tmux switch-client -t Email:Neomutt
+    fi
+}
