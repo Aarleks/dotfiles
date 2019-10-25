@@ -31,6 +31,7 @@ call plug#end()
 " }}}
 
 " BASICS: {{{
+
 set ignorecase
 set smartcase
 set path+=**
@@ -53,6 +54,7 @@ map <C-l> <C-w>l
 " matchit.vim is built-in
 " Hit % on if or else to jump to its partner
 runtime macros/matchit.vim
+" }}}
 
 " EDITING: {{{
 
