@@ -1,5 +1,6 @@
 " NEOVIM: the grand and glorious init.vim file of Alex Norman
 "============================================================
+" vim:foldmethod=marker
 
 let mapleader="\<Space>"
 let maplocalleader="\\"
