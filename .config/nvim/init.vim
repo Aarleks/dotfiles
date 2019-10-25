@@ -14,8 +14,7 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/goyo.vim'
-Plug '/usr/local/opt/fzf'                    " Fzf fuzzy finder
-Plug 'junegunn/fzf.vim'                      " Fzf vim wrapper
+Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-fugitive'
@@ -24,11 +23,12 @@ Plug 'vimwiki/vimwiki'
 Plug 'mboughaba/i3config.vim'
 "Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-"Plug 'plasticboy/vim-markdown'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
+
+imap <c-x><c-f> <plug>(fzf-complete-path)
 
 augroup pandoc_syntax
     au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
@@ -36,14 +36,22 @@ augroup END
 
 " BASICS:
 "filetype plugin indent on
+"syntax on
+
+"set incsearch
+"set hlsearch
 set ignorecase
 set smartcase
 set path+=**
+"set encoding=utf-8
 set number
 set relativenumber
 set wildmode=longest,list,full
+"set wildmenu
 set splitbelow splitright
+"set laststatus=2
 set noshowmode
+
 
 " NAVIGATION:
 
@@ -57,15 +65,18 @@ map <C-l> <C-w>l
 " Hit % on if or else to jump to its partner
 runtime macros/matchit.vim
 
+
 " EDITING:
+"set autoindent
+"set backspace=indent,eol,start
 set go=a " visual mode - highlighted text is copied to the clipboard
 set shiftwidth=4
 let &softtabstop=&shiftwidth
 
-" Fuzzy-find file-paths with fzf
-imap <c-x><c-f> <plug>(fzf-complete-path)
+" normal mode - c no longer cuts to the register
+"nnoremap c "_c
 
-" Delete training whitespace on save
+" Deleter training whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
 " Disables auto-commenting of new lines
@@ -109,13 +120,14 @@ inoremap <F10> <esc>:Goyo<CR>a
 " COMFY TIMES:
 " ===========:
 
-" When shortcut files are updated, renew bash and lf configs with new material:
+" When shortcut files are updated, renew bash and vifm configs with new material:
 autocmd BufWritePost ~/.config/alias-conf,~/.config/alias-dirs !shortcuts.sh
 
 " Vim-LaTeX-Live-Preview settings
 let g:livepreview_previewer = 'zathura'
 let g:livepreview_engine = 'xelatex'
 
+" Vimwiki Settings
 let g:vimwiki_global_ext=0
 let g:vimwiki_list=[{
 	    \ 'path': '$HOME/Dropbox/vimwiki/',
