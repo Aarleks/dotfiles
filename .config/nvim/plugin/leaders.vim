@@ -32,15 +32,19 @@ nnoremap <Leader><Leader>p :LLPStartPreview<CR>
 nnoremap <leader>l :set list!<CR>
 set listchars=tab:»\ ,eol:¬,nbsp:
 
+" Call some lorem into the mix
+nnoremap <Leader><Leader>l :-1read $HOME/.config/nvim/templates/lorem<CR>
+
 "" U:
 " Use urlview to choose a valid url from the file and open it
-noremap <leader>u :w<Home>silent <End> !urlview<CR>
+nnoremap <leader>u :w<Home>silent <End> !urlview<CR>
 
 "" Y:
 "" ::
 
 "" A:
 "" R:
+"" fzf - see after/ftplugin/markdown.vim
 "" S:
 " Fix spelling errors
 nnoremap <Leader>sp :call aarleks#spelling#replace()<CR>
