@@ -45,6 +45,7 @@ noremap <leader>u :w<Home>silent <End> !urlview<CR>
 "" fzf - see after/ftplugin/markdown.vim
 
 "" S:
+" Fix spelling errors
 nnoremap <Leader>sp :call aarleks#spelling#replace()<CR>
 
 "" T:
