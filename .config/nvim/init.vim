@@ -1,17 +1,17 @@
+" NEOVIM: the grand and glorious init.vim file of Alex Norman
+"============================================================
 " vim:foldmethod=marker
-" Playing around with Neovim
-"
 
 let mapleader="\<Space>"
 let maplocalleader="\\"
 
-" Check for Plug and download if not present ---------------- {{{
+" PLUGINS: {{{
+" Check for Plug and download if not present
 if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
         echo "Downloading junegunn/vim-plug to manage plugins..."
         silent !mkdir -p ~/.config/nvim/autoload/
         silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ~/.config/nvim/autoload/plug.vim
 endif
-" }}}
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/goyo.vim'
@@ -24,10 +24,11 @@ Plug 'vimwiki/vimwiki'
 Plug 'mboughaba/i3config.vim'
 "Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'roxma/nvim-yarp'
-Plug 'ncm2/ncm2'
+"Plug 'roxma/nvim-yarp'
+"Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
+" }}}
 
 imap <c-x><c-f> <plug>(fzf-complete-path)
 
