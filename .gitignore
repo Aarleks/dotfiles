@@ -112,4 +112,5 @@
 /.config/msmtp/
 /.TinyTeX/
 /.config/suckless/sxiv/
+/.config/suckless/slock/
 /.ssh/
