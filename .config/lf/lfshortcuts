@@ -20,15 +20,18 @@ map Crd2 $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD2)
 map grlit cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RLit
 map Mrlit $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RLit)
 map Crlit $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RLit)
-map gcu cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/
-map Mcu $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/)
-map Ccu $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/)
+map gcu cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units
+map Mcu $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units)
+map Ccu $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units)
 map gcv cd ~/Dropbox/WritingTools/CV
 map Mcv $(mv $f ~/Dropbox/WritingTools/CV)
 map Ccv $(cp $f ~/Dropbox/WritingTools/CV)
 map gproj cd ~/Projects
 map Mproj $(mv $f ~/Projects)
 map Cproj $(cp $f ~/Projects)
+map gadp cd ~/Dropbox/MRes/Development/ADP
+map Madp $(mv $f ~/Dropbox/MRes/Development/ADP)
+map Cadp $(cp $f ~/Dropbox/MRes/Development/ADP)
 map cfa :e ~/.config/aliasrc<CR>
 map cfc :e ~/.config/alias-conf<CR>
 map cfd :e ~/.config/alias-dirs<CR>
