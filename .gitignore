@@ -67,6 +67,7 @@
 /.zotero/
 /.slime/
 /..tmux.digests
+/.config/localinitrc
 
 # FOLDERS
 
