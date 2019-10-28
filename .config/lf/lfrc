@@ -11,11 +11,14 @@ set shellopts '-eu'
 set ifs "\n"
 
 # previewer file from Luke Smith https://github.com/LukeSmithxyz/voidrice/blob/voiddwm/.config/lf/lfrc
-set previewer ~/.config/lf/scope
+set previewer ~/.scripts/lfpreview
 
 # leave some space at the top and the bottom of the screen
 set scrolloff 10
 
+set hidden
+set incsearch
+set color256
 
 # COMMANDS AND FUNCTIONS
 
