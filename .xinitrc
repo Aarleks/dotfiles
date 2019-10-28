@@ -5,5 +5,5 @@
 
 #exec i3
 while :; do
-	ssh-agent dwm || break
+    /usr/local/bin/dwm 2> /dev/null
 done
