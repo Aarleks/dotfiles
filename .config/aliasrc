@@ -1,6 +1,5 @@
 # vim:filetype=sh
 
-
 alias mv="mv -v"\
     cp="cp -v"\
     mkc="make clean && rm -f config.h"\
