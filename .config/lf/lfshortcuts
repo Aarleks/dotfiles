@@ -32,15 +32,3 @@ map Cproj $(cp $f ~/Projects)
 map gadp cd ~/Dropbox/MRes/Development/ADP
 map Madp $(mv $f ~/Dropbox/MRes/Development/ADP)
 map Cadp $(cp $f ~/Dropbox/MRes/Development/ADP)
-map cfa :e ~/.config/aliasrc<CR>
-map cfc :e ~/.config/alias-conf<CR>
-map cfd :e ~/.config/alias-dirs<CR>
-map cfz :e ~/.zshrc<CR>
-map cfp :e ~/.profile<CR>
-map cfv :e ~/.config/nvim/init.vim<CR>
-map cfm :e ~/.config/mutt/muttrc<CR>
-map cfi :e ~/.config/i3/config<CR>
-map cfnew :e ~/.config/newsboat/urls<CR>
-map cfx :e ~/.xinitrc<CR>
-map cfxp :e ~/.xprofile<CR>
-map cff :e ~/.config/fontconfig/fonts.conf<CR>
