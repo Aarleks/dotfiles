@@ -1,6 +1,6 @@
 home   ~/
-conf   ~/config
-scr    ~/scripts
+conf   ~/.config
+scr    ~/.scripts
 down   ~/Downloads
 rd1    ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1
 rd2    ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD2
