@@ -6,6 +6,9 @@
 
 !/.**
 
+# File Types
+/*.pdf
+
 #++ VARIOUS FILES
 /.history
 /.histfile
