@@ -1,1 +1,31 @@
 # vim:filetype=vim
+map ghome cd ~/
+map Mhome $(mv $f ~/)
+map Chome $(cp $f ~/)
+map gconf cd ~/.config
+map Mconf $(mv $f ~/.config)
+map Cconf $(cp $f ~/.config)
+map gscr cd ~/.scripts
+map Mscr $(mv $f ~/.scripts)
+map Cscr $(cp $f ~/.scripts)
+map gdown cd ~/Downloads
+map Mdown $(mv $f ~/Downloads)
+map Cdown $(cp $f ~/Downloads)
+map grd1 cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1
+map Mrd1 $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1)
+map Crd1 $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1)
+map grd2 cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD2
+map Mrd2 $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD2)
+map Crd2 $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD2)
+map grlit cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RLit
+map Mrlit $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RLit)
+map Crlit $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RLit)
+map gcu cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/
+map Mcu $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/)
+map Ccu $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/)
+map gadp cd ~/Dropbox/MRes/
+map Madp $(mv $f ~/Dropbox/MRes/)
+map Cadp $(cp $f ~/Dropbox/MRes/)
+map gproj cd ~/Projects
+map Mproj $(mv $f ~/Projects)
+map Cproj $(cp $f ~/Projects)
