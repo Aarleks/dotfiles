@@ -3,9 +3,8 @@
 delimiter=" | "
 
 barstats() { \
-    echo "$delimiter"
 
-    case "$(cat /sys/class/power_supply/BAT0/capacity)" in
+    [ -f "/sys/class/power_supply/BAT0/capacity" ] && case "$(cat /sys/class/power_supply/BAT0/capacity)" in
 	100|9[0-9])    echo "" ;;
 	8[0-9]|7[0-9]) echo "" ;;
 	*)             echo "" ;;
