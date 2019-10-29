@@ -1,8 +1,8 @@
 text/plain; $EDITOR %s ;
-text/html; openfile %s ;
-text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/html; openfile %s ; nametemplate=%s.html
+text/html; uconv --add-signature -f %{charset} -t UTF-8 | firefox -new-tab %s & sleep 5 ; description="HTML Document" ; test=test -n "$DISPLAY" ; nametemplate=%s.html
 image/*; muttimage %s ; copiousoutput
 video/*; setsid mpv --quiet %s &; copiousoutput
-application/pdf; openfile %s ;
-application/pgp-encrypted; gpg -d '%s'; copiousoutput;
+application/pdf; /usr/bin/zathura %s ; copiousoutput ;
+application/pgp-encrypted; gpg -d '%s'; copiousoutput ;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s; copiousoutput
