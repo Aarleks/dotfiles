@@ -5,7 +5,6 @@ cfz    ~/.zshrc
 cfp    ~/.profile
 cfv    ~/.config/nvim/init.vim
 cfm    ~/.config/mutt/muttrc
-cfi    ~/.config/i3/config
 cfnew  ~/.config/newsboat/urls
 cfx    ~/.xinitrc
 cfxp   ~/.xprofile
