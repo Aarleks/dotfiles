@@ -39,7 +39,6 @@ map cfz :e ~/.zshrc<CR>
 map cfp :e ~/.profile<CR>
 map cfv :e ~/.config/nvim/init.vim<CR>
 map cfm :e ~/.config/mutt/muttrc<CR>
-map cfi :e ~/.config/i3/config<CR>
 map cfnew :e ~/.config/newsboat/urls<CR>
 map cfx :e ~/.xinitrc<CR>
 map cfxp :e ~/.xprofile<CR>
