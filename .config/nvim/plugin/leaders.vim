@@ -35,7 +35,7 @@ nnoremap <Leader><Leader>l :-1read $HOME/.config/nvim/templates/lorem<CR>
 
 "" U:
 " Use urlview to choose a valid url from the file and open it
-noremap <leader>u :w<Home>silent <End> !urlview<CR>
+nnoremap <leader>u :w<Home>silent <End> !urlview<CR>
 
 "" Y:
 "" ::
