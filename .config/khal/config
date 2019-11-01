@@ -1,0 +1,30 @@
+[default]
+highlight_event_days = True
+
+[view]
+frame = width
+bold_for_light_color = False
+
+[calendars]
+
+[[private]]
+path = /home/alex/.local/share/khal/calendars/private
+type = calendar
+
+[[work]]
+path = ~/.calendar/work/calendar/
+color = brown
+
+[[gmail]]
+path = ~/.calendar/gmail/aarleks@gmail.com
+color = dark blue
+
+[locale]
+timeformat = %H:%M
+dateformat = %d/%m/%Y
+longdateformat = "%d %b, %Y"
+datetimeformat = %d/%m/%Y %H:%M
+longdatetimeformat = %d/%m/%Y %H:%M
+local_timezone = Australia/Sydney
+
+# vim:filetype=dosini

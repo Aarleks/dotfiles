@@ -74,6 +74,7 @@
 /.macromedia/
 /.config/localinitrc
 /..tmux.digests
+/.davmail*
 
 # FOLDERS
 
@@ -118,3 +119,5 @@
 /.config/suckless/slock/
 /.ssh/
 /.vim/
+/.calendar/
+/.vdirsyncer/
