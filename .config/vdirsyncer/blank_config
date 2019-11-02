@@ -1,0 +1,46 @@
+[general]
+status_path = "~/.vdirsyncer/status/"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  Gmail Calendar ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+[pair gmail_calendar]
+a = "gmail_calendar_local"
+b = "gmail_calendar_remote"
+collections = ["address@place.com"]
+
+[storage gmail_calendar_local]
+type = "filesystem"
+path = ".calendar/gmail/"
+fileext = ".ics"
+
+[storage gmail_calendar_remote]
+type = "google_calendar"
+token_file = "~/.vdirsyncer/token_gmail_calendar"
+client_id = "client_id_stuff"
+client_secret = "client_secret_stuff"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;  Work Calendar  ;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[pair work_calendar]
+a = "work_calendar_local"
+b = "work_calendar_remote"
+collections = ["from a", "from b"]
+conflict_resolution = "b wins"
+
+[storage work_calendar_local]
+type = "filesystem"
+path = "~/.calendar/work/"
+fileext = ".ics"
+
+[storage work_calendar_remote]
+type = "caldav"
+url = "http://localhost:1080/users/name@email.com/calendar"
+username = "name@email.com"
+password.fetch = ["command", "pass", "name_of_pass"]
+;start_date = "datetime.now() - timedelta(days=365)"
+;end_date = "datetime.now() + timedelta(days=365)"
+
+; vim:filetype=dosini
