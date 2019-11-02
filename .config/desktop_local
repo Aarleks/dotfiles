@@ -1,5 +1,3 @@
 #!bin/sh
 
-#dwm-bar & # Print shit out in the bar
 setxkbmap -layout us -option caps:super && killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape' &
-

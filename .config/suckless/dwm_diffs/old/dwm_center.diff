@@ -38,7 +38,7 @@ index 4465af1..84b1643 100644
 @@ -1049,6 +1052,11 @@ manage(Window w, XWindowAttributes *wa)
  		&& (c->x + (c->w / 2) < c->mon->wx + c->mon->ww)) ? bh : c->mon->my);
  	c->bw = borderpx;
-
+ 
 +	if(c->iscentered) {
 +		c->x = c->mon->mx + (c->mon->mw - WIDTH(c)) / 2;
 +		c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2;
@@ -50,7 +50,7 @@ index 4465af1..84b1643 100644
 @@ -1423,6 +1431,19 @@ sendmon(Client *c, Monitor *m)
  	arrange(NULL);
  }
-
+ 
 +void
 +setcentered(const Arg *arg)
 +{
@@ -67,5 +67,3 @@ index 4465af1..84b1643 100644
  void
  setclientstate(Client *c, long state)
  {
-
-

@@ -7,7 +7,7 @@ index 1c0b587..cb8053a 100644
  static const int nmaster     = 1;    /* number of clients in master area */
  static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 +static const int attachbelow = 1;    /* 1 means attach after the currently active window */
-
+ 
  static const Layout layouts[] = {
  	/* symbol     arrange function */
 diff --git a/dwm.1 b/dwm.1
@@ -55,7 +55,7 @@ index 4465af1..bd715a2 100644
 +	c->mon->sel->next = c;
 +
 +}
-
+ 
  void
  attachstack(Client *c)
 @@ -1062,7 +1078,10 @@ manage(Window w, XWindowAttributes *wa)
@@ -94,5 +94,3 @@ index 4465af1..bd715a2 100644
  					attachstack(c);
  				}
  				if (m == selmon)
-
-

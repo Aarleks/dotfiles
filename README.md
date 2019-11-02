@@ -16,12 +16,24 @@ This is now my main Linux config.
 
 After messing around with two branches of these dotfiles I became sick of having to merge changes in one into the other, and vice versa. It was just annoying. Then I realised that the only real differences between the laptop and the desktop were keyboard and `.xinitrc` based. So, I decided to source in .xinitrc instead. The code blocks below are sample settings that should go into the desktop and laptop respectively.
 
-```sh
-dwm-bar & # Print shit out in the bar
-setxkbmap -layout us -variant colemak -option caps:super && killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape' &
+**On the laptop**
 
-#exec i3
-while :; do
-	ssh-agent dwm || break
-done
+```sh
+setxkbmap -layout us -variant colemak -option caps:super && killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape' &
 ```
+
+**On the desktop**
+
+```sh
+setxkbmap -layout us -option caps:super && killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape' &
+```
+
+## Khal and DavMail for Calendar Sync
+
+Lots of fiddling to get this right, but in the end I've been able to replicate this on two machines so I think it's working. The requirements are:
+
+```sh
+sudo pacman -S khal vdirsyncer python-requests-oauthlib
+```
+
+
