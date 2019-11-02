@@ -37,7 +37,7 @@ set collapse_unread    = no   # don't collapse threads with unread mails
 set strict_threads
 
 bind index,pager F noop
-+macro index,pager F "<view-attachments>jjjjjjjjjjjjjjjjjjjjtktkktkktkktkktkktkktkktkktkktkktkktkk;f" "Forward with attachments" # Forward all attachments with the message
+macro index,pager F "<view-attachments>jjjjjjjjjjjjjjjjjjjjtktkktkktkktkktkktkktkktkktkktkktkktkk;f" "Forward with attachments" # Forward all attachments with the message
 
 # powerline status bar hack
 color index white black "~D" # deleted messages
