@@ -67,8 +67,8 @@ super + d
     rofi -show run
 
 ## Run the Colemak script
-super + k
-    $TERMINAL -n khal -e khal interactive
+super + shift + k
+    $TERMINAL -n khal -e khal
 
 ## Lock the screen
 super + x
