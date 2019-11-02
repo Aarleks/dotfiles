@@ -26,12 +26,18 @@ set sort_aux = reverse-last-date-received
 set editor = "$EDITOR +1/^$ -c nohlsearch -c Goyo"
 set abort_noattach = ask-yes
 set edit_headers = yes
+auto_view text/calendar application/ics
+unset mime_forward
+set mime_forward_rest = yes
 
 unset fcc_attach
 set uncollapse_new     = yes  # open threads when new mail
 set uncollapse_jump    = yes  # jump to unread message when uncollapse
 set collapse_unread    = no   # don't collapse threads with unread mails
 set strict_threads
+
+bind index,pager F noop
++macro index,pager F "<view-attachments>jjjjjjjjjjjjjjjjjjjjtktkktkktkktkktkktkktkktkktkktkktkktkk;f" "Forward with attachments" # Forward all attachments with the message
 
 # powerline status bar hack
 color index white black "~D" # deleted messages
