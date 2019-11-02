@@ -68,7 +68,7 @@ super + d
 
 ## Run the Colemak script
 super + k
-    $TERMINAL khal interactive
+    $TERMINAL -n khal -e khal interactive
 
 ## Lock the screen
 super + x
