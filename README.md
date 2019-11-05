@@ -4,6 +4,28 @@ This is the dotfiles repo for my Arch installations.
 
 Various bits of the code here has been lifted from other places and people, some of whom are lost from my memory. Where I remember I provide attribution.
 
+### Installation
+
+Copied [Luke Smith's]() LARBS script and made some minor modifications. It works very nicely (I've done 4 installations with it so far).
+
+```sh
+# Download the script
+curl -LO https://raw.githubusercontent.com/Aarleks/dots-installer/master/strappyboot.sh
+
+# Run the script to install all packages and dependencies
+bash strappyboot.sh
+```
+
+This will take a while. The script assumes you are signed in as root, and will ask you to create a new user and password and will then proceed without too much intervention until all is done.
+
+## Main Packages and Commands
+
+
+
+### AUR Package Management
+
+I use `yay` to download packages from the Arch User Repository.
+
 ### Window Manager: `DWM`
 
 After starting with Ubuntu, then moving to i3, I migrated to Arch in 2017. I kept using Arch+i3 on all my machines until early 2019 when I started trialling `dwm`. As of late 2019 all my machines use `dwm`.
@@ -15,7 +37,7 @@ stuff about dwm, including branch management and sxhkd.
 
 ### Tmux
 
-I use `tmux` to read emails using `neomutt` and to manage projects. For the latter, I have borrowed the `.tmux` file from [Greg Hurrell](), which allows me to set up workspaces specific to each project. I then run the `tman` zsh command to launch `tmux` into the workspace, or re-attach to the workspace if it already exists.
+I use `tmux` to read emails using `neomutt` and to manage projects. For the latter, I have borrowed the `.tmux` file from [Greg Hurrell](https://github.com/wincent/wincent), which allows me to set up workspaces specific to each project. I then run the `tman` zsh command to launch `tmux` into the workspace, or re-attach to the workspace if it already exists.
 
 - `email` function in zsh folder
 - `tman` function in zsh folder
@@ -57,4 +79,8 @@ sudo pacman -S khal vdirsyncer python-requests-oauthlib
 yay -S davmail
 ```
 
+## Plain-Text Academic Writing
 
+stuff about this here
+
+vim + markdown + fzf + fzf-bibtex + zotero + pandoc
