@@ -3,15 +3,9 @@
 # Check for internet connection and exit if it's not there
 ping -q -c 1 1.1.1.1 > /dev/null || exit
 
-# Start davmail to enable CalDAV server connection
-#davmail ~/davmail.properties
-
 # Sync calendar accounts
 vdirsyncer sync
 
 # Go and tell somebody it
 notify-send "Khal:" "Calendar updated"
-
-# Kill davmail
-ps -aux | grep davmail | killall -9 java
 
