@@ -32,6 +32,9 @@ map Cproj $(cp $f ~/Projects)
 map gadp cd ~/Dropbox/MRes/Development/ADP
 map Madp $(mv $f ~/Dropbox/MRes/Development/ADP)
 map Cadp $(cp $f ~/Dropbox/MRes/Development/ADP)
+map gdap cd ~/Dropbox/MRes/DAP
+map Mdap $(mv $f ~/Dropbox/MRes/DAP)
+map Cdap $(cp $f ~/Dropbox/MRes/DAP)
 map cfa :e ~/.config/aliasrc<CR>
 map cfc :e ~/.config/alias-conf<CR>
 map cfd :e ~/.config/alias-dirs<CR>
