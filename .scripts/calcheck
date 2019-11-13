@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Check for internet connection and exit if it's not there
+ping -q -c 1 1.1.1.1 > /dev/null || exit
+
+# Sync calendar accounts
+vdirsyncer sync
+
+# Go and tell somebody it
+notify-send "Khal:" "Calendar updated"
+

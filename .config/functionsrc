@@ -27,7 +27,15 @@ function email() {
     if ! tmux has-session -t Email 2> /dev/null; then
 	# Make saved attachments go to ~/ by default.
 	tmux new-session -d -s Email -c ~/ -n Neomutt
-	tmux send-keys -t Email:Neomutt neomutt Enter
+	tmux send-keys -t Email:Neomutt "neomutt" Enter
+	# Bring up khal from $HOME and split for DavMail and vdirsyncer
+	tmux new-window -t Email -c ~/ -n Calendar
+	tmux send-keys -t Email:Calendar "khal interactive" Enter
+	tmux split-window -t Email:Calendar -h -c ~/
+	tmux send-keys -t Email:Calendar.right "vdirsyncer sync"
+	tmux split-window -t Email:Calendar -v -f -l 8 -c ~/
+	tmux send-keys -t Email:Calendar.bottom "davmail davmail.properties"
+	# Bring up muttrc
 	tmux new-window -t Email -c ~/.config/mutt -n muttrc
 	tmux send-keys -t Email:muttrc 'nvim muttrc' Enter
 #	tmux split-window -t Email:sync -h -c ~/.mutt
