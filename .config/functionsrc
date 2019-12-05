@@ -36,8 +36,8 @@ function email() {
 	tmux split-window -t Email:Calendar -v -f -l 8 -c ~/
 	tmux send-keys -t Email:Calendar.bottom "davmail davmail.properties"
 	# Bring up muttrc
-	tmux new-window -t Email -c ~/.config/mutt -n muttrc
-	tmux send-keys -t Email:muttrc 'nvim muttrc' Enter
+	tmux new-window -t Email -c ~/.config/mutt -n mutt
+	#tmux send-keys -t Email:muttrc "nvim muttrc" Enter
 #	tmux split-window -t Email:sync -h -c ~/.mutt
 #	tmux send-keys -t Email:sync.right '~/.mutt/scripts/control.sh work' Enter
 #	tmux split-window -t Email:sync -v -f -l 8 -c ~/.mutt
