@@ -58,6 +58,10 @@ super + shift + e
 super + r
     $TERMINAL -e lf
 
+## Run the screencast recorder
+super + shift + r
+    dmenurecord
+
 ## Open htop in a terminal instance
 super + i
     $TERMINAL -e htop
