@@ -49,34 +49,30 @@ super + shift + w
 
 ## Open neomutt in a terminal instance
 super + e
-    $TERMINAL -e email
+    $TERMINAL -e neomutt
 
 super + shift + e
     $TERMINAL -e neomutt -R
 
 ## Open the file manager lf in a terminal instance
-super + r
+super + f
     $TERMINAL -e lf
 
-## Run the screencast recorder
-super + shift + r
-    dmenurecord
-
 ## Open htop in a terminal instance
-super + i
-    $TERMINAL -e htop
+#super + i
+#    $TERMINAL -e htop
 
 ## Run the application launcher
 super + d
     rofi -show run
 
 ## Run the Colemak script
-super + shift + y
-    $TERMINAL -n khal -e khal interactive
+#super + shift + k
+#    kblayout.sh
 
 ## Lock the screen
 super + x
-    ~/.config/i3/lock.sh
+   slock
 
 ## Shut the system down
 super + shift + x
@@ -84,11 +80,11 @@ super + shift + x
 
 ## Toggle the webcam on-screen functionn on/off
 super + c
-    camtog2
+    camtoggle
 
 ## Toggle webcam on/off
-super + shift + c
-    mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
+#super + shift + c
+#    mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
 
 ## Launch the music visualiser in a terminal instance.
 super + v
