@@ -2,11 +2,16 @@ home   ~/
 conf   ~/.config
 scr    ~/.scripts
 down   ~/Downloads
-rd1    ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1
-rd2    ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD2
-rlit   ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RLit
+rd1    ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/1_RD1
+rd2    ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/2_RD2
+rlit   ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond
 cu     ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units
 cv     ~/Dropbox/WritingTools/CV
 proj   ~/Projects
 adp    ~/Dropbox/MRes/Development/ADP
-
+sac    ~/Dropbox/MRes/SAC
+dap    ~/Dropbox/MRes/DAP
+ass    ~/Dropbox/MRes/AssessmentCommittee
+soup   ~/Dropbox/MRes/Supervision
+dvv    ~/Dropbox/MRes/Development
+jlx    ~/Dropbox/JLX

@@ -41,3 +41,8 @@ function email() {
 	tmux switch-client -t Email:Neomutt
     fi
 }
+
+### FFF Customizations ###
+export FFF_COL2=3
+export FFF_OPENER="xdg-open"
+export FFF_FAV1=~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units
