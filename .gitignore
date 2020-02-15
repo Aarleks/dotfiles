@@ -122,3 +122,9 @@
 /.calendar/
 /.vdirsyncer/
 /.config/vdirsyncer/config
+.Rproj.user
+.config/cef_user_data/
+.config/Joplin/
+.config/joplin-desktop/
+.config/onlyoffice/
+.electron-gyp/
