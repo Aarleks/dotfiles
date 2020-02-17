@@ -22,6 +22,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vimwiki/vimwiki'
 Plug 'mboughaba/i3config.vim'
+"Plug 'amix/vim-zenroom2'
 "Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'roxma/nvim-yarp'
@@ -90,7 +91,7 @@ vnoremap L >gv
 " ==========:
 
 set linebreak
-"set background=dark
+set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 let g:lightline = {
