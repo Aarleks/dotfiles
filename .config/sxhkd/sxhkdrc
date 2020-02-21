@@ -80,7 +80,7 @@ super + shift + x
 
 ## Toggle the webcam on-screen functionn on/off
 super + c
-    camtoggle
+    camtog2
 
 ## Toggle webcam on/off
 #super + shift + c

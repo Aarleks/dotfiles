@@ -117,3 +117,9 @@
 /.calendar/
 /.vdirsyncer/
 /.config/vdirsyncer/
+/.config/joplin/
+/.config/Joplin/
+/.config/joplin-desktop/
+/.config/onlyoffice/
+/.electron-gyp/
+/.ssh/
