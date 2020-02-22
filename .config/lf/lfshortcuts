@@ -17,9 +17,9 @@ map Crd1 $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/1_RD1
 map grd2 cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/2_RD2
 map Mrd2 $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/2_RD2)
 map Crd2 $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/2_RD2)
-map grlit cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond
-map Mrlit $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond)
-map Crlit $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond)
+map grwb cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond
+map Mrwb $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond)
+map Crwb $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond)
 map gcu cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units
 map Mcu $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units)
 map Ccu $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units)
