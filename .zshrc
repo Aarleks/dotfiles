@@ -102,3 +102,6 @@ export FFF_COL1=4 # directory colour = blue
 export FFF_COL2=6 # status colour = light blue
 export FFF_COL4=4 # cursor colour = blue
 export FFF_FILE_FORMAT="\t%f"
+
+# nnn stuffs
+export NNN_BMS="D:~/Downloads"
