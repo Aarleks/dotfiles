@@ -12,7 +12,7 @@ The format here will be alphabetical with a mapping for each of the keys. Where 
 
 ## Tab:
 
-* **Super-**<++>
+* **Super-Tab** - Switch between current and previous DWM tag.
 * **Super-Shift-**<++>
 * **Super-Control-Shift**<++>
 
