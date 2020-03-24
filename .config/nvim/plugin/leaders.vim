@@ -71,7 +71,7 @@ nnoremap <Leader>x :xit<CR>
 nnoremap <Leader><Leader>x :xit<CR>:xit<CR>
 
 "" C:
-nnoremap <Leader>c :w! \| !compiler <c-r>%<CR>
+nnoremap <silent> <Leader>c :w! \| !compiler <c-r>%<CR>
 "" V:
 "" B:
 " Quick buffer navigation

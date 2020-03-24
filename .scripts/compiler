@@ -4,7 +4,7 @@
 #
 # It compiles a document to pdf
 
-file=$(basename "$1")
+file=$(readlink -f "$1")
 ext="${file##*.}"
 base="${file%.*}"
 

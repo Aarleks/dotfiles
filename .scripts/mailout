@@ -1,0 +1,7 @@
+#!/bin/sh
+
+
+neomutt \\
+-s "Test Email from Command Line" \\
+aarleks@gmail.com \\
+< Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/RD1/ASSESSMENTS/A3/SoupComms/soup_marking_email.md
