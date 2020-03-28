@@ -82,6 +82,10 @@ super + shift + x
 super + c
     camtog2
 
+## Stop dmenurecord
+super + r
+    dmenurecord kill
+
 ## Toggle webcam on/off
 #super + shift + c
 #    mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
