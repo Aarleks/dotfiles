@@ -97,6 +97,8 @@ alias ls='ls -hN --color=auto --group-directories-first'
 # Shortcuts
 [ -f "$HOME/.config/shortcutsrc" ] && source "$HOME/.config/shortcutsrc"
 
+[ -f "/usr/share/fzf/completion.zsh" ] && source "/usr/share/fzf/completion.zsh"
+
 # fff stuffs
 export FFF_COL1=4 # directory colour = blue
 export FFF_COL2=6 # status colour = light blue
