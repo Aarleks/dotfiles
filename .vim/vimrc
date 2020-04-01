@@ -1,0 +1,6 @@
+" Starting from Scratch Vimrc 2020-04-02
+" vim:foldmethod=marker
+
+let mapleader="\<Space>"
+
+
