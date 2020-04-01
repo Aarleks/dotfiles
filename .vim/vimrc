@@ -3,4 +3,43 @@
 
 let mapleader="\<Space>"
 
+if ! filereadable(expand('~/.vim/autoload/plug.vim'))
+	echo "Downloading junegunn/vim-plug to manage plugins..."
+	silent !mkdir -p ~/.vim/autoload
+	silent !curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > ~/.vim/autoload/plug.vim
+endif
 
+call plug#begin('~/.vim/plugged')
+    Plug 'reedes/vim-colors-pencil'
+    Plug 'reedes/vim-pencil'
+    Plug 'aarleks/zettel.vim'
+    Plug 'junegunn/fzf.vim'
+call plug#end()
+
+source $VIMRUNTIME/defaults.vim
+
+autocmd BufWritePost ~/.vim/vimrc source $MYVIMRC
+
+set number
+set relativenumber
+set ignorecase
+set smartcase
+set laststatus=2
+set path+=**
+set splitbelow splitright
+set scrolloff=5
+set wildmode=longest,list,full
+
+augroup search
+	autocmd!
+	autocmd CmdlineEnter /,\? :set hlsearch
+	autocmd CmdlineLeave /,\? :set nohlsearch
+augroup END
+
+runtime macros/matchit.vim
+
+colorscheme pencil
+
+highlight Comment cterm=italic
+
+let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
