@@ -54,10 +54,6 @@ super + e
 super + shift + e
     $TERMINAL -e neomutt -R
 
-# Start and stop the screencasting function
-super + shift + r
-    dmenurecord
-
 ## Open the file manager lf in a terminal instance
 super + f
     $TERMINAL -e lf
@@ -85,6 +81,10 @@ super + shift + x
 ## Toggle the webcam on-screen functionn on/off
 super + c
     camtog2
+
+## Stop dmenurecord
+super + r
+    dmenurecord kill
 
 ## Toggle webcam on/off
 #super + shift + c
