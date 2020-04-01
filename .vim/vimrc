@@ -43,3 +43,8 @@ colorscheme pencil
 highlight Comment cterm=italic
 
 let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
+
+augroup pencil
+	autocmd!
+	autocmd FileType markdown call pencil#init()
+augroup END
