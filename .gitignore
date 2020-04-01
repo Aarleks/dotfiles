@@ -45,6 +45,7 @@
 /.config/dconf/user
 /.vim/.netrwhist
 /.vim/autoload/plug.vim.old
+/.vim/autoload/plug.vim
 /.viminfo.tmp
 /.config/mimeapps.list
 /.zcompdump
@@ -118,7 +119,6 @@
 /.config/suckless/sxiv/
 /.config/suckless/slock/
 /.ssh/
-/.vim/
 /.calendar/
 /.vdirsyncer/
 /.config/vdirsyncer/config
