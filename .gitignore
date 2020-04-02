@@ -125,6 +125,7 @@
 .Rproj.user
 .config/cef_user_data/
 .config/Joplin/
+.config/joplin/
 .config/joplin-desktop/
 .config/onlyoffice/
 .electron-gyp/
