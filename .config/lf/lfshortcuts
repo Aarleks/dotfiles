@@ -1,0 +1,63 @@
+# vim:filetype=vim
+map ghome cd ~/
+map Mhome $(mv $f ~/)
+map Chome $(cp $f ~/)
+map gconf cd ~/.config
+map Mconf $(mv $f ~/.config)
+map Cconf $(cp $f ~/.config)
+map gscr cd ~/.scripts
+map Mscr $(mv $f ~/.scripts)
+map Cscr $(cp $f ~/.scripts)
+map gdown cd ~/Downloads
+map Mdown $(mv $f ~/Downloads)
+map Cdown $(cp $f ~/Downloads)
+map grd1 cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/1_RD1
+map Mrd1 $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/1_RD1)
+map Crd1 $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/1_RD1)
+map grd2 cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/2_RD2
+map Mrd2 $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/2_RD2)
+map Crd2 $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/2_RD2)
+map gwb cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond
+map Mwb $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond)
+map Cwb $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond)
+map gcu cd ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units
+map Mcu $(mv $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units)
+map Ccu $(cp $f ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units)
+map gcv cd ~/Dropbox/WritingTools/CV
+map Mcv $(mv $f ~/Dropbox/WritingTools/CV)
+map Ccv $(cp $f ~/Dropbox/WritingTools/CV)
+map gproj cd ~/Projects
+map Mproj $(mv $f ~/Projects)
+map Cproj $(cp $f ~/Projects)
+map gadp cd ~/Dropbox/MRes/Development/ADP
+map Madp $(mv $f ~/Dropbox/MRes/Development/ADP)
+map Cadp $(cp $f ~/Dropbox/MRes/Development/ADP)
+map gsac cd ~/Dropbox/MRes/SAC
+map Msac $(mv $f ~/Dropbox/MRes/SAC)
+map Csac $(cp $f ~/Dropbox/MRes/SAC)
+map gdap cd ~/Dropbox/MRes/DAP
+map Mdap $(mv $f ~/Dropbox/MRes/DAP)
+map Cdap $(cp $f ~/Dropbox/MRes/DAP)
+map gass cd ~/Dropbox/MRes/AssessmentCommittee
+map Mass $(mv $f ~/Dropbox/MRes/AssessmentCommittee)
+map Cass $(cp $f ~/Dropbox/MRes/AssessmentCommittee)
+map gsoup cd ~/Dropbox/MRes/Supervision
+map Msoup $(mv $f ~/Dropbox/MRes/Supervision)
+map Csoup $(cp $f ~/Dropbox/MRes/Supervision)
+map gdvv cd ~/Dropbox/MRes/Development
+map Mdvv $(mv $f ~/Dropbox/MRes/Development)
+map Cdvv $(cp $f ~/Dropbox/MRes/Development)
+map gjlx cd ~/Dropbox/JLX
+map Mjlx $(mv $f ~/Dropbox/JLX)
+map Cjlx $(cp $f ~/Dropbox/JLX)
+map cfa :e ~/.config/aliasrc<CR>
+map cfc :e ~/.config/alias-conf<CR>
+map cfd :e ~/.config/alias-dirs<CR>
+map cfz :e ~/.zshrc<CR>
+map cfp :e ~/.profile<CR>
+map cfv :e ~/.config/nvim/init.vim<CR>
+map cfm :e ~/.config/mutt/muttrc<CR>
+map cfnew :e ~/.config/newsboat/urls<CR>
+map cfx :e ~/.xinitrc<CR>
+map cfxp :e ~/.xprofile<CR>
+map cff :e ~/.config/fontconfig/fonts.conf<CR>
