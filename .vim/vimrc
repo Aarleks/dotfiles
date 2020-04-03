@@ -1,59 +1,50 @@
+" Starting from Scratch Vimrc 2020-04-02
 " vim:foldmethod=marker
-" A Vimrc From Scratch
 
-" BASIC SETTINGS: {{{
+let mapleader="\<Space>"
+
+if ! filereadable(expand('~/.vim/autoload/plug.vim'))
+	echo "Downloading junegunn/vim-plug to manage plugins..."
+	silent !mkdir -p ~/.vim/autoload
+	silent !curl https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim > ~/.vim/autoload/plug.vim
+endif
+
+call plug#begin('~/.vim/plugged')
+    Plug 'reedes/vim-colors-pencil'
+    Plug 'reedes/vim-pencil'
+    Plug 'aarleks/zettel.vim'
+    Plug 'junegunn/fzf.vim'
+call plug#end()
+
 source $VIMRUNTIME/defaults.vim
+
+autocmd BufWritePost ~/.vim/vimrc source $MYVIMRC
+
 set number
 set relativenumber
-set ignorecase   " case insensitive search
-set smartcase    " case sensitive search when specified
+set ignorecase
+set smartcase
 set laststatus=2
+set path+=**
+set splitbelow splitright
+set scrolloff=5
+set wildmode=longest,list,full
 
-augroup vimrc-incsearch-highlight
+augroup search
 	autocmd!
 	autocmd CmdlineEnter /,\? :set hlsearch
 	autocmd CmdlineLeave /,\? :set nohlsearch
 augroup END
-" }}}
 
-let mapleader = "\<Space>"
-nnoremap <Leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <Leader>sv :source $MYVIMRC<cr>
+runtime macros/matchit.vim
 
+colorscheme pencil
 
-" STATUSLINE: {{{
-set statusline=
-set statusline+=%#IncSearch#
-set statusline+=\ %{mode()}
-set statusline+=\ %t\
-set statusline+=%#LineNr#
-set statusline+=%m\
-set statusline+=%y
-set statusline+=%=
-set statusline+=ℓ
-set statusline+=\ %l
-set statusline+=/
-set statusline+=%L
-" }}}
+highlight Comment cterm=italic
 
-" NETRW: {{{
-let g:netrw_banner = 0       " Remove banner
-let g:netrw_liststyle = 3    " Tree view
-let g:netrw_browse_split = 4 " Open in the previous split
-let g:netrw_altv = 1         " Opens in split to the right
-let g:netrw_winsize = 25
-"let g:netrw_list_hide = netrw_gitignore#Hide()
-"let g:netrw_list_hide.= ',\(^\|\s\s\)\zs\.\S\+'
-" }}}
+let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
 
-" VIM: {{{
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
+augroup pencil
+	autocmd!
+	autocmd FileType markdown call pencil#init()
 augroup END
-" }}}
-
-" MARKDOWN: {{{
-autocmd FileType markdown :setlocal spell
-"inoremap bb<Tab> ****<++><Esc>F*hi
-" }}}
