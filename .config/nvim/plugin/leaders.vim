@@ -31,6 +31,8 @@ nnoremap <Leader><Leader>p :LLPStartPreview<CR>
 " http://vimcasts.org/episodes/show-invisibles/
 nnoremap <leader>l :set list!<CR>
 set listchars=tab:»\ ,eol:¬,nbsp:
+
+" Call some lorem into the mix
 nnoremap <Leader><Leader>l :-1read $HOME/.config/nvim/templates/lorem<CR>
 
 "" U:
@@ -43,7 +45,6 @@ nnoremap <leader>u :w<Home>silent <End> !urlview<CR>
 "" A:
 "" R:
 "" fzf - see after/ftplugin/markdown.vim
-
 "" S:
 " Fix spelling errors
 nnoremap <Leader>sp :call aarleks#spelling#replace()<CR>
@@ -70,8 +71,7 @@ nnoremap <Leader>x :xit<CR>
 nnoremap <Leader><Leader>x :xit<CR>:xit<CR>
 
 "" C:
-nnoremap <Leader>c :w! \| !compiler <c-r>%<CR>
-
+nnoremap <silent> <Leader>c :w! \| !compiler <c-r>%<CR>
 "" V:
 "" B:
 " Quick buffer navigation
