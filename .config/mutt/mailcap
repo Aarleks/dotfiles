@@ -4,8 +4,8 @@ text/html ; uconv --add-signature -f %{charset} -t UTF-8 %s | firefox -new-tab %
 text/html; w3m -I %{charset} -T text/html; copiousoutput
 image/*; muttimage %s ; copiousoutput
 video/*; setsid mpv --quiet %s &; copiousoutput
-application/pdf; /usr/bin/zathura %s ; copiousoutput ;
-application/pgp-encrypted; gpg -d '%s'; copiousoutput ;
+application/pdf; /usr/bin/zathura %s ; copiousoutput
+application/pgp-encrypted; gpg -d '%s'; copiousoutput;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s; copiousoutput
 text/calendar; mutt-ics; copiousoutput
 application/ics; mutt-ics; copiousoutput

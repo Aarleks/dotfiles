@@ -14,17 +14,19 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-    " Aesthetics
-    Plug 'itchyny/lightline.vim'
-    Plug 'junegunn/goyo.vim'
-    Plug 'itchyny/vim-gitbranch'
-    Plug 'altercation/vim-colors-solarized'
-    Plug 'vim-pandoc/vim-pandoc-syntax'
-    Plug 'baskerville/vim-sxhkdrc'
-    " File management
-    Plug 'junegunn/fzf.vim'
-    Plug 'tpope/vim-fugitive'
-    Plug 'vimwiki/vimwiki'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
+Plug 'tpope/vim-fugitive'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vimwiki/vimwiki'
+Plug 'mboughaba/i3config.vim'
+"Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+"Plug 'roxma/nvim-yarp'
+"Plug 'ncm2/ncm2'
+Plug 'baskerville/vim-sxhkdrc'
 call plug#end()
 " }}}
 
@@ -64,6 +66,7 @@ augroup pandoc_syntax
     au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
 
+set go=a " visual mode - highlighted text is copied to the clipboard
 set shiftwidth=4
 let &softtabstop=&shiftwidth
 
@@ -127,6 +130,10 @@ inoremap <F10> <esc>:Goyo<CR>a
 
 " When shortcut files are updated, renew bash and vifm configs with new material:
 autocmd BufWritePost ~/.config/alias-conf,~/.config/alias-dirs !shortcuts.sh
+
+" Vim-LaTeX-Live-Preview settings
+let g:livepreview_previewer = 'zathura'
+let g:livepreview_engine = 'xelatex'
 
 " Vimwiki Settings
 let g:vimwiki_global_ext=0
