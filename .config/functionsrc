@@ -30,11 +30,10 @@ function email() {
 	tmux send-keys -t Email:Neomutt neomutt Enter
 	tmux new-window -t Email -c ~/.config/mutt -n muttrc
 	tmux send-keys -t Email:muttrc 'nvim muttrc' Enter
-	tmux new-window -t Email -c ~/.config/mutt -n sync
-	tmux split-window -t Email:sync -h -c ~/.mutt
-	tmux send-keys -t Email:sync.right '~/.mutt/scripts/control.sh work' Enter
-	tmux split-window -t Email:sync -v -f -l 8 -c ~/.mutt
-	tmux send-keys -t Email:sync.bottom '~/.mutt/scripts/control.sh' Enter
+	tmux split-window -t Email:muttrc -h -c ~/
+	tmux send-keys -t Email:muttrc.right 'lf' Enter
+#	tmux split-window -t Email:sync -v -f -l 8 -c ~/.mutt
+#	tmux send-keys -t Email:sync.bottom '~/.mutt/scripts/control.sh' Enter
     fi
     if [ -z "$TMUX" ]; then
 	tmux attach -t Email:Neomutt

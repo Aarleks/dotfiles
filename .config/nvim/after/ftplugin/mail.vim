@@ -1,7 +1,6 @@
 " Settings for composing email in Vim
 
 set textwidth=0
-setlocal spell
 
 nnoremap <Leader>cc ?Cc:<CR>:nohlsearch<CR>A<space>
 nnoremap <Leader>bcc ?Bcc:<CR>:nohlsearch<CR>A<space>
