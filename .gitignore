@@ -122,6 +122,7 @@
 /.calendar/
 /.vdirsyncer/
 /.config/vdirsyncer/config
+/.pandoc/
 .Rproj.user
 .config/cef_user_data/
 .config/Joplin/
