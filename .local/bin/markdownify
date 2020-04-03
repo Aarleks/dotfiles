@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# take mail object from mutt
+# look for 'markdown markers'
+# if markers present, run pandoc and return an html file and the original mail
+

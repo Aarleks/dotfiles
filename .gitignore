@@ -71,7 +71,6 @@
 
 /.cache/
 /.mozilla/
-/.local/
 /.config/autostart/
 /.config/pulse/
 /.dropbox/
@@ -120,4 +119,5 @@
 /.electron-gyp/
 /.ssh/
 /.pandoc/
-/.TinyTex/
+/.TinyTeX/
+/.macromedia/
