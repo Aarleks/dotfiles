@@ -28,8 +28,7 @@
 /.config/enchant/
 /.config/nvim/.netrwhist
 /.config/qmk_firmware
-/.config/suckless/dmenu/
-/.config/suckless/surf/
+/.config/suckless/
 /.stellarium/
 /.surf/
 /.vimgolf/
@@ -60,7 +59,6 @@
 /.config/ranger/
 /.config/texput.log
 /.config/wall.png
-/.config/suckless/dwm/
 /.mplayer/
 /.vuescan/
 /.vuescanrc
@@ -105,12 +103,10 @@
 /.arduino15/
 /.config/fish/
 /.config/htop/
-/.config/suckless/st/
 /.config/msmtp/
 /.config/Gaijin/
 /.config/WarThunder/
 /.config/cef_user_data/
-/.config/suckless/sxiv/
 /.config/GIMP/
 /.fltk/
 /.vim/
