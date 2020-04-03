@@ -6,9 +6,6 @@
 
 !/.**
 
-# File Types
-/*.pdf
-
 #++ VARIOUS FILES
 /.history
 /.histfile
@@ -31,8 +28,7 @@
 /.config/enchant/
 /.config/nvim/.netrwhist
 /.config/qmk_firmware
-/.config/suckless/dmenu/
-/.config/suckless/surf/
+/.config/suckless/
 /.stellarium/
 /.surf/
 /.vimgolf/
@@ -44,15 +40,12 @@
 /.config/RStudio/desktop.ini
 /.config/dconf/user
 /.vim/.netrwhist
-/.vim/autoload/plug.vim.old
-/.vim/autoload/plug.vim
 /.viminfo.tmp
 /.config/mimeapps.list
 /.zcompdump
 /.zshrc.zni
 /.config/vifm/vifminfo
-/.config/nvim/autoload/plug.vim
-/.config/nvim/autoload/plug.vim.old
+/.config/nvim/autoload/
 /.config/nvim/plugged/
 /.wget-hsts
 /.mbsyncrc
@@ -66,16 +59,13 @@
 /.config/ranger/
 /.config/texput.log
 /.config/wall.png
-/.config/suckless/dwm/
 /.mplayer/
 /.vuescan/
 /.vuescanrc
 /.zotero/
 /.slime/
-/.macromedia/
-/.config/localinitrc
 /..tmux.digests
-/.davmail*
+/.config/localinitrc
 
 # FOLDERS
 
@@ -113,21 +103,20 @@
 /.arduino15/
 /.config/fish/
 /.config/htop/
-/.config/suckless/st/
 /.config/msmtp/
-/.TinyTeX/
-/.config/suckless/sxiv/
-/.config/suckless/slock/
-/.ssh/
+/.config/Gaijin/
+/.config/WarThunder/
+/.config/cef_user_data/
+/.config/GIMP/
+/.fltk/
+/.vim/
 /.calendar/
 /.vdirsyncer/
-/.config/vdirsyncer/config
+/.config/vdirsyncer/
+/.config/joplin/
+/.config/Joplin/
+/.config/joplin-desktop/
+/.config/onlyoffice/
+/.electron-gyp/
+/.ssh/
 /.pandoc/
-.Rproj.user
-.config/cef_user_data/
-.config/Joplin/
-.config/joplin/
-.config/joplin-desktop/
-.config/onlyoffice/
-.electron-gyp/
-/.config/suckless/
