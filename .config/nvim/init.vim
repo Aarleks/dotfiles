@@ -95,7 +95,7 @@ command! -bang -nargs=* RG call fzf#vim#grep("rg --no-ignore-parent --column --l
 " ==========:
 
 set linebreak
-set background=dark
+"set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
 let g:lightline = {
