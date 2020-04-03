@@ -63,7 +63,7 @@ super + f
 #    $TERMINAL -e htop
 
 ## Run the application launcher
-super + shift + d
+super + d
     rofi -show run
 
 ## Run the Colemak script
