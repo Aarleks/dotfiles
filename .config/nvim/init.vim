@@ -84,6 +84,14 @@ vnoremap H <gv
 vnoremap J xjP`[V`]
 vnoremap K xkP`[V`]
 vnoremap L >gv
+
+set grepprg=rg\ --vimgrep\ --smart-case\ --no-config\ --max-columns\ 1000
+set grepformat=%f:%l:%c:%m
+
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case " . <q-args>, 1, <bang>0)
+
+command! -bang -nargs=* RG call fzf#vim#grep("rg --no-ignore-parent --column --line-number --no-heading --color=always --smart-case " . <q-args>, 1, <bang>0)
+
 " }}}
 
 " AESTHETICS: {{{
