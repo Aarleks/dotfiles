@@ -11,7 +11,7 @@
 
 updateicon() { \
 	echo "$1" > /tmp/recordingicon
-	pkill -RTMIN+9 "${STATUSBAR:?}"
+	pkill -RTMIN+9 dwm-bar && dwm-bar
 	}
 
 killrecording() {
