@@ -96,3 +96,5 @@ alias ls='ls -hN --color=auto --group-directories-first'
 
 # Shortcuts
 [ -f "$HOME/.config/shortcutsrc" ] && source "$HOME/.config/shortcutsrc"
+
+[ -f "/usr/share/fzf/completion.zsh" ] && source "/usr/share/fzf/completion.zsh"
