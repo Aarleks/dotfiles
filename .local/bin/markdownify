@@ -4,3 +4,4 @@
 # look for 'markdown markers'
 # if markers present, run pandoc and return an html file and the original mail
 
+sed '1,/^X-T/d' | pandoc -s -f markdown -t html
