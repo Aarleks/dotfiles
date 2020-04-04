@@ -2,6 +2,7 @@
 # muttrc file for account work
 set realname = "Alex Norman"
 set from = "A.Norman@westernsydney.edu.au"
+set query_command = "abook --config "XDG_CONFIG_HOME"/abook/abookrc --datafile "XDG_DATA_HOME"/abook/adressbook --mutt-query '%s'"
 set sendmail = "msmtp -a work"
 #set sendmail = "env BUNDLE_GEMFILE=$HOME/.scripts/Gemfile $HOME/.scripts/msmtp.rb -a work"
 alias me Alex Norman <A.Norman@westernsydney.edu.au>
