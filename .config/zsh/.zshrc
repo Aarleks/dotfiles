@@ -5,6 +5,19 @@
 #   - Syntax highlighting
 #   - Git branch info in the promp
 
+alias ls='ls -hN --color=auto --group-directories-first'
+
+# Functions
+[ -f "$HOME/.config/functionsrc" ] && source "$HOME/.config/functionsrc"
+
+# Aliases
+[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+
+# Shortcuts
+[ -f "$HOME/.config/shortcutsrc" ] && source "$HOME/.config/shortcutsrc"
+
+[ -f "/usr/share/fzf/completion.zsh" ] && source "/usr/share/fzf/completion.zsh"
+
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -31,8 +44,7 @@ function +vi-git-untracked() {
 }
 
 # Prompt
-PS1="
-%B%F{166}%n%f%F{white}@%f%F{136}%m%f %F{33}%1~%f
+PS1="%B%F{166}%n%f%F{white}@%f%F{136}%m%f %F{33}%1~%f
 \${vcs_info_msg_0_} ->%b "
 
 RPROMPT='%F{33}%~'
@@ -60,6 +72,8 @@ setopt completealiases
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files.
+zstyle ':completion:*' completer _complete _ignored
+zstyle :compinstall filename '/home/alex/.zshrc'
 autoload -Uz compinit
 compinit
 
@@ -85,16 +99,3 @@ lfcd () {
     fi
 }
 bindkey -s '^o' 'lfcd\n'
-
-alias ls='ls -hN --color=auto --group-directories-first'
-
-# Functions
-[ -f "$HOME/.config/functionsrc" ] && source "$HOME/.config/functionsrc"
-
-# Aliases
-[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
-
-# Shortcuts
-[ -f "$HOME/.config/shortcutsrc" ] && source "$HOME/.config/shortcutsrc"
-
-[ -f "/usr/share/fzf/completion.zsh" ] && source "/usr/share/fzf/completion.zsh"

@@ -80,7 +80,7 @@ super + shift + x
 
 ## Toggle the webcam on-screen functionn on/off
 super + c
-    camtog2
+    togglecam
 
 ## Stop dmenurecord
 super + r

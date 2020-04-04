@@ -12,6 +12,12 @@ export VISUAL="nvim"
 export FILES="lf"
 export READER="zathura"
 
+# Cleaning up $HOME
+export ZDOTDIR="$HOME/.config/zsh"
+export INPUTRC="$HOME/.config/inputrc"
+export NOTMUCH_CONFIG="$HOME/.config/notmuch-config"
+export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
+
 # less/man colors
 export LESS=-R
 export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"; a="${a%_}"
