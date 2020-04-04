@@ -129,7 +129,7 @@ inoremap <F10> <esc>:Goyo<CR>a
 " ===========:
 
 " When shortcut files are updated, renew bash and vifm configs with new material:
-autocmd BufWritePost ~/.config/alias-conf,~/.config/alias-dirs !shortcuts.sh
+autocmd BufWritePost ~/.config/alias-conf,~/.config/alias-dirs !shortcuts
 
 " Vim-LaTeX-Live-Preview settings
 let g:livepreview_previewer = 'zathura'

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ls ~/Projects | dmenu -i | xargs cd
