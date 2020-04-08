@@ -14,6 +14,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'reedes/vim-pencil'
     Plug 'aarleks/zettel.vim'
     Plug 'junegunn/fzf.vim'
+    Plug 'swalladge/paper.vim'
+    Plug 'junegunn/goyo.vim'
 call plug#end()
 
 source $VIMRUNTIME/defaults.vim
@@ -39,6 +41,7 @@ augroup END
 runtime macros/matchit.vim
 
 colorscheme pencil
+"colorscheme paper
 
 highlight Comment cterm=italic
 

@@ -40,6 +40,7 @@
 /.config/RStudio/desktop.ini
 /.config/dconf/user
 /.vim/.netrwhist
+/.vim/autoload/plug.vim
 /.viminfo.tmp
 /.config/mimeapps.list
 /.zcompdump
@@ -108,7 +109,6 @@
 /.config/cef_user_data/
 /.config/GIMP/
 /.fltk/
-/.vim/
 /.calendar/
 /.vdirsyncer/
 /.config/vdirsyncer/
