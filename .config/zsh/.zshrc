@@ -16,6 +16,8 @@ alias ls='ls -hN --color=auto --group-directories-first'
 # Shortcuts
 [ -f "$HOME/.config/shortcutsrc" ] && source "$HOME/.config/shortcutsrc"
 
+#[ -f "$HOME/ls-colors" ] && source "$HOME/ls-colors"
+
 [ -f "/usr/share/fzf/completion.zsh" ] && source "/usr/share/fzf/completion.zsh"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

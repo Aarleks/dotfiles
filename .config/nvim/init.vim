@@ -21,12 +21,15 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vimwiki/vimwiki'
-Plug 'mboughaba/i3config.vim'
+"Plug 'mboughaba/i3config.vim'
 "Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'roxma/nvim-yarp'
 "Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
+"Plug 'chriskempson/base16-vim'
+"Plug 'chriskempson/base16-vim'
+"Plug 'mike-hearn/base16-vim-lightline'
 call plug#end()
 " }}}
 
