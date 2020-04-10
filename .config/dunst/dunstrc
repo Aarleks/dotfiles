@@ -1,4 +1,4 @@
-#vim: ft=cfg
+# vim: ft=cfg
 
 [global]
     monitor = 0
@@ -42,7 +42,7 @@
     # Markup is allowed
     format = "<b>%s</b>\n%b"
 
-    alignment = left
+    alignment = center
     show_age_threshold = 60
     word_wrap = yes
     ellipsize = middle
@@ -78,14 +78,14 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#002b36"
-    foreground = "#b58900"
+    foreground = "#252936"
     timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
     background = "#002b36"
-    foreground = "#d33682"
+    foreground = "#b58900"
     timeout = 5
 
 [urgency_critical]
