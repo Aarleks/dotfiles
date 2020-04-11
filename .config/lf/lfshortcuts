@@ -32,15 +32,15 @@ map Cproj $(cp $f ~/Projects)
 map gadp cd ~/Dropbox/MRes/Development/ADP
 map Madp $(mv $f ~/Dropbox/MRes/Development/ADP)
 map Cadp $(cp $f ~/Dropbox/MRes/Development/ADP)
-map gsac cd ~/Dropbox/MRes/SAC
-map Msac $(mv $f ~/Dropbox/MRes/SAC)
-map Csac $(cp $f ~/Dropbox/MRes/SAC)
-map gdap cd ~/Dropbox/MRes/DAP
-map Mdap $(mv $f ~/Dropbox/MRes/DAP)
-map Cdap $(cp $f ~/Dropbox/MRes/DAP)
-map gass cd ~/Dropbox/MRes/AssessmentCommittee
-map Mass $(mv $f ~/Dropbox/MRes/AssessmentCommittee)
-map Cass $(cp $f ~/Dropbox/MRes/AssessmentCommittee)
+map gsac cd ~/Dropbox/MRes/GovMin/SAC
+map Msac $(mv $f ~/Dropbox/MRes/GovMin/SAC)
+map Csac $(cp $f ~/Dropbox/MRes/GovMin/SAC)
+map gdap cd ~/Dropbox/MRes/GovMin/DAP
+map Mdap $(mv $f ~/Dropbox/MRes/GovMin/DAP)
+map Cdap $(cp $f ~/Dropbox/MRes/GovMin/DAP)
+map gass cd ~/Dropbox/MRes/GovMin/AssessmentCommittee
+map Mass $(mv $f ~/Dropbox/MRes/GovMin/AssessmentCommittee)
+map Cass $(cp $f ~/Dropbox/MRes/GovMin/AssessmentCommittee)
 map gsoup cd ~/Dropbox/MRes/Supervision
 map Msoup $(mv $f ~/Dropbox/MRes/Supervision)
 map Csoup $(cp $f ~/Dropbox/MRes/Supervision)
@@ -53,7 +53,7 @@ map Cjlx $(cp $f ~/Dropbox/JLX)
 map cfa :e ~/.config/aliasrc<CR>
 map cfc :e ~/.config/alias-conf<CR>
 map cfd :e ~/.config/alias-dirs<CR>
-map cfz :e ~/.zshrc<CR>
+map cfz :e ~/.config/zsh/zshrc<CR>
 map cfp :e ~/.profile<CR>
 map cfv :e ~/.config/nvim/init.vim<CR>
 map cfm :e ~/.config/mutt/muttrc<CR>

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+function project() {
+    DIR="$HOME/Projects/"
+
+    TARGET=$(find ~/Projects -name .tmux -type f | awk -F '/' '{print $5}' | dmenu -i -l 10)
+
+    cd "$DIR/$TARGET"
+
+    tman
+}
+
+project

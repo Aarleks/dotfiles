@@ -7,10 +7,10 @@ barstats() { \
     cat /tmp/recordingicon 2>/dev/null
 
     [ -f "/sys/class/power_supply/BAT0/capacity" ] && case "$(cat /sys/class/power_supply/BAT0/capacity)" in
-	100|9[0-9])    echo " " ;;
-	8[0-9]|7[0-9]) echo " " ;;
-	6[0-9]|4[0-9]) echo " " ;;
-	*)             echo "LOW!!  " ;;
+	100|9[0-9]|8[0-9])    echo " " ;;
+	7[0-9]|6[0-9]) echo " " ;;
+	6[0-9]|5[0-9]|4[0-9]) echo " " ;;
+	*)             echo "LOW!! " ;;
     esac
 
     echo "$delimiter"
@@ -28,7 +28,7 @@ barstats() { \
 
     echo "$delimiter"
 
-    pulsemixer --get-volume | awk '{print "" $1}'
+    pulsemixer --get-volume | awk '{print " " $1}'
 
     echo "$delimiter"
 

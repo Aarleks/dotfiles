@@ -1,7 +1,7 @@
 cfa    ~/.config/aliasrc
 cfc    ~/.config/alias-conf
 cfd    ~/.config/alias-dirs
-cfz    ~/.zshrc
+cfz    ~/.config/zsh/zshrc
 cfp    ~/.profile
 cfv    ~/.config/nvim/init.vim
 cfm    ~/.config/mutt/muttrc

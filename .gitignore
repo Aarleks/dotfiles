@@ -43,10 +43,9 @@
 /.vim/autoload/plug.vim
 /.viminfo.tmp
 /.config/mimeapps.list
-/.zcompdump
+/.config/zsh/.zcompdump
 /.zshrc.zni
-/.config/vifm/vifminfo
-/.config/nvim/autoload/
+/.config/nvim/autoload/plug.vim
 /.config/nvim/plugged/
 /.wget-hsts
 /.mbsyncrc
@@ -57,7 +56,6 @@
 /.config/mpv/
 /.config/mutt-wizard/
 /.config/mutt/.mailsynclastrun
-/.config/ranger/
 /.config/texput.log
 /.config/wall.png
 /.mplayer/
@@ -67,6 +65,8 @@
 /.slime/
 /..tmux.digests
 /.config/localinitrc
+/.config/lf/lfshortcuts
+.config/shortcutsrc
 
 # FOLDERS
 

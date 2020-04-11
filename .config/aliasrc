@@ -7,6 +7,7 @@ alias mv="mv -v"\
     YT="youtube-viewer"\
     fm="$FILES"\
     wup="ping -c 3 archlinux.org"\
-    bat="cat /sys/class/power_supply/BAT0/capacity"
+    bat="cat /sys/class/power_supply/BAT0/capacity"\
+    pro=". pro"
 
 vf() { fzf | xargs -r -I % $EDITOR % ;}
