@@ -46,6 +46,7 @@
 /.config/zsh/.zcompdump
 /.zshrc.zni
 /.config/nvim/autoload/plug.vim
+/.config/nvim/autoload/plug.vim.old
 /.config/nvim/plugged/
 /.wget-hsts
 /.mbsyncrc
@@ -122,3 +123,4 @@
 /.TinyTeX/
 /.macromedia/
 /.local/share/
+/.config/BraveSoftware
