@@ -19,7 +19,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-fugitive'
-"Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 Plug 'vimwiki/vimwiki'
 "Plug 'mboughaba/i3config.vim'
 "Plug 'vim-pandoc/vim-pandoc'
@@ -27,7 +27,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'roxma/nvim-yarp'
 "Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
-Plug 'chriskempson/base16-vim'
+"Plug 'chriskempson/base16-vim'
 "Plug 'mike-hearn/base16-vim-lightline'
 call plug#end()
 " }}}
@@ -99,13 +99,14 @@ command! -bang -nargs=* RG call fzf#vim#grep("rg --no-ignore-parent --column --l
 " AESTHETICS: {{{
 " ==========:
 
-set termguicolors
+"set termguicolors
+"set term=screen-256color
 "let base16colorspace=256
 set linebreak
 "set background=dark
 let g:solarized_termtrans=1
-"colorscheme solarized
-colorscheme base16-solarized-dark
+colorscheme solarized
+"colorscheme base16-solarized-dark
 let g:lightline = {
 	    \ 'colorscheme': 'solarized',
 	    \ 'active': {
