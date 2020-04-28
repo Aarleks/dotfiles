@@ -30,8 +30,11 @@ auto_view text/calendar application/ics
 unset mime_forward
 set mime_forward_rest=yes
 set forward_quote
-set query_command = "abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile $HOME/Dropbox/Contacts/addressbook --mutt-query '%s'"
-macro index,pager a "|abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile $HOME/Dropbox/Contacts/addressbook --add-email\n" 'Add sender to Adressbook'
+set alias_file=$HOME/Dropbox/aliases
+source $alias_file
+#bind editor <Tab> complete-query
+#set query_command = "abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile $HOME/Dropbox/Contacts/addressbook --mutt-query '%s'"
+#macro index,pager a "|abook --config "$XDG_CONFIG_HOME"/abook/abookrc --datafile $HOME/Dropbox/Contacts/addressbook --add-email\n" 'Add sender to Adressbook'
 
 unset fcc_attach
 set uncollapse_new     = yes  # open threads when new mail

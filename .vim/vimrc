@@ -14,8 +14,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'reedes/vim-pencil'
     Plug 'aarleks/zettel.vim'
     Plug 'junegunn/fzf.vim'
-    Plug 'swalladge/paper.vim'
     Plug 'junegunn/goyo.vim'
+    Plug 'logico/typewriter-vim'
+    Plug 'swalladge/paper.vim'
 call plug#end()
 
 source $VIMRUNTIME/defaults.vim
@@ -41,7 +42,6 @@ augroup END
 runtime macros/matchit.vim
 
 colorscheme pencil
-"colorscheme paper
 
 highlight Comment cterm=italic
 
@@ -49,5 +49,5 @@ let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
 
 augroup pencil
 	autocmd!
-	autocmd FileType markdown call pencil#init()
+	autocmd FileType markdown call pencil#init({'wrap': 'soft'})
 augroup END

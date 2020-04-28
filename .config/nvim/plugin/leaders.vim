@@ -79,6 +79,8 @@ nnoremap <Leader>b :ls<CR>:b<Space>
 
 "" K:
 "" M:
+" Go to the 'm' mark - probably don't need this
+nnoremap <Leader>m `m
 "" <:
 "" >:
 "" ?:
