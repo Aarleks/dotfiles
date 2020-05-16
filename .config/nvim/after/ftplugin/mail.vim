@@ -3,8 +3,8 @@
 set textwidth=0
 
 "nnoremap <Leader>cc ?Cc:<CR>:nohlsearch<CR>A<space>
-nnoremap <Leader>bcc ?Bcc:<CR>:nohlsearch<CR>A<space>
-nnoremap <Leader>to ?To:<CR>:nohlsearch<CR>A<space>
+nnoremap <Leader>bcc gg/Bcc:<CR>:nohlsearch<CR>A<space>
+nnoremap <Leader>to gg/To:<CR>:nohlsearch<CR>A<space>
 
 " ADDRESS COMPLETION:
 " Fuzzy-find addresses
@@ -20,14 +20,14 @@ function! s:Read_address(address)
     execute ':normal! a' . mail . ' '
 endfunc
 
-nnoremap <Leader>cc mm?Cc:<CR>:nohlsearch<CR>A<space><c-o>:call fzf#run({
-                        \ 'source': "cut -d' ' -f3- /home/alex/Dropbox/aliases",
+nnoremap <Leader>cc mmgg/Cc:<CR>:nohlsearch<CR>A<space><c-o>:call fzf#run({
+                        \ 'source': "abook --convert --infile Dropbox/Contacts/addressbook --outformat=custom --outformatstr '{name} <{email}>'",
                         \ 'sink': function('<sid>Read_address'),
                         \ 'up': '20%',
                         \ 'options': '--ansi --multi --prompt "Email> "'})<CR><CR>
 
 inoremap <silent> @@ <c-g>u<c-o>:call fzf#run({
-                        \ 'source': "cut -d' ' -f3- /home/alex/Dropbox/aliases",
+                        \ 'source': "abook --convert --infile Dropbox/Contacts/addressbook --outformat=custom --outformatstr '{email}'",
                         \ 'sink': function('<sid>Read_address'),
                         \ 'up': '20%',
                         \ 'options': '--ansi --multi --prompt "Email> "'})<CR>

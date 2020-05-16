@@ -10,21 +10,21 @@ if ! filereadable(expand('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-    Plug 'reedes/vim-colors-pencil'
     Plug 'reedes/vim-pencil'
     Plug 'aarleks/zettel.vim'
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/goyo.vim'
+    " COLOURS--------------------
     Plug 'logico/typewriter-vim'
     Plug 'swalladge/paper.vim'
+    Plug 'romainl/Apprentice'
+    Plug 'reedes/vim-colors-pencil'
 call plug#end()
 
 source $VIMRUNTIME/defaults.vim
 
 autocmd BufWritePost ~/.vim/vimrc source $MYVIMRC
 
-set number
-set relativenumber
 set ignorecase
 set smartcase
 set laststatus=2
@@ -41,7 +41,8 @@ augroup END
 
 runtime macros/matchit.vim
 
-colorscheme pencil
+"colorscheme pencil
+colorscheme apprentice
 
 highlight Comment cterm=italic
 

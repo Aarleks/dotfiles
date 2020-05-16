@@ -22,14 +22,16 @@ bind-key U show-urls
 bind-key x pb-delete
 bind-key ^t next-unread
 
-color listnormal cyan default
+highlight article "^Feed:.*" color4 default
+
+color listnormal color9 default
 color listfocus black yellow standout bold
 color listnormal_unread blue default
 color listfocus_unread yellow default bold
 color info red black bold
-color article cyan default
+color article color8 default
 
-browser linkhandler
+browser brave
 macro , open-in-browser
 macro t set browser "tsp youtube-dl --add-metadata -ic"; open-in-browser ; set browser linkhandler
 macro a set browser "tsp youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
