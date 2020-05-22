@@ -40,10 +40,9 @@
 /.config/RStudio/desktop.ini
 /.config/dconf/user
 /.vim/.netrwhist
-/.vim/autoload/plug.vim
+/.vim/autoload/
 /.viminfo.tmp
 /.config/mimeapps.list
-/.config/zsh/.zcompdump
 /.zshrc.zni
 /.config/nvim/autoload/plug.vim
 /.config/nvim/autoload/plug.vim.old
@@ -68,6 +67,7 @@
 /.config/localinitrc
 /.config/lf/lfshortcuts
 .config/shortcutsrc
+/.config/zsh/.zcompdump
 
 # FOLDERS
 
@@ -125,3 +125,4 @@
 /.local/share/
 /.config/BraveSoftware
 /.config/newsboat/urls
+/.local/lib/
