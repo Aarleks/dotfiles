@@ -8,6 +8,7 @@ alias mv="mv -v"\
     fm="$FILES"\
     wup="ping -c 3 archlinux.org"\
     batt="cat /sys/class/power_supply/BAT0/capacity"\
-    pro=". pro"
+    pro=". pro"\
+    news="newsboat -u $HOME/Dropbox/dots/urls"
 
 vf() { fzf | xargs -r -I % $EDITOR % ;}
