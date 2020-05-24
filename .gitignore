@@ -68,6 +68,7 @@
 /.config/lf/lfshortcuts
 .config/shortcutsrc
 /.config/zsh/.zcompdump
+/.config/newsboat/cache.db
 
 # FOLDERS
 
@@ -126,3 +127,4 @@
 /.config/BraveSoftware
 /.config/newsboat/urls
 /.local/lib/
+/.racket/

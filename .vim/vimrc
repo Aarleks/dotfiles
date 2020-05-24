@@ -19,6 +19,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'swalladge/paper.vim'
     Plug 'romainl/Apprentice'
     Plug 'reedes/vim-colors-pencil'
+    Plug 'otherjoel/vim-pollen'
+    Plug 'wlangstroth/vim-racket'
 call plug#end()
 
 source $VIMRUNTIME/defaults.vim
