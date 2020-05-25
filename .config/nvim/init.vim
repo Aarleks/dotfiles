@@ -81,7 +81,8 @@ nnoremap S :%s//g<Left><Left>
 
 " Move lines in Visual Mode
 vnoremap H <gv
-vnoremap J xjP`[V`]
+"vnoremap J xjP`[V`]
+vnoremap J :m '>+1<CR>gv=gv
 vnoremap K xkP`[V`]
 vnoremap L >gv
 
