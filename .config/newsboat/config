@@ -53,4 +53,5 @@ macro c set browser "xsel -b <<<" ; open-in-browser ; set browser linkandler
 
 # PODBOAT:
 
-download-path "~/Documents/Podcasts/%h/%n"
+download-path "~/Documents/Podcasts/%n"
+podlist-format "%i %p %-20S %F"
