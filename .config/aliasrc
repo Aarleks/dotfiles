@@ -7,6 +7,8 @@ alias mv="mv -v"\
     YT="youtube-viewer"\
     fm="$FILES"\
     wup="ping -c 3 archlinux.org"\
-    bat="cat /sys/class/power_supply/BAT0/capacity"
+    batt="cat /sys/class/power_supply/BAT0/capacity"\
+    pro=". pro"\
+    news="newsboat -u $HOME/Dropbox/dots/urls"
 
 vf() { fzf | xargs -r -I % $EDITOR % ;}

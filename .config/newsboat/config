@@ -1,7 +1,11 @@
+## NEWSBOAT CONFIG ##
+
+# GENERAL SETTINGS:
 auto-reload yes
-
 external-url-viewer "urlscan -dc"
+feed-sort-order lastupdated
 
+# KEYS:
 bind-key j down
 bind-key k up
 bind-key j next articlelist
@@ -22,14 +26,22 @@ bind-key U show-urls
 bind-key x pb-delete
 bind-key ^t next-unread
 
-color listnormal cyan default
+# AESTHETICS:
+
+datetime-format "%b %d, %y"
+text-width 72
+
+highlight article "^Feed:.*" color4 default
+color listnormal color9 default
 color listfocus black yellow standout bold
 color listnormal_unread blue default
 color listfocus_unread yellow default bold
 color info red black bold
-color article cyan default
+color article color8 default
 
-browser linkhandler
+# COMMANDS & MACROS:
+
+browser $BROWSER
 macro , open-in-browser
 macro t set browser "tsp youtube-dl --add-metadata -ic"; open-in-browser ; set browser linkhandler
 macro a set browser "tsp youtube-dl --add-metadata -xic -f bestaudio/best"; open-in-browser ; set browser linkhandler
@@ -38,5 +50,7 @@ macro w set browser "w3m"; open-in-browser ; set browser linkhandler
 macro p set browser "dmenuhandler"; open-in-browser ; set browser linkhandler
 # c copies the link to the clipboard.
 macro c set browser "xsel -b <<<" ; open-in-browser ; set browser linkandler
-text-width 72
-datetime-format "%b %d, %y"
+
+# PODBOAT:
+
+download-path "~/Documents/Podcasts/%h/%n"
