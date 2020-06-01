@@ -5,12 +5,14 @@ delimiter=" | "
 barstats() { \
 
     cat /tmp/recordingicon 2>/dev/null
+    bat=$(cat /sys/class/power_supply/BAT0/capacity)
 
     [ -f "/sys/class/power_supply/BAT0/capacity" ] && case "$(cat /sys/class/power_supply/BAT0/capacity)" in
+
 	100|9[0-9]|8[0-9])    echo " " ;;
 	7[0-9]|6[0-9]) echo " " ;;
 	6[0-9]|5[0-9]|4[0-9]) echo " " ;;
-	*)             echo "LOW!! " ;;
+	*)             echo " LOW!! $bat% " ;;
     esac
 
     echo "$delimiter"

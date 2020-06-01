@@ -1,0 +1,31 @@
+#!/bin/sh
+
+
+case $1 in
+    work)
+	printf "What have you been doing?\\n"
+	read -r string
+	printf "For how long?\\n"
+	read -r time
+	printf "What type of work was this?\\n"
+	read -r type
+	echo "$(date "+%F"),$type,$time,\"$string\"" >> $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv;;
+    kg)
+	printf "Any notes?\\n"
+	read -r notes
+	weight=$2
+	echo "$(date "+%F"),$weight,\"$notes\"" >> $HOME/Dropbox/Health_and_Fitness/weight-log.csv
+	;;
+    *) cat << EOF
+Tracker - a script for recording information that's useful to you.
+
+These are the options:
+  work      Record the task, time, and type of work into
+            the tracker file. All data input is prompted.
+
+  kg        Record bodyweight and any notes. Weight is an
+            argument; e.g. "tk kg 90". Notes are prompted.
+
+  all else  Print this message.
+EOF
+esac
