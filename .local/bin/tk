@@ -9,7 +9,10 @@ case $1 in
 	read -r time
 	printf "What type of work was this?\\n"
 	read -r type
-	echo "$(date "+%F"),$type,$time,\"$string\"" >> $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv;;
+	echo "$(date "+%F"),$type,$time,\"$string\"" >> $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv
+	printf "\\n\e[3mWork so far today\e[0m:\\n"
+	today="$(grep $(date "+%F") $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv)"
+	echo "$today" ;;
     kg)
 	printf "Any notes?\\n"
 	read -r notes
