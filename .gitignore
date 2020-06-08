@@ -128,3 +128,4 @@
 /.config/newsboat/urls
 /.local/lib/
 /.racket/
+/.ghc/

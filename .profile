@@ -8,10 +8,11 @@ export PATH="/home/alex/.gem/ruby/2.6.0/bin:$PATH"
 #export TERM="alacritty"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
-export BROWSER="firefox"
+export BROWSER="brave"
 export VISUAL="nvim"
 export FILES="lf"
 export READER="zathura"
+export MANPAGER="nvim +Man!"
 
 # Cleaning up $HOME
 export ZDOTDIR="$HOME/.config/zsh"

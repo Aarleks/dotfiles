@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'aarleks/zettel.vim'
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/goyo.vim'
+    Plug 'vim-pandoc/vim-pandoc-syntax'
     " COLOURS--------------------
     Plug 'logico/typewriter-vim'
     Plug 'swalladge/paper.vim'
@@ -53,4 +54,8 @@ let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
 augroup pencil
 	autocmd!
 	autocmd FileType markdown call pencil#init({'wrap': 'soft'})
+augroup END
+
+augroup pandoc_syntax
+	au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
