@@ -109,7 +109,6 @@
 /.config/cef_user_data/
 /.config/GIMP/
 /.fltk/
-/.vim/
 /.calendar/
 /.vdirsyncer/
 /.config/vdirsyncer/
@@ -121,3 +120,4 @@
 /.ssh/
 /.pandoc/
 /.TinyTex/
+/.vim/autoload/plug.vim

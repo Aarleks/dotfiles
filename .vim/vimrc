@@ -50,7 +50,9 @@ highlight Comment cterm=italic
 
 let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
 
-augroup pencil
+augroup pollengroup
 	autocmd!
-	autocmd FileType markdown call pencil#init({'wrap': 'soft'})
+	autocmd! BufRead,BufNewFile *.pm set filetype=pollen
+	autocmd! BufRead,BufNewFile *.pp set filetype=pollen
+	autocmd! BufRead,BufNewFile *.ptree set filetype=pollen
 augroup END
