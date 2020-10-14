@@ -9,11 +9,11 @@ super + Return
     $TERMINAL
 
 ## Open the Vimwiki Index page in the default editor
-super + shift + Return
-    $TERMINAL -e $EDITOR ~/Dropbox/vimwiki/index.md
+#super + shift + Return
+#    $TERMINAL -e $EDITOR ~/Dropbox/vimwiki/index.md
 
-super + shift + F1
-    firefox $HOME/Dropbox/vimwiki/html/index.html
+#super + shift + F1
+#    firefox $HOME/Dropbox/vimwiki/html/index.html
 
 super + F3
     displayselect
@@ -23,12 +23,12 @@ super + shift + F12
     kblayout.sh
 
 # Increase volume
-super + equal
-    pulsemixer --change-volume +5
+#super + equal
+#    pulsemixer --change-volume +5
 
 # Decrease volume
-super + minus
-    pulsemixer --change-volume -5
+#super + minus
+#    pulsemixer --change-volume -5
 
 ## Reboot
 super + shift + BackSpace
@@ -63,8 +63,8 @@ super + f
 #    $TERMINAL -e htop
 
 ## Run the application launcher
-super + d
-    rofi -show run
+#super + d
+#    rofi -show run
 
 ## Run the Colemak script
 #super + shift + k

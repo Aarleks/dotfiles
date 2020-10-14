@@ -7,7 +7,7 @@ dunst & # Notifications
 unclutter & # Makes the mouse disappear after a bit
 dropbox &
 mpd &
-#xrdb ~/.config/Xresources
+#xmobar
 
 sxhkd & # Keybindings
 

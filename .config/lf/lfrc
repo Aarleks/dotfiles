@@ -75,6 +75,7 @@ cmd zip ${{
     rm -rf $1
 }}
 
+map c zip
 
 cmd moveto ${{
 	set -f

@@ -55,6 +55,15 @@ multimon() { # Multi-monitor handler.
 		*) morescreen ;;
 	esac ;}
 
+teleprompter() { # Make a screen into a flipped & mirrored for teleprompting
+    fliposaur=$(echo "$screens" | dmenu -i -p "Select display for teleprompt:")
+    telechoice=$(printf "On\\nOff" | dmenu -i -p "Would you like to switch telepromter on or off?")
+    case "$telechoice" in
+	"On") xrandr --output "$fliposaur" --reflect xy --scale 1.0x1.0 ;;
+	"Off") xrandr --output "$fliposaur" --reflect normal --scale 1.0x1.0 ;;
+    esac ;
+}
+
 onescreen() { # If only one output available or chosen.
 	xrandr --output "$1" --auto --scale 1.0x1.0 $(echo "$allposs" | grep -v "$1" | awk '{print "--output", $1, "--off"}' | paste -sd ' ')
 	}
@@ -76,10 +85,11 @@ screens=$(echo "$allposs" | awk '/ connected/ {print $1}')
 	{ onescreen "$screens"; postrun; notify-send "💻 Only one screen detected." "Using it in its optimal settings...";  exit ;}
 
 # Get user choice including multi-monitor and manual selection:
-chosen=$(printf "%s\\nmulti-monitor\\nmanual selection" "$screens" | dmenu -i -p "Select display arangement:") &&
+chosen=$(printf "%s\\nmulti-monitor\\nteleprompter\\nmanual selection" "$screens" | dmenu -i -p "Select display arrangement:") &&
 case "$chosen" in
 	"manual selection") arandr ; exit ;;
 	"multi-monitor") multimon ;;
+	"teleprompter") teleprompter ;;
 	*) onescreen "$chosen" ;;
 esac
 

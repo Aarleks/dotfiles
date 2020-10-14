@@ -2,7 +2,7 @@
 
 
 case $1 in
-    work)
+    w)
 	printf "What have you been doing?\\n"
 	read -r string
 	printf "For how long?\\n"
@@ -12,8 +12,13 @@ case $1 in
 	echo "$(date "+%F"),$type,$time,\"$string\"" >> $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv
 	printf "\\n\e[3mWork so far today\e[0m:\\n"
 	today="$(grep $(date "+%F") $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv)"
-	echo "$today" ;;
-    kg)
+	hours="$(grep $(date "+%F") $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv | awk -F ',' '{s+=$3} END {print s}')"
+	echo "$today"
+	printf "\e[1;32mHours Worked Today: $hours\\n" ;;
+    wr)
+	hours="$(grep $(date "+%F") $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv | awk -F ',' '{s+=$3} END {print s}')"
+	printf "\e[1;32mHours Worked Today: $hours\\n" ;;
+    k)
 	printf "Any notes?\\n"
 	read -r notes
 	weight=$2
@@ -23,10 +28,12 @@ case $1 in
 Tracker - a script for recording information that's useful to you.
 
 These are the options:
-  work      Record the task, time, and type of work into
+  w         Record the task, time, and type of work into
             the tracker file. All data input is prompted.
 
-  kg        Record bodyweight and any notes. Weight is an
+  wr        Print the total time recorded so far today
+
+  k         Record bodyweight and any notes. Weight is an
             argument; e.g. "tk kg 90". Notes are prompted.
 
   all else  Print this message.
