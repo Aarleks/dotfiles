@@ -57,3 +57,5 @@ color status black blue ' ([0-9]+%|all|end) \s*'
 color status yellow black '()\s*' 1
 color status default black ''
 #set index_format = "%4C %Z %[%b %d %R] %-15.15L (%?l?%4l&%4c?) %s"
+#color index		color117	default 	~N # new messages
+#color index		color212	default 	~Q # messages which have been replied to

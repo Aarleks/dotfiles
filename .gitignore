@@ -66,6 +66,7 @@
 /.slime/
 /..tmux.digests
 /.config/localinitrc
+/.config/youtube-viewer/api.json
 
 # FOLDERS
 
@@ -120,4 +121,14 @@
 /.ssh/
 /.pandoc/
 /.TinyTex/
+/.racket/
+/.r/
+/.R/
+/.config/BraveSoftware/
+/.config/Microsoft/
+/.config/Slack/
+/.config/gh/
+/.config/teams/
+/.mono/
 /.vim/autoload/plug.vim
+.Rproj.user

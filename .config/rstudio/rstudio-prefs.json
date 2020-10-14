@@ -1,0 +1,16 @@
+{
+    "highlight_selected_line": true,
+    "editor_keybindings": "vim",
+    "soft_wrap_r_files": true,
+    "syntax_color_console": true,
+    "font_size_points": 13,
+    "editor_theme": "Solarized Dark",
+    "default_project_location": "~/Projects",
+    "pdf_previewer": "rstudio",
+    "spelling_dictionary_language": "en_AU",
+    "rmd_preferred_template_path": "/home/alex/R/x86_64-pc-linux-gnu-library/3.6/vitae/rmarkdown/templates/awesomecv",
+    "wrap_tab_navigation": false,
+    "reuse_sessions_for_project_links": true,
+    "document_author": "Alex Norman",
+    "jobs_tab_visibility": "shown"
+}

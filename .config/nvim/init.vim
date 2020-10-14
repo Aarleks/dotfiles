@@ -27,6 +27,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'roxma/nvim-yarp'
 "Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 call plug#end()
 " }}}
 
