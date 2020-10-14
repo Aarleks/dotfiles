@@ -69,6 +69,8 @@
 .config/shortcutsrc
 /.config/zsh/.zcompdump
 /.config/newsboat/cache.db
+/.config/lf/lfshortcuts
+/.config/shortcutsrc
 
 # FOLDERS
 
