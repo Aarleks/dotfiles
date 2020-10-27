@@ -9,10 +9,13 @@ cu     ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units
 cv     ~/Dropbox/WritingTools/CV
 proj   ~/Projects
 adp    ~/Dropbox/MRes/Development/ADP
-sac    ~/Dropbox/MRes/SAC
-dap    ~/Dropbox/MRes/DAP
-ass    ~/Dropbox/MRes/AssessmentCommittee
+sac    ~/Dropbox/MRes/GovMin/SAC
+dap    ~/Dropbox/MRes/GovMin/DAP
 soup   ~/Dropbox/MRes/Supervision
 dvv    ~/Dropbox/MRes/Development
 jlx    ~/Dropbox/JLX
+zet    ~/Dropbox/Zettelkasten
+cab    ~/Dropbox/CabSav
+wood   ~/Dropbox/Woodworking
+lib    ~/Dropbox/Library
 

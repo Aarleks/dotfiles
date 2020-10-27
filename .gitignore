@@ -131,4 +131,5 @@
 /.config/teams/
 /.mono/
 /.vim/autoload/plug.vim
+/.vim/autoload/
 .Rproj.user
