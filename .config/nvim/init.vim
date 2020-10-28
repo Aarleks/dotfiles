@@ -20,11 +20,13 @@ Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-fugitive'
 Plug 'altercation/vim-colors-solarized'
+Plug 'romainl/Apprentice'
 Plug 'vimwiki/vimwiki'
 "Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'jalvesaq/Nvim-R'
+Plug 'aarleks/zettel.vim'
 call plug#end()
 " }}}
 
@@ -136,4 +138,5 @@ let g:vimwiki_list=[{
 	    \ 'ext': '.md'
 	    \ }]
 
+let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
 " }}}

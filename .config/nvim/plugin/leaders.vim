@@ -22,7 +22,6 @@ nnoremap <leader>f :Goyo<CR>
 
 "" P:
 nnoremap <Leader>p :!opout <c-r>%<CR><CR>
-nnoremap <Leader><Leader>p :LLPStartPreview<CR>
 "" G:
 "" J:
 
