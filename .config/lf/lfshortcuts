@@ -32,15 +32,12 @@ map Cproj $(cp $f ~/Projects)
 map gadp cd ~/Dropbox/MRes/Development/ADP
 map Madp $(mv $f ~/Dropbox/MRes/Development/ADP)
 map Cadp $(cp $f ~/Dropbox/MRes/Development/ADP)
-map gsac cd ~/Dropbox/MRes/SAC
-map Msac $(mv $f ~/Dropbox/MRes/SAC)
-map Csac $(cp $f ~/Dropbox/MRes/SAC)
-map gdap cd ~/Dropbox/MRes/DAP
-map Mdap $(mv $f ~/Dropbox/MRes/DAP)
-map Cdap $(cp $f ~/Dropbox/MRes/DAP)
-map gass cd ~/Dropbox/MRes/AssessmentCommittee
-map Mass $(mv $f ~/Dropbox/MRes/AssessmentCommittee)
-map Cass $(cp $f ~/Dropbox/MRes/AssessmentCommittee)
+map gsac cd ~/Dropbox/MRes/GovMin/SAC
+map Msac $(mv $f ~/Dropbox/MRes/GovMin/SAC)
+map Csac $(cp $f ~/Dropbox/MRes/GovMin/SAC)
+map gdap cd ~/Dropbox/MRes/GovMin/DAP
+map Mdap $(mv $f ~/Dropbox/MRes/GovMin/DAP)
+map Cdap $(cp $f ~/Dropbox/MRes/GovMin/DAP)
 map gsoup cd ~/Dropbox/MRes/Supervision
 map Msoup $(mv $f ~/Dropbox/MRes/Supervision)
 map Csoup $(cp $f ~/Dropbox/MRes/Supervision)
@@ -50,6 +47,18 @@ map Cdvv $(cp $f ~/Dropbox/MRes/Development)
 map gjlx cd ~/Dropbox/JLX
 map Mjlx $(mv $f ~/Dropbox/JLX)
 map Cjlx $(cp $f ~/Dropbox/JLX)
+map gzet cd ~/Dropbox/Zettelkasten
+map Mzet $(mv $f ~/Dropbox/Zettelkasten)
+map Czet $(cp $f ~/Dropbox/Zettelkasten)
+map gcab cd ~/Dropbox/CabSav
+map Mcab $(mv $f ~/Dropbox/CabSav)
+map Ccab $(cp $f ~/Dropbox/CabSav)
+map gwood cd ~/Dropbox/Woodworking
+map Mwood $(mv $f ~/Dropbox/Woodworking)
+map Cwood $(cp $f ~/Dropbox/Woodworking)
+map glib cd ~/Dropbox/Library
+map Mlib $(mv $f ~/Dropbox/Library)
+map Clib $(cp $f ~/Dropbox/Library)
 map cfa :e ~/.config/aliasrc<CR>
 map cfc :e ~/.config/alias-conf<CR>
 map cfd :e ~/.config/alias-dirs<CR>

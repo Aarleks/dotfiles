@@ -29,6 +29,8 @@
 /.config/nvim/.netrwhist
 /.config/qmk_firmware
 /.config/suckless/
+/.config/shortcutsrc
+/.config/lf/lfshortcuts
 /.stellarium/
 /.surf/
 /.vimgolf/
