@@ -28,6 +28,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+Plug 'aarleks/zettel.vim'
 call plug#end()
 " }}}
 
@@ -145,4 +146,5 @@ let g:vimwiki_list=[{
 	    \ 'ext': '.md'
 	    \ }]
 
+let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
 " }}}
