@@ -2,8 +2,8 @@
 "============================================================
 " vim:foldmethod=marker
 
-let mapleader="\<Space>"
-let maplocalleader="\\"
+let mapleader="\<Space>"  " Leader is spacebar
+let maplocalleader="\\"   " local leader is backslash
 
 " PLUGINS: {{{
 " Check for Plug and download if not present
@@ -14,44 +14,45 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'junegunn/fzf.vim'
-Plug 'itchyny/vim-gitbranch'
-Plug 'tpope/vim-fugitive'
-Plug 'vimwiki/vimwiki'
+Plug 'junegunn/fzf.vim'                 " fuzzy finder plugin
+Plug 'itchyny/vim-gitbranch'            " shows git info in statusline
+Plug 'tpope/vim-fugitive'               " git plugin
+Plug 'vimwiki/vimwiki'                  " personal wiki
 "Plug 'vim-pandoc/vim-pandoc'
-Plug 'baskerville/vim-sxhkdrc'
-Plug 'jalvesaq/Nvim-R'
+Plug 'baskerville/vim-sxhkdrc'          " syntax highlighting for sxhkd
+Plug 'jalvesaq/Nvim-R'                  " make vim into a RStudio-like IDE
 "Plug 'aarleks/zettel.vim'
 " MY PLUGINS:
 " Unmanaged plugins (manually installed and updated)
-Plug '~/Projects/zettel.vim'
-Plug '$HOME/Projects/whid.vim'
-Plug '$HOME/Projects/notes-cabinet'
+Plug '~/Projects/zettel.vim'            " zettelkasten interface
+Plug '$HOME/Projects/whid.vim'          " test lua-based plugin for floating window
+Plug '$HOME/Projects/notes-cabinet'     " test lua-based zettelkasten plugin
 " AESTHETICS:
-Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'altercation/vim-colors-solarized'
-Plug 'itchyny/lightline.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'romainl/Apprentice'
+Plug 'vim-pandoc/vim-pandoc-syntax'     " syntax highlighting for Markdown prose
+Plug 'itchyny/lightline.vim'            " pretty statusline
+Plug 'junegunn/goyo.vim'                " minimalist writing environment
+Plug 'romainl/Apprentice'               " RomainL's colorscheme
+Plug 'altercation/vim-colors-solarized' " Solarized colortheme
 call plug#end()
 " }}}
 
 " BASICS: {{{
 
-set ignorecase
-set smartcase
+set ignorecase                  " ignore character case in search
+set smartcase                   " if search has uppercase character, pay attention to it
 set path+=**
-set number
-set relativenumber
+set number                      " show line number in the left gutter
+set relativenumber              " show line number distance relative to the cursor
 set wildmode=longest,list,full
 set splitbelow splitright
 set noshowmode
-set scrolloff=5
+set scrolloff=5                 " start scrolling when n lines from the edge of window
 " }}}
 
 " NAVIGATION: {{{
 
-" Shortcuts for navigating splits
+" Shortcuts for navigating splits that remove the Control-w prefix and make
+" it simply Control-<movement direction>
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -125,7 +126,7 @@ let g:lightline = {
 " Needs to go after colour plugin is loaded to override it
 highlight Comment cterm=italic
 
-" Goyo stuffs
+" Goyo plugin settings
 map <F10> :Goyo<CR>
 inoremap <F10> <esc>:Goyo<CR>a
 " }}}
@@ -144,15 +145,12 @@ let g:vimwiki_list=[{
 	    \ 'ext': '.md'
 	    \ }]
 
-let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
+let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/' " sets folder variable for zettel.vim plugin
+
 if has('nvim')
-    " cabinet folder and whether to auto git commit
-  lua <<
-    NotesCabinet = {
-      ["~/Dropbox/NotesCabinet"] = {
-        autocommit = true,
-      }
-      }
+    " sets folder variable for notes-cabinet plugin
+    lua <<
+    NotesCabinet = "~/Dropbox/NotesCabinet"
 .
 endif
 " }}}
