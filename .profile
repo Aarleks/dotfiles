@@ -13,6 +13,7 @@ export VISUAL="nvim"
 export FILES="lf"
 export READER="zathura"
 export MANPAGER="nvim +Man!"
+export GOPATH="$HOME/go"
 
 # Cleaning up $HOME
 export ZDOTDIR="$HOME/.config/zsh"

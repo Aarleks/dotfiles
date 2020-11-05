@@ -14,19 +14,25 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'junegunn/goyo.vim'
 Plug 'junegunn/fzf.vim'
-Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-fugitive'
-Plug 'altercation/vim-colors-solarized'
-Plug 'romainl/Apprentice'
 Plug 'vimwiki/vimwiki'
 "Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'baskerville/vim-sxhkdrc'
 Plug 'jalvesaq/Nvim-R'
-Plug 'aarleks/zettel.vim'
+"Plug 'aarleks/zettel.vim'
+" MY PLUGINS:
+" Unmanaged plugins (manually installed and updated)
+Plug '~/Projects/zettel.vim'
+Plug '$HOME/Projects/whid.vim'
+Plug '$HOME/Projects/notes-cabinet'
+" AESTHETICS:
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'altercation/vim-colors-solarized'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'romainl/Apprentice'
 call plug#end()
 " }}}
 
@@ -127,16 +133,26 @@ inoremap <F10> <esc>:Goyo<CR>a
 " COMFY TIMES: {{{
 " ===========:
 
-" When shortcut files are updated, renew bash and vifm configs with new material:
+" When shortcut files are updated, renew bash and lf configs with new material:
 autocmd BufWritePost ~/.config/alias-conf,~/.config/alias-dirs !shortcuts
 
 " Vimwiki Settings
 let g:vimwiki_global_ext=0
 let g:vimwiki_list=[{
 	    \ 'path': '$HOME/Dropbox/vimwiki/',
-	    \ 'syntax': 'markdown',
+	    \ 'syntax': 'default',
 	    \ 'ext': '.md'
 	    \ }]
 
 let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
+if has('nvim')
+    " cabinet folder and whether to auto git commit
+  lua <<
+    NotesCabinet = {
+      ["~/Dropbox/NotesCabinet"] = {
+        autocommit = true,
+      }
+      }
+.
+endif
 " }}}

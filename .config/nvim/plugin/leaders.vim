@@ -49,6 +49,9 @@ nnoremap <leader>u :w<Home>silent <End> !urlview<CR>
 nnoremap <Leader>sp :call aarleks#spelling#replace()<CR>
 
 "" T:
+" Generate ctags silently
+nnoremap <leader>tt :silent !ctags -R . <CR>:redraw!<CR>
+
 "" D:
 "" H:
 " For removing search highlighting
@@ -71,6 +74,10 @@ nnoremap <Leader><Leader>x :xit<CR>:xit<CR>
 
 "" C:
 nnoremap <silent> <Leader>c :w! \| !compiler <c-r>%<CR>
+
+" Change directory to directory of current file
+nnoremap <leader>cd :cd %:h<CR>
+
 "" V:
 "" B:
 " Quick buffer navigation
