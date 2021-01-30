@@ -2,10 +2,9 @@ home   ~/
 conf   ~/.config
 scr    ~/.scripts
 down   ~/Downloads
-rd1    ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/1_RD1
-rd2    ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/2_RD2
-wb     ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units/3_WritingBeyond
-cu     ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units
+rd1    ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units_1H21/1_RD1
+wb     ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units_1H21/2_WrB
+cu     ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units_1H21
 cv     ~/Dropbox/WritingTools/CV
 proj   ~/Projects
 adp    ~/Dropbox/MRes/Development/ADP
@@ -14,7 +13,7 @@ dap    ~/Dropbox/MRes/GovMin/DAP
 soup   ~/Dropbox/MRes/Supervision
 dvv    ~/Dropbox/MRes/Development
 jlx    ~/Dropbox/JLX
-zet    ~/Dropbox/Zettelkasten
+zet    ~/Dropbox/NotesCabinet/Zettelkasten
 cab    ~/Dropbox/CabSav
 wood   ~/Dropbox/Woodworking
 lib    ~/Dropbox/Library

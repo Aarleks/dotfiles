@@ -18,14 +18,13 @@ Plug 'junegunn/fzf.vim'                 " fuzzy finder plugin
 Plug 'itchyny/vim-gitbranch'            " shows git info in statusline
 Plug 'tpope/vim-fugitive'               " git plugin
 Plug 'vimwiki/vimwiki'                  " personal wiki
-"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'wincent/corpus'                   " personal wiki/zettelkasten plugin
 Plug 'baskerville/vim-sxhkdrc'          " syntax highlighting for sxhkd
 Plug 'jalvesaq/Nvim-R'                  " make vim into a RStudio-like IDE
-"Plug 'aarleks/zettel.vim'
 " MY PLUGINS:
 " Unmanaged plugins (manually installed and updated)
 Plug '~/Projects/zettel.vim'            " zettelkasten interface
-Plug '$HOME/Projects/whid.vim'          " test lua-based plugin for floating window
+"Plug '$HOME/Projects/whid.vim'          " test lua-based plugin for floating window
 Plug '$HOME/Projects/notes-cabinet'     " test lua-based zettelkasten plugin
 " AESTHETICS:
 Plug 'vim-pandoc/vim-pandoc-syntax'     " syntax highlighting for Markdown prose
@@ -145,12 +144,21 @@ let g:vimwiki_list=[{
 	    \ 'ext': '.md'
 	    \ }]
 
-let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/' " sets folder variable for zettel.vim plugin
+let g:zettelkasten = '$HOME/Dropbox/NotesCabinet/Zettelkasten/' " sets folder variable for zettel.vim plugin
 
 if has('nvim')
     " sets folder variable for notes-cabinet plugin
-    lua <<
-    NotesCabinet = "~/Dropbox/NotesCabinet"
-.
+lua << EOF
+    NotesCabinet = {
+      ['~/Dropbox/NotesCabinet/Zettelkasten'] = {
+        base = './',
+      },
+      ['~/code/masochist/content/content/wiki'] = {
+        base = '/.',
+      },
+      }
+
+EOF
 endif
+
 " }}}

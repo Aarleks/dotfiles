@@ -1,28 +1,72 @@
 #!/bin/sh
 
+LOG="$HOME/Dropbox/MRes/Development/2021_Work_Log.csv"
+
+JLX="$HOME/Dropbox/JLX/1_JLXmin/4_Timesheets/Alex_timesheet.csv"
+
+MOODS="1 - Really bad
+2 - Bad
+3 - OK
+4 - Good
+5 - Really good
+"
 
 case $1 in
     w)
+	printf "WORK LOG\\n"
 	printf "What have you been doing?\\n"
 	read -r string
 	printf "For how long?\\n"
 	read -r time
 	printf "What type of work was this?\\n"
 	read -r type
-	echo "$(date "+%F"),$type,$time,\"$string\"" >> $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv
+	echo "$(date "+%F"),$type,$time,\"$string\"" >> $LOG
 	printf "\\n\e[3mWork so far today\e[0m:\\n"
-	today="$(grep $(date "+%F") $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv)"
-	hours="$(grep $(date "+%F") $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv | awk -F ',' '{s+=$3} END {print s}')"
+	today=$(grep $(date "+%F") $LOG)
+	hours="$(grep $(date "+%F") $LOG | awk -F ',' '{s+=$3} END {print s}')"
 	echo "$today"
 	printf "\e[1;32mHours Worked Today: $hours\\n" ;;
     wr)
-	hours="$(grep $(date "+%F") $HOME/Dropbox/MRes/Development/2020_Work_Time_Tracker.csv | awk -F ',' '{s+=$3} END {print s}')"
+	hours="$(grep $(date "+%F") $LOG | awk -F ',' '{s+=$3} END {print s}')"
 	printf "\e[1;32mHours Worked Today: $hours\\n" ;;
     k)
+	printf "BODYWEIGHT LOG\\n"
 	printf "Any notes?\\n"
 	read -r notes
 	weight=$2
 	echo "$(date "+%F"),$weight,\"$notes\"" >> $HOME/Dropbox/Health_and_Fitness/weight-log.csv
+	;;
+    m)
+	printf "MOOD AND SLEEP LOG\\n"
+	printf "\\n"
+	echo "$MOODS"
+	printf "\\n"
+	printf "How was yesterday?\\n"
+	read -r mood
+	printf "What made it that way?\\n"
+	read -r moodnotes
+	printf "\\n"
+	printf "=== Sleep ===\\n"
+	printf "What time to bed?\\n"
+	read -r tobed
+	printf "What time awake?\\n"
+	read -r awake
+	printf "Any notes?\\n"
+	read -r sleepnotes
+	echo "$(date --date "-1 days" "+%F"),$mood,\"$moodnotes\"" >> $HOME/Dropbox/Health_and_Fitness/mood-log.csv
+	echo "$(date "+%F"),$tobed,$awake,\"$sleepnotes\"" >> $HOME/Dropbox/Health_and_Fitness/sleep-log.csv
+	;;
+    j)
+	printf "WORK LOG\\n"
+	printf "What have you been doing?\\n"
+	read -r string
+	printf "For which client?\\n"
+	read -r client
+	printf "For how long?\\n"
+	read -r time
+	printf "What type of work was this?\\n"
+	read -r task
+	echo "$(date "+%F"),$client,$task,$time,\"$string\"" >> $JLX
 	;;
     *) cat << EOF
 Tracker - a script for recording information that's useful to you.
@@ -35,6 +79,10 @@ These are the options:
 
   k         Record bodyweight and any notes. Weight is an
             argument; e.g. "tk kg 90". Notes are prompted.
+
+  m         Record mood on a 1-5 scale for yesterday and
+            sleep via 'time to bed' and 'time awake'.
+	    Notes are prompted.
 
   all else  Print this message.
 EOF
