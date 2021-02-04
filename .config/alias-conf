@@ -9,3 +9,5 @@ cfnew  ~/.config/newsboat/urls
 cfx    ~/.xinitrc
 cfxp   ~/.xprofile
 cff    ~/.config/fontconfig/fonts.conf
+wld    ~/Dropbox/MRes/Development/2021_Workload.Rmd
+wlg    ~/Dropbox/MRes/Development/2021_Work_Log.csv
