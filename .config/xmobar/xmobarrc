@@ -1,34 +1,39 @@
-Config { position = Top
-       , font     = "xft:Hack Nerd Font:size=12:bold:antialias=true"
-       , fgColor = "#ffffff"
-       , bgColor = "#000000"
-       , alpha = 50  -- 0 transparent, 255 opaque
+Config { font = "xft:BlexMono Nerd Font:pixelsize=16"
+       , additionalFonts = []
+       , borderColor = "black"
+       , border = NoBorder
+       , bgColor = "#2E3440"
+       , fgColor = "#D8DEE9"
+       , alpha = 255
+       , position = Top
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "/home/alex/.xmonad/xpm/"
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [ Run DiskU [("/", " <free> free")]
+                          ["-L", "20", "-H", "95", "-m", "1"
+			  , "-h", "#2E3440,#BF616A", "-l", "#A3BE8C"] 20
+                    , Run BatteryP ["BAT0"]
+		          ["-t", "<acstatus>"
+                          , "-L", "15", "-H", "80"
+                          , "-l", "#2E3440,#BF616A", "-h", "#A3BE8C"
+                          , "--", "-O", "ﮣ <left>%", "-o", " <left>%"
+                          ] 10
+                    , Run Date "%_d %b %Y, %H:%M" "date" 50
+		    , Run Alsa "default" "Master" ["-t", "<status><volume>%"
+		          , "--", "-O", " ", "-o", " "
+			  , "-C", "#D8DEE9", "-c", "#BF616A"
+			  ]
+		    , Run Com "/home/alex/.local/bin/xwifi" [] "wifi" 50
+		    , Run StdinReader
+		    ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " %StdinReader% } %time% { %date% %coretemp%  %battery%        "
-
-       , commands = [ Run StdinReader
-                    , Run Date "%_I:%M" "time" 300 -- every 30s
-                    , Run Date "%A %_d %B" "date" 18000 -- every 30min
-                    -- CPU core temperature
-                    , Run CoreTemp [ "--template" , "<core0>/<core1>°C"
-                                   , "--Low"      , "70"
-                                   , "--High"     , "80"
-                                   , "--low"      , "#33BB33"
-                                   , "--normal"   , "#AA8800"
-                                   , "--high"     , "#FF0000"
-                                   ] 50 -- every 5s
-                    , Run Battery  [ "--template" , "<acstatus>"
-                                   , "--Low"      , "15"
-                                   , "--High"     , "80"
-                                   , "--low"      , "#FF0000"
-                                   , "--normal"   , "#AA8800"
-                                   , "--high"     , "#33BB33"
-                                   -- Battery-specific options
-                                   , "--"
-                                   , "-o" , "<left>% (<timeleft>)"      -- discharging
-                                   , "-O" , "<fc=#DDDD00>+<left>%+</fc>" -- charging
-                                   , "-i" , "<fc=#008800>Full</fc>"  -- fully charged
-                                   ] 50 -- every 5s
-                    ]
+       , template = " <icon=haskell_20.xpm/>  }\
+                    \{ %alsa:default:Master% | %wifi% | %disku% | %battery% | <fc=#EBCB8B>%date%</fc> "
        }

@@ -1,2 +1,6 @@
 
-<no location info>: error: can't find file: xmonad.hs
+xmonad.hs:103:1: error:
+    parse error (possibly incorrect indentation or mismatched brackets)
+    |
+103 | toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
+    | ^

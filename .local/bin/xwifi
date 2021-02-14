@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ "$(cat /sys/class/net/w*/operstate)" = 'up' ]; then
+	name="$(nmcli connection show | grep wlp | awk '{ print $1 }')"
+	wificon="直 $name"
+elif [ "$(cat /sys/class/net/e*/operstate)" = 'up' ]; then
+	wificon=""
+else
+	wificon="No interwebz"
+fi
+
+echo "$wificon"
