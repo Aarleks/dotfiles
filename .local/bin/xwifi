@@ -6,7 +6,7 @@ if [ "$(cat /sys/class/net/w*/operstate)" = 'up' ]; then
 elif [ "$(cat /sys/class/net/e*/operstate)" = 'up' ]; then
 	wificon=""
 else
-	wificon="No interwebz"
+	wificon="睊 No interwebz"
 fi
 
 echo "$wificon"

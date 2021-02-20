@@ -17,10 +17,19 @@ myFocusColor  = "#B48EAD"  -- Border color of focused windows
 
 myKeys =
     [("M-C-q", spawn "xmonad --recompile; xmonad --restart")
-    , ("M-b", spawn "dbus-send --session --dest=org.Xmobar.Control --type=method_call --print-reply '/org/Xmobar/Control' org.Xmobar.Control.SendSignal 'string:Toggle 0'" >> sendMessage ToggleStruts)
+    , ("M-b", spawn "xbar" >> sendMessage ToggleStruts)
+    , ("M-c", spawn "togglecam")
+    , ("M-e", spawn (myTerminal ++ " -e email"))
+    , ("M-f", spawn (myTerminal ++ " -e lf"))
+    , ("M-m", spawn (myTerminal ++ " -e ncmpcpp"))
+    , ("M-x", spawn "slock")
     ]
 
-myWorkspaces = ["tty","2","3","4","5","6","7","8","9"]
+{-
+This is a block comment
+-}
+
+myWorkspaces = [" \62543 ","2","3","4","5"," \63212 ","7","8","9"]
 
 main = do
     xmproc <- spawnPipe "xmobar"

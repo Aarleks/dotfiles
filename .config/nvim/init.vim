@@ -1,4 +1,4 @@
-" NEOVIM: the grand and glorious init.vim file of Alex Norman
+:" NEOVIM: the grand and glorious init.vim file of Alex Norman
 "============================================================
 " vim:foldmethod=marker
 
@@ -28,9 +28,12 @@ Plug '~/Projects/zettel.vim'            " zettelkasten interface
 Plug '$HOME/Projects/notes-cabinet'     " test lua-based zettelkasten plugin
 " AESTHETICS:
 Plug 'vim-pandoc/vim-pandoc-syntax'     " syntax highlighting for Markdown prose
+Plug 'arcticicestudio/nord-vim'         " Nord colour theme
+Plug 'morhetz/gruvbox'                  " Gruvbox colour theme
 Plug 'itchyny/lightline.vim'            " pretty statusline
 Plug 'junegunn/goyo.vim'                " minimalist writing environment
 Plug 'romainl/Apprentice'               " RomainL's colorscheme
+"Plug 'Soares/base16.nvim'
 Plug 'altercation/vim-colors-solarized' " Solarized colortheme
 call plug#end()
 " }}}
@@ -105,7 +108,9 @@ command! -bang -nargs=* RG call fzf#vim#grep("rg --no-ignore-parent --column --l
 
 set linebreak
 let g:solarized_termtrans=1
+"set background=dark
 colorscheme solarized
+"colorscheme gruvbox
 let g:lightline = {
 	    \ 'colorscheme': 'solarized',
 	    \ 'active': {

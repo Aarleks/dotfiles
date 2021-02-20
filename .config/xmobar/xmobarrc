@@ -1,5 +1,5 @@
 Config { font = "xft:BlexMono Nerd Font:pixelsize=16"
-       , additionalFonts = []
+       , additionalFonts = ["xft:FontAwesome-10"]
        , borderColor = "black"
        , border = NoBorder
        , bgColor = "#2E3440"
@@ -34,6 +34,6 @@ Config { font = "xft:BlexMono Nerd Font:pixelsize=16"
 		    ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " <icon=haskell_20.xpm/>  }\
+       , template = " <icon=haskell_20.xpm/> %StdinReader% }\
                     \{ %alsa:default:Master% | %wifi% | %disku% | %battery% | <fc=#EBCB8B>%date%</fc> "
        }
