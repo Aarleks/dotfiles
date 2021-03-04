@@ -90,10 +90,6 @@ super + r
 #super + shift + c
 #    mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
 
-## Launch the music visualiser in a terminal instance.
-super + v
-    $TERMINAL -e ncmpcpp -s visualizer
-
 ## Open Newsboat in a terminal instance
 super + n
     $TERMINAL -n "newsboat" -e "news"

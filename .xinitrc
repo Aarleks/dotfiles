@@ -8,3 +8,4 @@
 #    /usr/local/bin/dwm 2> /dev/null
 #done
 exec xmonad
+#/home/alex/.config/my_penrose/target/release/my_penrose

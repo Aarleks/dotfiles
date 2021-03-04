@@ -2,10 +2,18 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run -- for spawnPipe
-import XMonad.Util.EZConfig
+import XMonad.Util.EZConfig -- for easier reading of keybindings
 import System.IO -- for hPutStrLn for xmobar
+import System.Exit
 import qualified XMonad.StackSet as W
 
+{- TODO
+- Get rid of defaultConfig
+- Xmonad.Prompt.Ssh - for sshing
+- Xmonad.Prompt.Man - for looking up man pages
+- Xmonad.Prompt.Search?? - for browser, scholar, etc. searches
+
+-}
 
 -- MY DEFAULTS --
 -----------------
@@ -14,6 +22,7 @@ myTerminal = "alacritty"   -- Sets default terminal
 myBorderWidth = 1          -- Sets border width for windows
 myNormColor   = "#282C34"  -- Border color of normal windows
 myFocusColor  = "#B48EAD"  -- Border color of focused windows
+myFocusFollowsMouse = True
 
 myKeys =
     [("M-C-q", spawn "xmonad --recompile; xmonad --restart")
@@ -22,6 +31,7 @@ myKeys =
     , ("M-e", spawn (myTerminal ++ " -e email"))
     , ("M-f", spawn (myTerminal ++ " -e lf"))
     , ("M-m", spawn (myTerminal ++ " -e ncmpcpp"))
+    , ("M-q", kill)
     , ("M-x", spawn "slock")
     ]
 

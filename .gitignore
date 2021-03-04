@@ -131,3 +131,4 @@
 /.local/lib/
 /.racket/
 /.ghc/
+/.rustup/
