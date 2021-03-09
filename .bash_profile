@@ -14,3 +14,4 @@ export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 if [[ "$(tty)" = "/dev/tty1" ]]; then
 	pgrep i3 || startx
 fi
+source "$HOME/.cargo/env"

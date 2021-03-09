@@ -117,3 +117,4 @@ export TIMEWARRIORDB=~/Dropbox/.timewarrior
 export VISUAL="nvim"
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 source /home/alex/.bash_shortcuts
+source "$HOME/.cargo/env"

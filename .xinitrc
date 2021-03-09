@@ -1,5 +1,4 @@
 #!/bin/sh
-
 [ -f "$HOME/.config/localinitrc" ] && . ~/.config/localinitrc
 [ -f "$HOME/.xprofile" ] && . ~/.xprofile
 

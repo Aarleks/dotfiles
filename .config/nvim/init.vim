@@ -18,23 +18,23 @@ Plug 'junegunn/fzf.vim'                 " fuzzy finder plugin
 Plug 'itchyny/vim-gitbranch'            " shows git info in statusline
 Plug 'tpope/vim-fugitive'               " git plugin
 Plug 'vimwiki/vimwiki'                  " personal wiki
-"Plug 'wincent/corpus'                   " personal wiki/zettelkasten plugin
 Plug 'baskerville/vim-sxhkdrc'          " syntax highlighting for sxhkd
 Plug 'jalvesaq/Nvim-R'                  " make vim into a RStudio-like IDE
 " MY PLUGINS:
 " Unmanaged plugins (manually installed and updated)
 Plug '~/Projects/zettel.vim'            " zettelkasten interface
-"Plug '$HOME/Projects/whid.vim'          " test lua-based plugin for floating window
 Plug '$HOME/Projects/notes-cabinet'     " test lua-based zettelkasten plugin
+Plug '$HOME/Projects/vim-pollen'        " syntax highlighting for Pollen files - modding Joel Dueck's plugin
 " AESTHETICS:
 Plug 'vim-pandoc/vim-pandoc-syntax'     " syntax highlighting for Markdown prose
-Plug 'arcticicestudio/nord-vim'         " Nord colour theme
-Plug 'morhetz/gruvbox'                  " Gruvbox colour theme
+Plug 'arcticicestudio/nord-vim'         " Nord colourscheme
+Plug 'morhetz/gruvbox'                  " Gruvbox colourscheme
+Plug 'altercation/vim-colors-solarized' " Solarized colorscheme
+Plug 'romainl/Apprentice'               " RomainL's colorscheme
 Plug 'itchyny/lightline.vim'            " pretty statusline
 Plug 'junegunn/goyo.vim'                " minimalist writing environment
-Plug 'romainl/Apprentice'               " RomainL's colorscheme
-"Plug 'Soares/base16.nvim'
-Plug 'altercation/vim-colors-solarized' " Solarized colortheme
+Plug 'cespare/vim-toml'                 " get proper syntax highlighting for toml files
+Plug 'wlangstroth/vim-racket'           " syntax highlighting for Racket
 call plug#end()
 " }}}
 
