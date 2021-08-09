@@ -1,18 +1,18 @@
 # Keymapping for DWM, i3, etc.
 
-The format here will be alphabetical with a mapping for each of the keys. Where no mapping exists the listing will
+The format here will be alphabetical with a mapping for each of the keys. Where no mapping exists the listing will have a placeholder `<++>`
 
 # Mod and Action Keys
 
 ## Enter:
 
 * **Super-Enter** - Spawn a new `$TERMINAL` instance using. My default is `st`.
-* **Super-Shift-Enter** - Spawn a new `$TERMINAL` instance and open `Vimwiki` Index page.
+* **Super-Shift-Enter** - Make the current window the master
 * **Super-Control-Shift**<++>
 
 ## Tab:
 
-* **Super-Tab** - Switch between current and previous DWM tag.
+* **Super-Tab** - Switch between current and previous tag.
 * **Super-Shift-**<++>
 * **Super-Control-Shift**<++>
 
@@ -75,7 +75,7 @@ NOTE: Numeric keys are tag or window numbers in tiling window managers. The acti
 
 * **Super-[num]** - Move to that tag or window.
 * **Super-Shift-[num]** - Move the current pane to that tag or window.
-* **Super-Control-Shift-[num]** - In `DWM`, put the current pane in that tag in addition to this one (similar to a tmux attachment), as the lowest stacked pane.
+* **Super-Control-[num]** - Put the current pane in that tag in addition to this one (similar to a tmux attachment), as the lowest stacked pane.
 
 ## Grave/Tilde
 
@@ -92,20 +92,20 @@ NOTE: Numeric keys are tag or window numbers in tiling window managers. The acti
 ## Equal
 
 * **Super-=** - Change volume by +5 with `pulsemixer`.
-* **Super-Shift-**
-* **Super-Control-Shift**<++>
+* **Super-Shift--**
+* **Super-Control-Shift--**<++>
 
 # Alphas
 
 ## A:
 
-* Super-a
-* Super-Shift-a
-* Super-Control-Shift-a
+* **Super-a**
+* **Super-Shift-a**
+* **Super-Control-Shift-a**
 
 ## B:
 
-* **Super-b** - Toggle the bar on/off in `dwm`. Default is off.
+* **Super-b** - Toggle the bar on/off. Default is off.
 * **Super-Shift-**<++>
 * **Super-Control-Shift**<++>
 

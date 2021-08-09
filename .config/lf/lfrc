@@ -77,6 +77,13 @@ cmd zip ${{
 
 map c zip
 
+cmd bulk ${{
+    set -f
+    echo $fx | sed 's/ /\n/g' | tee ~/.cache/bulkold > ~/.cache/bulknew
+    nvim ~/.cache/bulknew && ~/.local/bin/bulk
+
+{{
+
 cmd moveto ${{
 	set -f
 	clear; echo "Move to where?"

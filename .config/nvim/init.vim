@@ -35,6 +35,7 @@ Plug 'itchyny/lightline.vim'            " pretty statusline
 Plug 'junegunn/goyo.vim'                " minimalist writing environment
 Plug 'cespare/vim-toml'                 " get proper syntax highlighting for toml files
 Plug 'wlangstroth/vim-racket'           " syntax highlighting for Racket
+Plug 'jez/vim-better-sml'               " syntax + REPL for SMLNJ
 call plug#end()
 " }}}
 
@@ -157,9 +158,6 @@ lua << EOF
     NotesCabinet = {
       ['~/Dropbox/NotesCabinet/Zettelkasten'] = {
         base = './',
-      },
-      ['~/code/masochist/content/content/wiki'] = {
-        base = '/.',
       },
       }
 
