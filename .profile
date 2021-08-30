@@ -27,3 +27,4 @@ export LESS_TERMCAP_ue="$(printf '%b' '[0m')"; a="${a%_}"
 if [[ "$(tty)" = "/dev/tty1" ]]; then
 	pgrep i3 || startx
 fi
+. "$HOME/.cargo/env"

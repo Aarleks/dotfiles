@@ -27,7 +27,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 "Plug 'roxma/nvim-yarp'
 "Plug 'ncm2/ncm2'
 Plug 'baskerville/vim-sxhkdrc'
-Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+"Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 Plug 'aarleks/zettel.vim'
 call plug#end()
 " }}}
@@ -66,6 +66,7 @@ imap <c-x><c-f> <plug>(fzf-complete-path)
 " Set Markdown files as markdown.pandoc for pandoc-syntax
 augroup pandoc_syntax
     au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+    au! BufNewFile,BufFilePre,BufRead *.Rmd set filetype=markdown.pandoc
 augroup END
 
 set go=a " visual mode - highlighted text is copied to the clipboard
@@ -134,10 +135,6 @@ inoremap <F10> <esc>:Goyo<CR>a
 " When shortcut files are updated, renew bash and vifm configs with new material:
 autocmd BufWritePost ~/.config/alias-conf,~/.config/alias-dirs !shortcuts.sh
 
-" Vim-LaTeX-Live-Preview settings
-let g:livepreview_previewer = 'zathura'
-let g:livepreview_engine = 'xelatex'
-
 " Vimwiki Settings
 let g:vimwiki_global_ext=0
 let g:vimwiki_list=[{
@@ -146,5 +143,5 @@ let g:vimwiki_list=[{
 	    \ 'ext': '.md'
 	    \ }]
 
-let g:zettelkasten = '$HOME/Dropbox/Zettelkasten/'
+let g:zettelkasten = '$HOME/Dropbox/NotesCabinet/Zettelkasten/'
 " }}}

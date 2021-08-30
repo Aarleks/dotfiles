@@ -61,3 +61,5 @@ inoremap ;p ```{python}<CR>```<CR><CR><esc>2kO
 
 " TEMPLATES:
 nnoremap ;art :-1read $HOME/.config/nvim/templates/article.md<CR>jA<Space>
+
+nnoremap <Leader>di :-1read $HOME/.config/nvim/templates/diary_template<CR>jA<Space>
