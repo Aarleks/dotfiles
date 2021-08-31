@@ -3,9 +3,11 @@
 
 export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"
 export PATH="$PATH":$HOME/.local/bin
+export PATH="$PATH":/usr/local/go/bin
 export PATH="$PATH":$HOME/go/bin
 source "$HOME/.cargo/env"
-export PATH="/home/alex/.gem/ruby/2.6.0/bin:$PATH"
+export PATH="/home/alex/.local/share/gem/ruby/2.7.0/bin:$PATH"
+
 #export TERM="alacritty"
 export EDITOR="nvim"
 export TERMINAL="alacritty"

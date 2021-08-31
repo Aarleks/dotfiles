@@ -61,6 +61,7 @@ nnoremap <Leader><Leader>h :nohlsearch<CR>
 "" E:
 " <LocalLeader>e -- Edit file, starting in same directory as current file.
 nnoremap <LocalLeader>e :edit <C-R>=expand('%:p:h') . '/'<CR>
+nnoremap <Leader>e :Explore<CR>
 
 "" I:
 "" O:
