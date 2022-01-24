@@ -190,8 +190,9 @@ colors:
       #    - { index: 20, color: '0xa7adba' }
       #    - { index: 21, color: '0xdfe1e8' }
 
-background_opacity: 0.95
+      #background_opacity: 0.85
 window:
-    padding:
-        x: 4
-        y: 2
+  padding:
+    x: 4
+    y: 2
+  opacity: 0.8
