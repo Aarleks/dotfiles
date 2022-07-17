@@ -4,16 +4,27 @@
 ## MOD KEYS ##
 ##############
 
+## Show Stats
+# time + date
+# battery
+# HD space
+# internet connection
+
+## Floating Zettel
+# open a floating scratchpad window with neovim, opened in zettel
+# $TERMINAL -e $EDITOR ~/Dropbox/Zettlekasten
+
+## Calculator
+# open a floating scratchpad window with Alacritty running R
+# $TERMINAL -e R
+
 ## Open $TERMINAL instance
-super + Return
-    $TERMINAL
+#super + Return
+#    $TERMINAL
 
 ## Open the Vimwiki Index page in the default editor
 #super + shift + Return
 #    $TERMINAL -e $EDITOR ~/Dropbox/vimwiki/index.md
-
-#super + shift + F1
-#    firefox $HOME/Dropbox/vimwiki/html/index.html
 
 super + F3
     displayselect
@@ -40,8 +51,8 @@ super + shift + BackSpace
 # q
 
 ## Open the default browser
-super + w
-    $BROWSER
+#super + w
+#    $BROWSER
 
 ## Refresh the wifi
 super + shift + w
@@ -64,6 +75,7 @@ super + shift + e
 
 ## Run the application launcher
 #super + d
+#    dmenu_run
 #    rofi -show run
 
 ## Run the Colemak script
@@ -105,7 +117,9 @@ super + shift + m
 super + Insert
     showclip
 
-XF86AudioLowerVolume
-    pamixer --allow-boost -d 5
-XF86AudioRaiseVolume
-    pamixer --allow-boost -i 5
+#XF86AudioLowerVolume
+#    pamixer --allow-boost -d 5
+#XF86AudioRaiseVolume
+#    pamixer --allow-boost -i 5
+#XF86AudioMute
+#    pamixer --toggle-mute

@@ -220,8 +220,9 @@ colors:
       #    white: '#aeb3bb'
 
 
-background_opacity: 0.95
+      #background_opacity: 0.80
 window:
+    opacity: 0.65
     padding:
         x: 4
         y: 2
