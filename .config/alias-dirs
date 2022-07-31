@@ -2,12 +2,8 @@ home   ~/
 conf   ~/.config
 scr    ~/.scripts
 down   ~/Downloads
-rd1    ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units_1H21/1_RD1
-wb     ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units_1H21/2_WrB
-cu     ~/Dropbox/MRes/mres_shared_folder/1_UNITS/1_Current_Units_1H21
 cv     ~/Dropbox/WritingTools/CV
 proj   ~/Projects
-adp    ~/Dropbox/MRes/Development/ADP
 sac    ~/Dropbox/MRes/GovMin/SAC
 min    ~/Dropbox/MRes/GovMin
 dap    ~/Dropbox/MRes/GovMin/DAP
@@ -18,5 +14,5 @@ zet    ~/Dropbox/NotesCabinet/Zettelkasten
 cab    ~/Dropbox/CabSav
 wood   ~/Dropbox/Woodworking
 lib    ~/Dropbox/Library
-
-
+pho    ~/Dropbox/Photography
+lang   ~/Dropbox/Languages
