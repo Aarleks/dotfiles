@@ -19,8 +19,8 @@
 # $TERMINAL -e R
 
 ## Open $TERMINAL instance
-#super + Return
-#    $TERMINAL
+super + Return
+    $TERMINAL
 
 ## Open the Vimwiki Index page in the default editor
 #super + shift + Return
@@ -51,8 +51,8 @@ super + shift + BackSpace
 # q
 
 ## Open the default browser
-#super + w
-#    $BROWSER
+super + w
+    $BROWSER
 
 ## Refresh the wifi
 super + shift + w
@@ -62,12 +62,12 @@ super + shift + w
 #super + e
 #    $TERMINAL -e email
 
-super + shift + e
-    $TERMINAL -e neomutt -R
+#super + shift + e
+#    $TERMINAL -e neomutt -R
 
 ## Open the file manager lf in a terminal instance
-#super + f
-#    $TERMINAL -e lf
+super + f
+    $TERMINAL -e lf
 
 ## Open htop in a terminal instance
 #super + i

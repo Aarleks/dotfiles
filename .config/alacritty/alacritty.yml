@@ -222,7 +222,7 @@ colors:
 
       #background_opacity: 0.80
 window:
-    opacity: 0.65
+    opacity: 0.75
     padding:
         x: 4
         y: 2

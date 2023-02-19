@@ -2,10 +2,9 @@
 [ -f "$HOME/.config/localinitrc" ] && . ~/.config/localinitrc
 [ -f "$HOME/.xprofile" ] && . ~/.xprofile
 
-#exec i3
-#while :; do
-#    /usr/local/bin/dwm 2> /dev/null
-#done
+while :; do
+    /usr/local/bin/dwm 2> /dev/null
+done
 #exec xmonad
 #/home/alex/.config/my_penrose/target/release/my_penrose
-exec awesome
+#exec awesome

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-LOG="$HOME/Dropbox/MRes/Development/2022_Work_Log.csv"
+LOG="$HOME/Dropbox/MRes/Development/AnnualReview/2023/2023_WorkLog.csv"
 
 JLX="$HOME/Dropbox/JLX/1_JLXmin/4_Timesheets/Alex_timesheet.csv"
 

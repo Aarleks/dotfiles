@@ -48,72 +48,10 @@ export PS1;
 PS2="\[${yellow}\]→ \[${reset}\]";
 export PS2;
 
-#Generic shortcuts:
-alias music="ncmpcpp"
-alias clock="ncmpcpp -s clock"
-alias visualizer="ncmpcpp -s visualizer"
-alias news="newsboat"
-alias email="neomutt"
-alias audio="ncpamixer"
-alias getmail="offlineimap && notmuch new"
-
-# System Maintainence
-alias progs="pacman -Qet" # List programs I've installed
-alias orphans="pacman -Qdt" # List orphan programs
-alias upgr="neofetch && sudo pacman -Syyu --noconfirm && echo Update complete."
-alias sydtime="sudo timedatectl set-timezone Australia/Sydney && i3 restart" # Eastcoast time
-alias sdn="sudo shutdown now"
-alias newnet="sudo systemctl restart NetworkManager" # Refresh wifi
-alias nf="clear && neofetch" # Le Redditfetch
-#Install an AUR package manually (for Parabola to get AUR access):
-aurinstall() { curl -O https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz && tar -xvf $1.tar.gz && cd $1 && makepkg --noconfirm -si && cd .. && rm -rf $1 $1.tar.gz ;}
-alias psref="gpg-connect-agent RELOADAGENT /bye" # Refresh gpg
-
 # Some aliases
-alias r="ranger"
-alias sr="sudo ranger"
-alias ka="killall"
-alias g="git"
-alias gitup="git push origin master"
 alias gitpass="git config --global credential.helper cache"
-alias bars="bash ~/.config/polybar/launch.sh" # Run Polybar relaunch script
 weath() { curl wttr.in/$1 ;} # Check the weather (give city or leave blank).
 
-# Adding color
-alias ls='ls -hN --color=auto --group-directories-first'
-alias grep="grep --color=always" # Color grep - highlight desired sequence.
-alias ccat="highlight --out-format=xterm256" #Color cat - print file with syntax highlighting.
-
-# Laptop management
-alias lsc="screen.sh l" # Use laptop screen only
-alias vsc="screen.sh v" # Use VGA only
-alias dsc="screen.sh d" # Use both laptop and VGA screen
-alias debase="sudo umount /home/Shared/Videos & screen.sh l && i3 restart" # Prep for taking my ThinkPad off Ultrabase
-
-# Internet
-alias yt="youtube-dl --add-metadata -ic" # Download video link
-alias yta="youtube-dl --add-metadata -xic" # Download only audio
-alias YT="youtube-viewer"
-alias ethspeed="speedometer -r enp2s0"
-alias wifispeed="speedometer -r wlp1s0"
-alias starwars="telnet towel.blinkenlights.nl"
-
-# Audio and Music
-alias mute="pamixer -m"
-alias unmute="pamixer -u"
-alias vu="pamixer --allow-boost -i 5"
-alias vd="pamixer --allow-boost -d 5"
-alias pause="mpc toggle"
-alias next="mpc next"
-alias prev="mpc prev"
-alias trupause="mpc pause"
-alias beg="mpc seek 0%"
-alias lilbak="mpc seek -10"
-alias lilfor="mpc seek +10"
-alias bigbak="mpc seek -120"
-alias bigfor="mpc seek +120"
-
-export TIMEWARRIORDB=~/Dropbox/.timewarrior
 export VISUAL="nvim"
 shdl() { curl -O $(curl -s http://sci-hub.tw/"$@" | grep location.href | grep -o http.*pdf) ;}
 source /home/alex/.bash_shortcuts
