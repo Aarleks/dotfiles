@@ -26,7 +26,6 @@
 #/.config/mpd/
 #/.config/chromium/
 #/.config/enchant/
-#/.config/nvim/.netrwhist
 #/.config/qmk_firmware
 #/.config/suckless/
 #/.stellarium/
@@ -44,9 +43,6 @@
 #/.viminfo.tmp
 #/.config/mimeapps.list
 #/.zshrc.zni
-#/.config/nvim/autoload/plug.vim
-#/.config/nvim/autoload/plug.vim.old
-#/.config/nvim/plugged/
 #/.wget-hsts
 #/.mbsyncrc
 #/.abook
@@ -68,7 +64,6 @@
 #/.config/lf/lfshortcuts
 #.config/shortcutsrc
 #/.config/zsh/.zcompdump
-#/.config/newsboat/cache.db
 #/.config/lf/lfshortcuts
 #/.config/shortcutsrc
 #
