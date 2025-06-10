@@ -1,4 +1,0 @@
-set sort = threads
-set sort_aux = reverse-date
-
-macro index Z "<enter-command>source ~/.config/mutt/sort-date.rc<enter>"

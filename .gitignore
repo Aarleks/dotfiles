@@ -127,3 +127,6 @@
 #/.racket/
 #/.ghc/
 #/.rustup/
+#~/Projects/nixLearn/flake.nix
+/home/alex/Projects/
+.Rproj.user

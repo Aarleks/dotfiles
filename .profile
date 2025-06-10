@@ -1,5 +1,4 @@
 #!/bin/sh
-#
 
 export PATH="$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')$PATH"
 export PATH="$PATH":$HOME/.local/bin
@@ -10,13 +9,14 @@ export PATH="/home/alex/.local/share/gem/ruby/2.7.0/bin:$PATH"
 
 #export TERM="alacritty"
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export BROWSER="brave"
 export VISUAL="nvim"
 export FILES="lf"
 export READER="zathura"
 export MANPAGER="nvim +Man!"
 export GOPATH="$HOME/go"
+export BKMR_DB_URL="$HOME/Dropbox/bookmarks"
 
 # Cleaning up $HOME
 export ZDOTDIR="$HOME/.config/zsh"
